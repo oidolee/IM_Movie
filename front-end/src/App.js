@@ -1,4 +1,4 @@
-import './styles/common/Appcd.css';
+import './styles/common/App.css';
 import React from 'react';
 import Header from './component/route/Header';
 import RouterComponent from './component/route/RouterComponent'
