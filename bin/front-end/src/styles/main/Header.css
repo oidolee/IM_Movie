@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.header_section{
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid red;
+}
+
+.header_section .gnb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+.header_section .gnb a{
+    /* color: #FFF; */
+}
+
+.header_section .gnb .right-gnb ul{
+    display: flex;
+} 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="springBoot.ict.movie.dao.SampleMapper">
+	
+	<!-- 상품목록 -->
+	<select id="sampleList" resultType="springBoot.ict.movie.dto.SampleDTO">
+		SELECT * FROM mvc_sample_tbl
+		 ORDER BY id
+	</select>
+	
+	
+	<insert id="insertSample" parameterType="springBoot.ict.movie.dto.SampleDTO">
+		insert into mvc_sample_tbl(id, name, brand, madein, price)
+			values((select nvl(max(id),1)+1 from mvc_sample_tbl), #{name}, #{brand}, #{madein}, #{price})
+	</insert>
+	
+	<select id="findById" parameterType="int" resultType="springBoot.ict.movie.dto.SampleDTO">
+		SELECT * FROM mvc_sample_tbl
+			WHERE ID = #{id}
+	</select>
+	
+	<update id="updateSample" parameterType="springBoot.ict.movie.dto.SampleDTO">
+		UPDATE mvc_sample_tbl
+			SET name = #{name}, 
+				brand = #{brand},
+				madein = #{madein},
+				price = #{price}
+			WHERE id = #{id}
+	</update>
+	
+	<delete id="deleteSample" parameterType="int">
+		delete from mvc_sample_tbl
+			where id = #{id}
+	</delete>
+</mapper>
