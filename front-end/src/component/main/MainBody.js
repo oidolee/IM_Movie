@@ -12,8 +12,8 @@ class MainBody extends Component{
                         
                     </div>
 
-                    <div className='contents'>contents</div>
                 </div>
+                <div className='contents'>contents</div>
             </div>
         );
     }

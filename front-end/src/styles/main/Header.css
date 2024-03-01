@@ -12,12 +12,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid blue; */
+    border-bottom: 1px solid #a7a7a7;
+    padding: 10px 0;
 }
 .header_section .gnb a{
-    /* color: #FFF; */
+    color: #a7a7a7;
 }
 
 .header_section .gnb .right-gnb ul{
     display: flex;
 } 
+
+
+.header_section .nav *{
+    color: #FFF;
+}
+
+.header_section .nav >ul{
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+

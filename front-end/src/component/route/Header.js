@@ -31,7 +31,64 @@ function Header() {
                 </div>
             </div>
             <div className='nav'>
-                nav
+                <ul>
+                    <li>
+                        <a href="#">예매!</a>
+                        <div>
+                            <ul>
+                                <li><a href="#">예매하기</a></li>
+                                <li><a href="#">상영시간표</a></li>
+                                <li><a href="#">할인</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">영화</a>
+                        <div>
+                            <ul>
+                                <li><a href="#">홈</a></li>
+                                <li><a href="#">현재상영작</a></li>
+                                <li><a href="#">상영예정작</a></li>
+                                <li><a href="#">아르뗴</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">영화관</a>
+                        <div>
+                             <ul>
+                                <li><a href="#">스페셜관</a></li>
+                                <li><a href="#">서울</a></li>
+                                <li><a href="#">경기/인천</a></li>
+                                <li><a href="#">전라/광주</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">이벤트</a>
+                        <div>
+                             <ul>
+                                <li><a href="#">홈</a></li>
+                                <li><a href="#">영화</a></li>
+                                <li><a href="#">시사회/무대인사</a></li>
+                                <li><a href="#">HOT</a></li>
+                                <li><a href="#">제휴할인</a></li>
+                                <li><a href="#">우리동네영화관</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">스토어</a>
+                        <div>
+                             <ul>
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">관람권</a></li>
+                                <li><a href="#">스낵음료</a></li>
+                                <li><a href="#">포토카드</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
 
