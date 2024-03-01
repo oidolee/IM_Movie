@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import logo from '../../assets/main/IM_Logo.png'
-import '../../styles/main/Header.css'
-
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-
-// npm install react-bootstrap
 
 function Header() {
+    const [path, setPath] = useState('/');
+        // 페이지 로딩 시 경로 설정 (실제로는 해당 경로를 얻는 방법에 따라 다를 수 있음)
+        useEffect(() => {
+            const currentPath = window.location.pathname;
+            console.log(currentPath)
+            setPath(currentPath);
+        }, []);
+    
+        // 경로에 따라 다른 CSS 파일 import
+        let headerStyle;
+        console.log(path)
+        console.log(path.length)
+        if (path.length === 1) {
+            require('../../styles/main/Header.css');
+        } else {
+            require('../../styles/main/Header1.css');
+        }
     return (
         <div id="header_section" className='header_section'>
             <div className='gnb'>
@@ -33,7 +40,7 @@ function Header() {
             <div className='nav'>
                 <ul>
                     <li>
-                        <a href="#">예매!</a>
+                        <a href="/test">예매!</a>
                         <div>
                             <ul>
                                 <li><a href="#">예매하기</a></li>
