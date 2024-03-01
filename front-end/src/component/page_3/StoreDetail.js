@@ -6,7 +6,7 @@ class StoreDetail extends Component {
     render() {
         return (
             <div className='store'>
-                <div className='contents'>
+                <div className='store_detail'>
                     <div className="main_img">
                         <img src={package1} alt="[롯시와 봄] 패키지" />
                     </div>
@@ -28,7 +28,7 @@ class StoreDetail extends Component {
                                     <th scope="row" className="tit" colSpan="2">[롯시와 봄] 패키지</th>
                                 </tr>
                                 <tr>
-                                    <ctd><span className="txt_sale">15%</span></td>
+                                    <td><span className="txt_sale">15%</span></td>
                                     <td><span className="txt_price">22,000<em>원</em></span><span className="txt_price_ins">26,000원</span></td>
                                 </tr>
                                 <tr>
