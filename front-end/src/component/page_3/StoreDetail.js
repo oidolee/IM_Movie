@@ -6,7 +6,7 @@ class StoreDetail extends Component {
     render() {
         return (
             <div className='store'>
-                <div className='contents'>
+                <div className='store_detail'>
                     <div className="main_img">
                         <img src={package1} alt="[롯시와 봄] 패키지" />
                     </div>
