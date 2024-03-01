@@ -1,6 +1,6 @@
 @charset "utf-8";
 .header_section{
-    width: 1000px;
+    width: 100%;
     position: initial;
     left: initial;
     transform: initial;
@@ -25,7 +25,7 @@
 
 
 .header_section .nav *{
-    color: #FFF;
+    color: #000;
 }
 
 .header_section .nav >ul{
@@ -33,6 +33,11 @@
     width: 100%;
     padding: 10px 0;
     justify-content: center;
+}
+
+/* 하단 내역 */
+.header_section .nav >ul>li>div{
+    background-color: rgba(255, 255, 255);
 }
 
 
