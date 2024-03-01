@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.contents{    
+    width: 980px;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+}
+
+.contents .pd_wrap .pd_detail .pd_table .tit {
+    padding: 10px 0 22px;
+    font-size: 28px;
+}
+
+.contents .pd_wrap .pd_detail .pd_table th {
+    text-align: left;
+}
+
+.contents .pd_wrap .pd_detail .bx_num .txt_num {
+    padding: 23px 0;
+}
+
+.contents .pd_wrap .pd_detail .txt_price_wrap {
+    font-size: 15px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.txt_price_str {
+    display: inline-block;
+    font-family: 'Roboto', 'Noto Sans KR';
+    font-weight: bold;
+    color: #FF243E;
+}
+
+.contents .pd_wrap .pd_detail .btn_wrap button {
+    width: 212px;
+    margin-right: 6px;
+    box-sizing: border-box;
+}
+
+.contents .pd_wrap .pd_detail .btn_col4 {
+    padding: 0 25px;
+    margin-right: 5px;
+}
+
+.contents .pd_wrap .pd_detail .pd_table td {
+    color: #666666;
+}
+
+.txt_sale {
+    display: inline-block;
+    font-family: 'Roboto', 'Noto Sans KR';
+    color: #FF243E;
+    font-weight: bold;
+}
