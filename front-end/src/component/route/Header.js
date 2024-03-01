@@ -1,30 +1,41 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../assets/main/IM_Logo.png'
 
 function Header() {
     const [path, setPath] = useState('/');
-        // 페이지 로딩 시 경로 설정 (실제로는 해당 경로를 얻는 방법에 따라 다를 수 있음)
-        useEffect(() => {
-            const currentPath = window.location.pathname;
-            console.log(currentPath)
-            setPath(currentPath);
-        }, []);
-    
-        // 경로에 따라 다른 CSS 파일 import
-        let headerStyle;
-        console.log(path)
-        console.log(path.length)
-        if (path.length === 1) {
-            require('../../styles/main/Header.css');
-        } else {
-            require('../../styles/main/Header1.css');
-        }
+    const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
+    const [currentMenuValue, setCurrentMenuValue] = useState(null);
+
+    // 페이지 로딩 시 경로 설정 (실제로는 해당 경로를 얻는 방법에 따라 다를 수 있음)
+    useEffect(() => {
+        const currentPath = window.location.pathname;
+        console.log(currentPath)
+        setPath(currentPath);
+    }, []);
+
+    // 경로에 따라 다른 CSS 파일 import
+    if (path.length === 1) {
+        require('../../styles/main/Header.css');
+    } else {
+        require('../../styles/main/Header1.css');
+    }
+    const handleMouseOver = (value) => {
+        setIsSubMenuVisible(true);
+        setCurrentMenuValue(value);
+    };
+
+    const handleMouseOut = () => {
+        setIsSubMenuVisible(false);
+        setCurrentMenuValue(null);
+    };
+
+
     return (
         <div id="header_section" className='header_section'>
             <div className='gnb'>
                 <div className='logo'>
                     <a href="/">
-                        <img src={logo} style={{width:'100px'}} />
+                        <img src={logo} style={{ width: '100px' }} />
                     </a>
                 </div>
 
@@ -33,69 +44,84 @@ function Header() {
                         <li><a href='page_1'>멤버쉽</a></li>
                         <li><a href='page_2'>고객센터</a></li>
                         <li><a href='page_3'>단체관람/대관문의</a></li>
-                        <li><a href='#'>로그인</a></li>
+                        <li><a href='StoreDetail'>로그인</a></li>
                     </ul>
                 </div>
             </div>
             <div className='nav'>
                 <ul>
-                    <li>
-                        <a href="/test">예매!</a>
-                        <div>
-                            <ul>
-                                <li><a href="#">예매하기</a></li>
-                                <li><a href="#">상영시간표</a></li>
-                                <li><a href="#">할인</a></li>
-                            </ul>
-                        </div>
+                    {/* 이벤트 버블링 */}
+                    <li onMouseOver={() => handleMouseOver(1)} onMouseOut={handleMouseOut}>
+                        <a href="/test" onMouseEnter={() => handleMouseOver(1)} onMouseOut={handleMouseOut}>예매</a>
+                        {isSubMenuVisible && currentMenuValue === 1 && (
+                            <div className='bottom-menu-box'>
+                                <ul>
+                                    <li><a href="#">예매하기</a></li>
+                                    <li><a href="#">상영시간표</a></li>
+                                    <li><a href="#">할인</a></li>
+                                </ul>
+                            </div>
+                        )}
                     </li>
-                    <li>
-                        <a href="#">영화</a>
-                        <div>
-                            <ul>
-                                <li><a href="#">홈</a></li>
-                                <li><a href="#">현재상영작</a></li>
-                                <li><a href="#">상영예정작</a></li>
-                                <li><a href="#">아르뗴</a></li>
-                            </ul>
-                        </div>
+
+                    <li onMouseOver={() => handleMouseOver(2)} onMouseOut={handleMouseOut}>
+                        <a href="#" onMouseEnter={() => handleMouseOver(2)} onMouseOut={handleMouseOut}>영화</a>
+                        {isSubMenuVisible && currentMenuValue === 2 && (
+                            <div>
+                                <ul>
+                                    <li><a href="#">홈</a></li>
+                                    <li><a href="#">현재상영작</a></li>
+                                    <li><a href="#">상영예정작</a></li>
+                                    <li><a href="#">아르뗴</a></li>
+                                </ul>
+                            </div>
+                        )}
                     </li>
-                    <li>
-                        <a href="#">영화관</a>
-                        <div>
-                             <ul>
-                                <li><a href="#">스페셜관</a></li>
-                                <li><a href="#">서울</a></li>
-                                <li><a href="#">경기/인천</a></li>
-                                <li><a href="#">전라/광주</a></li>
-                            </ul>
-                        </div>
+
+                    <li onMouseOver={() => handleMouseOver(3)} onMouseOut={handleMouseOut}>
+                        <a href="#" onMouseEnter={() => handleMouseOver(3)} onMouseOut={handleMouseOut}>영화관</a>
+                        {isSubMenuVisible && currentMenuValue === 3 && (
+                            <div>
+                                <ul>
+                                    <li><a href="#">스페셜관</a></li>
+                                    <li><a href="#">서울</a></li>
+                                    <li><a href="#">경기/인천</a></li>
+                                    <li><a href="#">전라/광주</a></li>
+                                </ul>
+                            </div>
+                        )}
                     </li>
-                    <li>
-                        <a href="#">이벤트</a>
-                        <div>
-                             <ul>
-                                <li><a href="#">홈</a></li>
-                                <li><a href="#">영화</a></li>
-                                <li><a href="#">시사회/무대인사</a></li>
-                                <li><a href="#">HOT</a></li>
-                                <li><a href="#">제휴할인</a></li>
-                                <li><a href="#">우리동네영화관</a></li>
-                            </ul>
-                        </div>
+                    <li onMouseOver={() => handleMouseOver(4)} onMouseOut={handleMouseOut}>
+                        <a href="#" onMouseEnter={() => handleMouseOver(4)} onMouseOut={handleMouseOut}>이벤트</a>
+                        {isSubMenuVisible && currentMenuValue === 4 && (
+                            <div>
+                                <ul>
+                                    <li><a href="#">홈</a></li>
+                                    <li><a href="#">영화</a></li>
+                                    <li><a href="#">시사회/무대인사</a></li>
+                                    <li><a href="#">HOT</a></li>
+                                    <li><a href="#">제휴할인</a></li>
+                                    <li><a href="#">우리동네영화관</a></li>
+                                </ul>
+                            </div>
+                        )}
                     </li>
-                    <li>
-                        <a href="/page3">스토어</a>
-                        <div>
-                             <ul>
-                                <li><a href="#">베스트</a></li>
-                                <li><a href="#">관람권</a></li>
-                                <li><a href="#">스낵음료</a></li>
-                                <li><a href="#">포토카드</a></li>
-                            </ul>
-                        </div>
+                    <li onMouseOver={() => handleMouseOver(5)} onMouseOut={handleMouseOut}>
+                        <a href="/page3" onMouseEnter={() => handleMouseOver(5)} onMouseOut={handleMouseOut}>스토어</a>
+                        {isSubMenuVisible && currentMenuValue === 5 && (
+                            <div>
+                                <ul>
+                                    <li><a href="#">베스트</a></li>
+                                    <li><a href="#">관람권</a></li>
+                                    <li><a href="#">스낵음료</a></li>
+                                    <li><a href="#">포토카드</a></li>
+                                </ul>
+                            </div>
+                        )}
                     </li>
+                  
                 </ul>
+               
             </div>
 
 

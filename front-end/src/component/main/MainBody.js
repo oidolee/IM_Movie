@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../styles/main/MainBody.css'
+import '../../styles/main/MainBody.module.css'
 import slide_1 from '../../assets/main/slide_1.jpg'
 
 class MainBody extends Component{
