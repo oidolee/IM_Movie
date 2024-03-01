@@ -27,6 +27,7 @@ function Header() {
     const handleMouseOut = () => {
         setIsSubMenuVisible(false);
         setCurrentMenuValue(null);
+       
     };
 
 
@@ -45,6 +46,14 @@ function Header() {
                         <li><a href='page_2'>고객센터</a></li>
                         <li><a href='page_3'>단체관람/대관문의</a></li>
                         <li><a href='StoreDetail'>로그인</a></li>
+                    </ul>
+                    <ul className='header-member-box'>
+                        <li>
+                            <i class="bi bi-person" className='bi-person'></i>
+                            <a href='#'>회원가입</a>
+                        </li>
+                        <li><a href='#' class="btn_reserve">바로예매</a></li>
+                        <li><i class="bi bi-list" className='bi-list'></i></li>
                     </ul>
                 </div>
             </div>

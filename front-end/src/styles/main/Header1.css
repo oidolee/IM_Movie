@@ -19,6 +19,19 @@
     color: #a7a7a7;
 }
 
+/* 회원가입 쪽 박스 */
+.header_section .gnb .right-gnb ul.header-member-box * {
+    color: #000;
+}
+
+.header_section .gnb .right-gnb ul > li .bi-person{
+    color: #000;
+}
+
+.header_section .gnb .right-gnb ul > li .btn_reserve{
+    background:url("../../assets/main/nav_side_reserve.png") no-repeat 0 2px;
+}
+
 .header_section .gnb .right-gnb ul{
     display: flex;
 } 
