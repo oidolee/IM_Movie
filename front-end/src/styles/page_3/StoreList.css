@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.content{
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid red;
+}
+
+.contents{    
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 2000px;
+    border: 1px solid;
+}
+
+.second_menu{
+    display: flex;
+}

@@ -11,6 +11,7 @@ import MainBody from '../main/MainBody';
 //page_1
 import Page1 from '../page_1/Page1';
 import Page2 from '../page_2/Page2';
+import Page3 from '../page_3/Page3';
 
 const AppRouter = () => {
 
@@ -21,7 +22,7 @@ const AppRouter = () => {
                     <Route path="/" exact={true} component={MainBody} />
                     <Route path="/page_1" exact={true} component={Page1} />
                     <Route path="/page_2" exact={true} component={Page2} />
-
+                    <Route path="/page3" exact={true} component={Page3} />
 
                     <Route path="/add-sample" exact={true} component={AddSampleComponent} />
                     <Route path="/samples" exact={true} component={ListSampleComponent} />
