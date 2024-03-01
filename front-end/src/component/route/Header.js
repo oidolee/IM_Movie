@@ -78,7 +78,7 @@ function Header() {
                         </div>
                     </li>
                     <li>
-                        <a href="#">스토어</a>
+                        <a href="/page3">스토어</a>
                         <div>
                              <ul>
                                 <li><a href="#">베스트</a></li>
