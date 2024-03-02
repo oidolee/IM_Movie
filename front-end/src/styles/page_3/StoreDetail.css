@@ -7,6 +7,15 @@
     display: flex;
 }
 
+
+.store_d{    
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 2000px;
+    border: 1px solid;
+    padding-top: 30px;
+}
+
 .store_detail  .pd_detail .pd_table .tit {
     padding: 10px 0 22px;
     font-size: 28px;
@@ -107,4 +116,30 @@ div {
     text-align: center;
     vertical-align: middle;
     background-color: #414141;
+}
+
+
+
+
+.tab_wrap.outer > .tab_tit {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #CCC;
+    font-size: 15px;
+    color: #7F7F7F;
+}
+
+.tab_wrap >.tab_tit {
+    border: none;
+}
+
+
+button {
+    border: 1px solid #DDD;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.tab_wrap {
+    margin-top: 100px;
 }
