@@ -68,7 +68,7 @@ class SignupComponent extends Component {
 
     render() {
         return (
-            <div id='Page' >
+            <div className='Page' id='Page' >
                 <div className='test'>
 
 

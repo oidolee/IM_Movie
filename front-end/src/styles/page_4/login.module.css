@@ -1,8 +1,8 @@
-#wrappage {
+.wrappage #wrappage {
     text-align: center;
     
 }
-#login-box {
+.wrappage .login_box {
     width: 300px;
     height: 220px;
     text-align: left;
@@ -10,7 +10,7 @@
     display: flex;
 }
 
-#btndiv {
+.wrappage #btndiv {
     
     display: inline-block;
     float: right;
@@ -18,13 +18,13 @@
    
 }
 
-#login-input {
+.wrappage #login-input {
     position: absolute;
     width: 350px;
    
 }
 
-#btn {
+.wrappage #btn {
     width: 100px;
     height: 100px;
     
