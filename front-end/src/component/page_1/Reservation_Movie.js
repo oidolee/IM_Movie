@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import moment from "moment";
-import "../../styles/page_1/Reservation_Movie.css";
+import style from  "../../styles/page_1/Reservation_Movie.css";
 import Reservation_Swiper from "./Reservation_Swiper.js";
 import Res_img15 from '../../assets/page_1/15.jpg';
 import Res_img12 from '../../assets/page_1/12.jpg';
@@ -14,7 +14,7 @@ class Reservation_Movie extends Component {
     const day = moment().format("DD");
 
     return (
-      <div className="Res_menu">
+      <div className={`Res_menu ${style.Res_menu}`}>
         <div id="Res_menu1">
           <ul>
             <li className="step">
