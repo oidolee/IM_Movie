@@ -61,11 +61,11 @@ function Header() {
                 <ul>
                     {/* 이벤트 버블링 */}
                     <li onMouseOver={() => handleMouseOver(1)} onMouseOut={handleMouseOut}>
-                        <a href="/test" onMouseEnter={() => handleMouseOver(1)} onMouseOut={handleMouseOut}>예매</a>
+                        <a href="/page_1/Reservation_Movie" onMouseEnter={() => handleMouseOver(1)} onMouseOut={handleMouseOut}>예매</a>
                         {isSubMenuVisible && currentMenuValue === 1 && (
                             <div className='bottom-menu-box'>
                                 <ul>
-                                    <li><a href="#">예매하기</a></li>
+                                    <li><a href="/page_1/Reservation_Movie">예매하기</a></li>
                                     <li><a href="#">상영시간표</a></li>
                                     <li><a href="#">할인</a></li>
                                 </ul>
