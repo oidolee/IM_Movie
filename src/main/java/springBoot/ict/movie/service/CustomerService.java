@@ -17,4 +17,7 @@ public interface CustomerService {
 	public int insertCustomer(CustomerDTO dto)
 			throws ServletException, IOException;
 
+	// 로그인
+	public int loginCustomer(String email)
+			throws ServletException, IOException;
 }

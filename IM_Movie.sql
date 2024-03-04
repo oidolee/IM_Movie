@@ -1,14 +1,14 @@
 ---------------------------------------파이널 플젝
 
 CREATE TABLE mvc_customer_tbl(
-    No              VARCHAR2(20)       PRIMARY KEY,
-    email           VARCHAR2(50)       NOT NULL,
-    name            VARCHAR2(20)       NOT NULL,
-    password        VARCHAR2(30)       NOT NULL,
-    hp              VARCHAR2(20)       NOT NULL,
-    birthday        DATE               NOT NULL,
-    regdate         DATE               DEFAULT sysdate,
-    show            VARCHAR2(1)        DEFAULT 'n'
+    c_No              VARCHAR2(20)       PRIMARY KEY,
+    c_email           VARCHAR2(50)       NOT NULL,
+    c_name            VARCHAR2(20)       NOT NULL,
+    c_password        VARCHAR2(30)       NOT NULL,
+    c_hp              VARCHAR2(20)       NOT NULL,
+    c_birthday        DATE               NOT NULL,
+    c_regdate         DATE               DEFAULT sysdate,
+    c_show            VARCHAR2(1)        DEFAULT 'y'
 );
 DROP TABLE mvc_customer_tbl;
 SELECT * FROM mvc_customer_tbl;
