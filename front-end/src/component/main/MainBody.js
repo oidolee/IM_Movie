@@ -18,5 +18,5 @@ class MainBody extends Component{
         );
     }
 }
-
+  
 export default MainBody;
