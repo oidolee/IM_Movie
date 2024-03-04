@@ -1,0 +1,32 @@
+#wrappage {
+    text-align: center;
+    
+}
+#login-box {
+    width: 300px;
+    height: 220px;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+}
+
+#btndiv {
+    
+    display: inline-block;
+    float: right;
+    padding-right: 5px;
+   
+}
+
+#login-input {
+    position: absolute;
+    width: 350px;
+   
+}
+
+#btn {
+    width: 100px;
+    height: 100px;
+    
+}
+

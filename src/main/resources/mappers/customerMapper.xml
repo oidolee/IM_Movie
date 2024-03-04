@@ -16,5 +16,8 @@
 		SELECT * FROM mvc_customer_tbl
 	</select>
 	
+	<!-- 로그인 처리 -->
+	<!-- SELECT COUNT(*) FROM DR_customers WHERE c_email=#{c_email} and c_password=#{c_password} and show ='y' -->
+	
 	
 </mapper>

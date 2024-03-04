@@ -15,5 +15,17 @@
     margin-left: 20px;
 }
 
+.test {
+    width: 500px;
+    
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+
+#btn {
+    margin-left: 250px;
+}
+
 
 
