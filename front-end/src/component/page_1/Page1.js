@@ -1,11 +1,10 @@
-
 import React, {Component} from 'react';
 
 class MainBody extends Component{
     render(){
         return(
             <div>
-               Page1111
+               Page2222
             </div>
         );
     }
