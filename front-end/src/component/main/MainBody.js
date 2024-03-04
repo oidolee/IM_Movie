@@ -9,7 +9,7 @@ class MainBody extends Component{
                 <div className='slide-box'>
                     <div className='slide_1'>
                         <img src={slide_1}></img>
-                        
+                         
                     </div>
 
                 </div>
