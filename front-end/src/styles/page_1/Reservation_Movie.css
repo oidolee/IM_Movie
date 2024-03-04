@@ -133,3 +133,13 @@ li {
 .menu4 {
     height: 100%;
 }
+
+.menu2_left a {
+    font-weight: 500;
+    color: black;
+}
+
+.menu3_left a {
+    font-weight: 600;
+    color: black;
+}
