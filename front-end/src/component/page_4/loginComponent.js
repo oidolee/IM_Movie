@@ -1,34 +1,19 @@
 import { Button, TextField } from '@mui/material';
-import React, { Component } from 'react';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom'; // useHistory 불러오기
 import ApiService from '../../ApiService';
-import '../../styles/page_4/login.module.css';
+import style from '../../styles/page_4/login.module.css';
 
-class Login extends Component {
+function Login() {
+    const [id, setId] = useState('');
+    const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const history = useHistory(); // useHistory 훅 사용하여 history 객체 가져오기
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            email: '',
-            password: '',
-            message: ''
-        }
-    }
-
-    onChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    };
-
-    // 로그인 함수 구현
-
-    login = (e) => {
-        e.preventDefault();
-
+    const handleLogin = () => {
         let inputData = {
-            email: this.state.email,
-            password: this.state.password
+            email: id,
+            password: password
         }
 
         console.log(inputData);
@@ -37,60 +22,59 @@ class Login extends Component {
         ApiService.login(inputData)
             .then(res => {
                 sessionStorage.setItem('user', JSON.stringify(res.data)); // 예시: res.data에는 사용자 정보가 들어있다고 가정
-                this.setState({
-
-                })
-                this.props.history.push('/');
+                history.push('/'); // history 객체를 사용하여 페이지 이동
             })
             .catch(err => {
                 console.log('에러', err);
-                this.setState({ message: '로그인에 실패했습니다.' });
+                setMessage('로그인에 실패했습니다.');
             });
-    }
+    };
 
-    render() {
-        return (
-            <div className='wrappage' id='wrappage'>
-                <br></br>
+    return (
+        <div id='wrappage' className={`loginComponent_wrappage ${style.wrappage}`}>
+            <br />
 
-                <div className='login_box' id='login-box'>
+            <div id='login-box' className={`login_box ${style.login_box}`}>
 
-                    {/* 첫 번째 행 */}
-                    <div className='input_box'>
+                {/* 첫 번째 행 */}
+                <div className={style.input_box}>
 
-                        <TextField
-                            required
-                            //id="standard-required"
-                            variant="standard"
-                            label="이메일"
-                            type="text"
-                            name="email"
-                            value={this.state.email}
-                            onChange={this.onChange}
-                        />
+                    <TextField
+                        required
+                        //id="standard-required"
+                        variant="standard"
+                        label="이메일"
+                        type="text"
+                        name="id"
+                        value={id}
+                        onChange={(e) => setId(e.target.value)}
+                    />
 
-
-
-                        <TextField
-                            required
-                            //id="standard-required"
-                            variant="standard"
-                            label="비밀번호"
-                            type="password"
-                            name="password"
-                            value={this.state.password}
-                            onChange={this.onChange}
-                        />
-                    </div>
-
-                    <Button id='btn' variant="contained" color="primary" onClick={this.login}>로그인</Button>
-
+                    <TextField
+                        required
+                        //id="standard-required"
+                        variant="standard"
+                        label="비밀번호"
+                        type="password"
+                        name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                 </div>
 
-                <br /><br />
+                <Button id='btn' className={`loginComponent_btn ${style.loginComponent_btn}`} variant="contained" color="primary" onClick={handleLogin}>Login</Button>
+                
+                
             </div>
-        )
-    }
+            <div id='login_bot' className={`login_bot ${style.login_bot}`}>
+                    <a href='/sign-up' id='signup' className={`signup ${style.signup}`}>회원가입</a>
+                    <a href='/sign-up' id='confirmID' >아이디 찾기</a>
+                    <a href='/sign-up' id='confirmPassword' className={`confirmPassword ${style.confirmPassword}`}>비밀번호 찾기</a>
+                </div>
+
+            <br /><br />
+        </div>
+    );
 }
 
 export default Login;

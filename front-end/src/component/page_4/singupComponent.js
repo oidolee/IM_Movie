@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ApiService from '../../ApiService';
 import { TextField, Button } from '@mui/material';
 
-import '../../styles/page_4/signup.module.css';
+import style from  '../../styles/page_4/signup.module.css';
 
 
 class SignupComponent extends Component {
@@ -36,9 +36,6 @@ class SignupComponent extends Component {
 
     saveCustomer = (e) => {
         e.preventDefault();
-
-        
-
         let inputData = {
             
             email: this.state.email,
@@ -68,10 +65,8 @@ class SignupComponent extends Component {
 
     render() {
         return (
-            <div className='Page' id='Page' >
-                <div className='test'>
-
-
+            <div id='Page' className={`singupComponent ${style.singupComponent}`} >
+                <div className={`singupComponent_box ${style.singupComponent_box}`}>
                     <h6>이메일</h6>
 
                     <TextField
@@ -137,7 +132,7 @@ class SignupComponent extends Component {
                     <br /><br />
 
                     <h6>핸드폰</h6>
-                    <select id="company" name="company" value={this.state.company} onChange={this.onChange}>
+                    <select id="company" name="company" className={`singupComponent_company ${style.singupComponent_company}`} value={this.state.company} onChange={this.onChange}>
                         <option>통신사</option>
                         <option>SKT</option>
                         <option>KT</option>
@@ -154,6 +149,7 @@ class SignupComponent extends Component {
                         value={this.state.hp}
                         placeholder='핸드폰 번호'
                         onChange={this.onChange}
+                        className={`singupComponent_text ${style.singupComponent_text}`}
                     />
                     
                     <br /><br />
@@ -170,10 +166,11 @@ class SignupComponent extends Component {
                         name="birthday"
                         value={this.state.birthday}
                         onChange={this.onChange}
+                        className={`singupComponent_text ${style.singupComponent_text}`}
                     />
                     
                     <br /><br /><br />
-                    <Button id="btn" variant="contained" color="primary" onClick={this.saveCustomer}>회원가입</Button>
+                    <Button id="btn" className={`singupComponent_btn ${style.singupComponent_btn}`} variant="contained" color="primary" onClick={this.saveCustomer}>회원가입</Button>
                 </div>
 
             </div>

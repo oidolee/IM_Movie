@@ -1,21 +1,21 @@
-.Page #Page {
+.singupComponent {
     width: 950px; /* 원하는 너비를 지정합니다. */
     margin: 0 auto; /* 가운데 정렬을 위해 margin을 auto로 설정합니다. */
     text-align: left;
 }
-.Page #company{
+.singupComponent .singupComponent_company{
     text-align: center;
     margin-top: 20px;
     margin-right: 20px;
     
 }
 
-.Page #standard-required{
+.singupComponent .singupComponent_text{
     width: 300px;
     margin-left: 20px;
 }
 
-.Page .test {
+.singupComponent .singupComponent_box {
     width: 500px;
     
     margin: 0 auto;
@@ -23,7 +23,7 @@
 }
 
 
-.Page #btn {
+.singupComponent .singupComponent_btn {
     margin-left: 250px;
 }
 
