@@ -17,7 +17,10 @@
 	</select>
 	
 	<!-- 로그인 처리 -->
-	<!-- SELECT COUNT(*) FROM DR_customers WHERE c_email=#{c_email} and c_password=#{c_password} and show ='y' -->
+	<select id="loginCustomer" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM mvc_customers WHERE email=#{email} and password=#{password} and show ='y'
+	</select>
+	
 	
 	
 </mapper>

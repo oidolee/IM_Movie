@@ -1,15 +1,15 @@
-a {
+.Res_menu a {
     text-decoration: none;
     color: #666;
 }
 
-ul {
+.Res_menu ul {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-li {
+.Res_menu li {
     list-style: none;
 }
 
@@ -28,7 +28,7 @@ li {
     width: 100px;
 }
 
-.step {
+.Res_menu .step {
     padding: 100px 20px;
     position: relative;
     display: flex;
@@ -39,7 +39,7 @@ li {
     font-size: 12px;
 }
 
-.step_content {
+.Res_menu .step_content {
     display: none;
     position: absolute;
     background-color: white;
@@ -50,7 +50,7 @@ li {
     padding-left: 20px;
 }
 
-.step_content dt {
+.Res_menu .step_content dt {
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -61,57 +61,57 @@ li {
     font-weight: 600;
 }
 
-.step:hover .step_content {
+.Res_menu .step:hover .step_content {
     background-color: #FF243E;
     display: flex;
     align-items: center;
     height: 100%; 
 }
 
-.step:hover {
+.Res_menu .step:hover {
     background-color: #FF243E;
     cursor: pointer;
 }
 
-.step:hover a {
+.Res_menu .step:hover a {
     color: white;
 }
 
-.menu2,
-.menu3,
-.menu4 {
+.Res_menu .menu2,
+.Res_menu .menu3,
+.Res_menu .menu4 {
     display: flex;
     flex-direction: row;
 }
 
-.menu2 ul {
+.Res_menu .menu2 ul {
     list-style: none;
     width: 200px;
     font-size: 15px;
     text-align: left;
 }
 
-.menu3 ul,
-.menu4 ul {
+.Res_menu .menu3 ul,
+.Res_menu .menu4 ul {
     list-style: none;
     width: 400px;
     font-size: 15px;
     text-align: left;
 }
 
-.menu2 ul li,
-.menu3 ul li,
-.menu4 ul li {
+.Res_menu .menu2 ul li,
+.Res_menu .menu3 ul li,
+.Res_menu .menu4 ul li {
     margin-top: 20px;
     padding-left: 20px;
 }
 
-.menu2_left,
-.menu3_left {
+.Res_menu .menu2_left,
+.Res_menu .menu3_left {
     background-color: #F5F5F5;
 }
 
-.Res_tit {
+.Res_menu .Res_tit {
     font-size: 18px;
     padding: 20px 150px;
     border: 1px solid #666;
@@ -123,23 +123,28 @@ li {
     font-weight: 600;
 }
 
-.Res_left > li:nth-of-type(2) {
+.Res_menu .Res_left > li:nth-of-type(2) {
     height: -webkit-calc(100% - 65px); /* google, safari */
 }
 
-.Res_left,
-.menu2,
-.menu3,
-.menu4 {
+.Res_menu .Res_left,
+.Res_menu .menu2,
+.Res_menu .menu3,
+.Res_menu .menu4 {
     height: 100%;
 }
 
-.menu2_left a {
+.Res_menu .menu2_left a {
     font-weight: 500;
     color: black;
 }
 
-.menu3_left a {
+.Res_menu .menu3_left a {
     font-weight: 600;
     color: black;
+}
+
+.Res_menu img {
+    width: 20px;
+    margin-right: 10px;
 }
