@@ -1,11 +1,32 @@
 import React, { Component } from 'react';
 import '../../styles/page_3/StoreDetail.css'
 import package1 from '../../assets/page_3/package1.jpg'
+import GiftModal from './GiftModal'; // GiftModal 컴포넌트를 import
+
 
 class StoreDetail extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isGiftModalOpen: false, // 선물하기 모달 열림 여부를 추적하는 상태
+        };
+    }
+
+    // 선물하기 버튼 클릭시 모달 열기
+    openGiftModal = () => {
+        this.setState({ isGiftModalOpen: true });
+    };
+
+    // 선물하기 모달 닫기
+    closeGiftModal = () => {
+        this.setState({ isGiftModalOpen: false });
+    };
+
+
     render() {
         return (
-            <div className='store'>
+            <div className='store_d'>
                 <div className='store_detail'>
                     <div className="main_img">
                         <img src={package1} alt="[롯시와 봄] 패키지" />
@@ -60,11 +81,26 @@ class StoreDetail extends Component {
                             총 상품금액<strong className="txt_price_str">22,000<em>원</em></strong>
                         </div>
                         <div className="btn_wrap">
-                            <button className="btn_col2 ty7">선물하기</button>
+                            <button className="btn_col2 ty7" onClick={this.openGiftModal}>선물하기</button>
                             <button className="btn_col1 ty7">구매하기</button>
                         </div>
+
+                        {/* 선물하기 모달/팝업 조건부 렌더링 */}
+                        {this.state.isGiftModalOpen && <GiftModal onClose={this.closeGiftModal} />}
+
                     </div>
                 </div>
+
+
+                <ul class="tab_wrap">
+                    <button type="button" className="tab_tit" style={{ width: '50%', left: '0%' }}>
+                        <span>사용방법</span>
+                    </button>
+                    <button type="button" className="tab_tit" style={{ width: '50%', left: '0%' }}>
+                        <span>유의사항</span>
+                    </button>
+                </ul>
+                
             </div>
         );
     }
