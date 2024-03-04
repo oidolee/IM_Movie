@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../styles/page_3/StoreDetail.module.css'
+import style from  '../../styles/page_3/StoreDetail.module.css'
 import package1 from '../../assets/page_3/package1.jpg'
 import StoreGift from './StoreGift'; // StoreGift 컴포넌트를 import
 
@@ -27,14 +27,14 @@ class StoreDetail extends Component {
 
     render() {
         return (
-            <div className='store_d'>
-                <div className='store_detail'>
-                    <div className="main_img">
+            <div className={`store_d ${style.store_d}`}>
+                <div className={`store_detail ${style.store_detail}`}>
+                    <div className={`main_img ${style.main_img}`}>
                         <img src={package1} alt="[롯시와 봄] 패키지" />
                     </div>
 
-                    <div className="pd_detail">
-                        <table className="pd_table" summary="상품 상세설명에 대한 표입니다">
+                    <div className={`pd_detail ${style.pd_detail}`}>
+                        <table className={`pd_table ${style.pd_table}`} summary="상품 상세설명에 대한 표입니다">
                             <caption>상품 상세내용</caption>
                             <colgroup>
                                 <col style={{ width: '30%' }} />
@@ -42,16 +42,16 @@ class StoreDetail extends Component {
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="row" className="badge_wrap" colSpan="2"></th>
+                                    <th scope="row" className={`badge_wrap ${style.badge_wrap}`} colSpan="2"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row" className="tit" colSpan="2">[롯시와 봄] 패키지</th>
+                                    <th scope="row" className={`tit ${style.tit}`} colSpan="2">[롯시와 봄] 패키지</th>
                                 </tr>
                                 <tr>
-                                    <td><span className="txt_sale">15%</span></td>
-                                    <td><span className="txt_price">22,000<em>원</em></span><span className="txt_price_ins">26,000원</span></td>
+                                    <td><span className={`txt_sale ${style.txt_sale}`}>15%</span></td>
+                                    <td><span className={`txt_price ${style.txt_price}`}>22,000<em>원</em></span><span className={`txt_price_ins ${style.txt_price_ins}`}>26,000원</span></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">구성품</th>
@@ -73,15 +73,15 @@ class StoreDetail extends Component {
                                 </tr>
                             </tbody>
                         </table>
-                        <div className="bx_num">
-                            <button className="btn_mins">삭제</button>
-                            <div className="txt_num">1</div>
-                            <button className="btn_plus">추가</button>
+                        <div className={`bx_num ${style.bx_num}`}>
+                            <button className={`btn_mins ${style.btn_mins}`}>삭제</button>
+                            <div className={`txt_num ${style.txt_num}`}>1</div>
+                            <button className={`txt_pbtn_plusrice ${style.btn_plus}`}>추가</button>
                         </div>
-                        <div className="txt_price_wrap">
-                            총 상품금액<strong className="txt_price_str">22,000<em>원</em></strong>
+                        <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
+                            총 상품금액<strong className={`txt_price_str ${style.txt_price_str}`}>22,000<em>원</em></strong>
                         </div>
-                        <div className="btn_wrap">
+                        <div className={`btn_wrap ${style.btn_wrap}`}>
                             <button className="btn_col2 ty7" onClick={this.openStoreGift}>선물하기</button>
                             <button className="btn_col1 ty7">구매하기</button>
                         </div>
@@ -93,11 +93,11 @@ class StoreDetail extends Component {
                 </div>
 
 
-                <ul class="tab_wrap">
-                    <button type="button" className="tab_tit" style={{ width: '50%', left: '0%' }}>
+                <ul class={`tab_wrap ${style.tab_wrap}`}>
+                    <button type="button" className={`tab_tit ${style.tab_tit}`} style={{ width: '50%', left: '0%' }}>
                         <span>사용방법</span>
                     </button>
-                    <button type="button" className="tab_tit" style={{ width: '50%', left: '0%' }}>
+                    <button type="button" className={`tab_tit ${style.tab_tit}`} style={{ width: '50%', left: '0%' }}>
                         <span>유의사항</span>
                     </button>
                 </ul>

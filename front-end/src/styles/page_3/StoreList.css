@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.contents{    
+.page3_contents{    
     max-width: 1000px;
     margin: 0 auto;
     height: 2000px;
@@ -37,7 +37,7 @@
     text-align: left; /* 왼쪽 정렬 스타일 추가 */
 }
 
-.store2 {
+.page3_store2 {
     margin-top: 30px;
 }
 
@@ -51,7 +51,7 @@ img {
     vertical-align: top;
 }
 
-.contents_mall_home .store2 .store_item .item_content .item_title h4 {
+.contents_mall_home .page3_store2 .store_item .item_content .item_title h4 {
     margin: 5px 0;
     font-size: 17px;
     
@@ -101,12 +101,12 @@ h1, h2, h3, h4, h5, h6, address, caption, em, th {
 }
 
 
-.store2 .lc_itm .item_content .badge_wrap {
+.page3_store2 .lc_itm .item_content .badge_wrap {
     height: 18px;
     vertical-align: middle;
 }
 
-.store .store2 .store_item {
+.page3_store .page3_store2 .store_item {
     display: inline-block;
     width: 33%;
     min-height: 320px;
