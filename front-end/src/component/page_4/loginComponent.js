@@ -1,65 +1,56 @@
-import { Button, TextField, Grid } from '@mui/material';
-import React, { Component } from 'react';
-import '../../styles/page_4/login.module.css';
+import { Button, TextField } from '@mui/material';
+import { styled } from '@mui/system';
+import { useState } from 'react';
+import style from  '../../styles/page_4/login.module.css';
 
-class Login extends Component {
+function Login() {
+    const [id, setId] = useState('');
+    const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
 
-    constructor(props) {
-        super(props);
+    const handleLogin = () => {
+        // 로그인 처리 로직 구현
+    };
 
-        this.state = {
-            id: '',
-            password: '',
-            message: ''
-        }
-    }
+    return (
+        <div id='wrappage' className={`loginComponent_wrappage ${style.wrappage}`}>
+            <br />
 
-    // 로그인 함수 구현
-
-    render() {
-        return (
-            <div id='wrappage'>
-                <br></br>
-
-                <div id='login-box'>
+            <div id='login-box' className={`login_box ${style.login_box}`}>
+                
+                {/* 첫 번째 행 */}
+                <div className={style.input_box}>
                     
-                        {/* 첫 번째 행 */}
-                            <div className='input-box'>
-                               
-                                <TextField
-                                    required
-                                    id="standard-required"
-                                    variant="standard"
-                                    label="이메일"
-                                    type="text"
-                                    name="id"
-                                    value={this.state.id}
-                                />
-                             
-                            
-                            
-                                <TextField
-                                    required
-                                    id="standard-required"
-                                    variant="standard"
-                                    label="비밀번호"
-                                    type="password"
-                                    name="password"
-                                    value={this.state.password}
-                                />
-                            </div>
-                        
-                            <Button id='btn' variant="contained" color="primary" onClick={this.Login}>Login</Button>
-                            
-                            
-                          
+                    <TextField
+                        required
+                        id="standard-required"
+                        variant="standard"
+                        label="이메일"
+                        type="text"
+                        name="id"
+                        value={id}
+                        onChange={(e) => setId(e.target.value)}
+                    />
+                
+                    <TextField
+                        required
+                        id="standard-required"
+                        variant="standard"
+                        label="비밀번호"
+                        type="password"
+                        name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                 </div>
                 
-
-                <br /><br />
+                <Button id='btn' className={`loginComponent_btn ${style.loginComponent_btn}`} variant="contained" color="primary" onClick={handleLogin}>Login</Button>
+                
             </div>
-        )
-    }
+
+            <br /><br />
+        </div>
+    );
 }
 
 export default Login;

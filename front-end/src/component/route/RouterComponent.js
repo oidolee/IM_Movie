@@ -9,7 +9,7 @@ import EditSampleComponent from "../sample/EditSampleComponent";
 import MainBody from '../main/MainBody';
 
 //page_1
-import Reservation_Movie from '../page_1/Reservation_Movie';
+//import Reservation_Movie from '../page_1/Reservation_Movie';
 import Page2 from '../page_2/Page2';
 import Page3 from '../page_3/Page3';
 import StoreDetail from '../page_3/StoreDetail';
@@ -30,7 +30,7 @@ const AppRouter = () => {
                     <Route path="/" exact={true} component={MainBody} />
 
                     <Route>
-                        <Route path="/page_1/Reservation_Movie" exact={true} component={Reservation_Movie} />
+                        {/* <Route path="/page_1/Reservation_Movie" exact={true} component={Reservation_Movie} /> */}
                     </Route>
 
                     <Route path="/page_2" exact={true} component={Page2} />
