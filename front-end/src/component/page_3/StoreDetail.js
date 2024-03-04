@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../styles/page_3/StoreDetail.css'
+import '../../styles/page_3/StoreDetail.module.css'
 import package1 from '../../assets/page_3/package1.jpg'
 import StoreGift from './StoreGift'; // StoreGift 컴포넌트를 import
 
