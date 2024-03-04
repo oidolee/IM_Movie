@@ -49,6 +49,9 @@ class ApiService {
         return axios.get(url + "/index");
     }
 
+    login(inputData) {
+        return axios.get(url + "/index",inputData);
+    }
 
 }
 export default new ApiService();

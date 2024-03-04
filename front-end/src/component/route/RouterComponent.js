@@ -9,7 +9,7 @@ import EditSampleComponent from "../sample/EditSampleComponent";
 import MainBody from '../main/MainBody';
 
 //page_1
-//import Reservation_Movie from '../page_1/Reservation_Movie';
+import Reservation_Movie from '../page_1/Reservation_Movie';
 import Page2 from '../page_2/Page2';
 import Page3 from '../page_3/Page3';
 import StoreDetail from '../page_3/StoreDetail';
@@ -18,6 +18,9 @@ import StoreDetail from '../page_3/StoreDetail';
 import listCustomer from '../page_4/listCustomer';
 import singupComponent from '../page_4/singupComponent';
 import loginComponent from '../page_4/loginComponent';
+
+// page_6
+import MyPage from '../page_6/MyPage';
 
 
 
@@ -30,7 +33,7 @@ const AppRouter = () => {
                     <Route path="/" exact={true} component={MainBody} />
 
                     <Route>
-                        {/* <Route path="/page_1/Reservation_Movie" exact={true} component={Reservation_Movie} /> */}
+                        <Route path="/page_1/Reservation_Movie" exact={true} component={Reservation_Movie} />
                     </Route>
 
                     <Route path="/page_2" exact={true} component={Page2} />
@@ -43,6 +46,10 @@ const AppRouter = () => {
 
                     <Route path="/sign-up" exact={true} component={singupComponent} />
                     <Route path="/listCustomer" exact={true} component={listCustomer} />
+                    <Route path="/login" exact={true} component={loginComponent} />
+
+                    <Route path="/mypage" exact={true} component={MyPage} />
+                    <Route path="/login" exact={true} component={loginComponent} />
                     <Route path="/login" exact={true} component={loginComponent} />
 
 
