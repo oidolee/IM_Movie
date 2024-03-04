@@ -14,6 +14,12 @@ import Page2 from '../page_2/Page2';
 import Page3 from '../page_3/Page3';
 import StoreDetail from '../page_3/StoreDetail';
 
+//page_4
+import listCustomer from '../page_4/listCustomer';
+import singupComponent from '../page_4/singupComponent';
+import loginComponent from '../page_4/loginComponent';
+
+
 
 const AppRouter = () => {
 
@@ -30,6 +36,12 @@ const AppRouter = () => {
                     <Route path="/add-sample" exact={true} component={AddSampleComponent} />
                     <Route path="/samples" exact={true} component={ListSampleComponent} />
                     <Route path="/edit-sample" exact={true} component={EditSampleComponent} />
+
+                    <Route path="/sign-up" exact={true} component={singupComponent} />
+                    <Route path="/listCustomer" exact={true} component={listCustomer} />
+                    <Route path="/login" exact={true} component={loginComponent} />
+
+
                 </div>
             </BrowserRouter>
         </div>
