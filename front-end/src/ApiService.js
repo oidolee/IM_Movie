@@ -1,5 +1,6 @@
 import axios from 'axios'; // npm install -f axios@^1.3.5
 const SAMPLE_API_BASE_URL = "http://localhost:8081/samples";
+const url = "http://localhost:8081";
 
 class ApiService {
 
@@ -33,6 +34,20 @@ class ApiService {
         console.log('editsSample() 호출!!', sampleID);
         return axios.delete(SAMPLE_API_BASE_URL + "/"+ sampleID);
     };
+
+    // page_4
+    
+    // insert
+    addCustomer(inputData) {
+        console.log('addCustomer 호출', inputData);
+        return axios.post(url + "/index", inputData);
+    }
+
+    // 고객리스트
+    listCustomer(inputData) {
+        console.log('listCustomer 호출');
+        return axios.get(url + "/index");
+    }
 
 
 }
