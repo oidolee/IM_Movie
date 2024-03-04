@@ -71,7 +71,7 @@
 }
 
 
-div {
+.store_detail div {
     display: block;
 }
 
@@ -79,7 +79,7 @@ div {
     padding: 0 40px;
 }
 
-.bx_num .btn_mins {
+.store_detail .bx_num .btn_mins {
     left: 0;
     background-image: url();
 }
@@ -94,19 +94,19 @@ div {
     font: 0 auto;
 }
 
-.btn_col2.ty7 {
+.store_detail .btn_col2.ty7 {
     height: 52px;
     line-height: 50px;
     padding: 0 24px;
 }
 
-.btn_col1.ty7 {
+.store_detail .btn_col1.ty7 {
     height: 52px;
     line-height: 50px;
     padding: 0 24px;
 }
 
-.btn_col2 {
+.store_detail .btn_col2 {
     display: inline-block;
     box-sizing: border-box;
     border-radius: 4px;
@@ -140,6 +140,6 @@ button {
     background-color: #fff;
 }
 
-.tab_wrap {
+.store_detail .tab_wrap {
     margin-top: 100px;
 }
