@@ -159,28 +159,28 @@ class Reservation_Movie extends Component {
               <div className="menu3">
                 <ul className="menu3_left">
                   <li>
-                    <a href="#none">서울</a>
+                    <a href="#none">파묘</a>
                   </li>
                   <li>
-                    <a href="#none">경기/인천</a>
+                    <a href="#none">듄:파트2</a>
                   </li>
                   <li>
-                    <a href="#none">충청/대전</a>
+                    <a href="#none">건국전쟁</a>
                   </li>
                   <li>
-                    <a href="#none">전라/광주</a>
+                    <a href="#none">윙카</a>
                   </li>
                   <li>
-                    <a href="#none">경북/대구</a>
+                    <a href="#none">소풍</a>
                   </li>
                   <li>
-                    <a href="#none">경남/부산/울산</a>
+                    <a href="#none">로봇 드림</a>
                   </li>
                   <li>
-                    <a href="#none">강원</a>
+                    <a href="#none">패스트 라이브즈</a>
                   </li>
                   <li>
-                    <a href="#none">제주</a>
+                    <a href="#none">엘리멘탈</a>
                   </li>
                 </ul>
               </div>
