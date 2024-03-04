@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import moment from "moment";
 import "../../styles/page_1/Reservation_Movie.css";
 import Reservation_Swiper from "./Reservation_Swiper.js";
+import Res_img15 from '../../assets/page_1/15.jpg';
+import Res_img12 from '../../assets/page_1/12.jpg';
+import Res_imgAll from '../../assets/page_1/all.jpg';
 
 class Reservation_Movie extends Component {
   render() {
@@ -159,28 +162,28 @@ class Reservation_Movie extends Component {
               <div className="menu3">
                 <ul className="menu3_left">
                   <li>
-                    <a href="#none">파묘</a>
+                    <a href="#none"><img src={Res_img15} />파묘</a>
                   </li>
                   <li>
-                    <a href="#none">듄:파트2</a>
+                    <a href="#none"><img src={Res_img12} />듄:파트2</a>
                   </li>
                   <li>
-                    <a href="#none">건국전쟁</a>
+                    <a href="#none"><img src={Res_img12} />건국전쟁</a>
                   </li>
                   <li>
-                    <a href="#none">윙카</a>
+                    <a href="#none"><img src={Res_imgAll} />윙카</a>
                   </li>
                   <li>
-                    <a href="#none">소풍</a>
+                    <a href="#none"><img src={Res_img12} />소풍</a>
                   </li>
                   <li>
-                    <a href="#none">로봇 드림</a>
+                    <a href="#none"><img src={Res_imgAll} />로봇 드림</a>
                   </li>
                   <li>
-                    <a href="#none">패스트 라이브즈</a>
+                    <a href="#none"><img src={Res_img12} />패스트 라이브즈</a>
                   </li>
                   <li>
-                    <a href="#none">엘리멘탈</a>
+                    <a href="#none"><img src={Res_imgAll} />엘리멘탈</a>
                   </li>
                 </ul>
               </div>

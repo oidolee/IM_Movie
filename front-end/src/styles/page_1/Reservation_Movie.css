@@ -143,3 +143,8 @@ li {
     font-weight: 600;
     color: black;
 }
+
+img {
+    width: 20px;
+    margin-right: 10px;
+}
