@@ -1,7 +1,8 @@
-import { Button, TextField } from '@mui/material';
-import React,{ Component } from 'react';
+import { Button, TextField, Grid } from '@mui/material';
+import React, { Component } from 'react';
+import '../../styles/page_4/login.module.css';
 
-class login extends Component {
+class Login extends Component {
 
     constructor(props) {
         super(props);
@@ -13,39 +14,52 @@ class login extends Component {
         }
     }
 
-    Login 
-
+    // 로그인 함수 구현
 
     render() {
         return (
-            <div>
-                아이디
-                <TextField
-                    required
-                    id="standard-required"
-                    variant="standard"
-                    label="id"
-                    type="text"
-                    name="id"
-                    value={this.state.id}
-                />
-                <br />
-                비밀번호
-                <TextField
-                    required
-                    id="standard-required"
-                    variant="standard"
-                    label="password"
-                    type="text"
-                    name="password"
-                    value={this.state.password}
-                />
-                <br />
+            <div id='wrappage'>
+                <br></br>
 
-                <Button variant="contained" color="primary" onClick={this.Login}> Login </Button>
+                <div id='login-box'>
+                    
+                        {/* 첫 번째 행 */}
+                            <div className='input-box'>
+                               
+                                <TextField
+                                    required
+                                    id="standard-required"
+                                    variant="standard"
+                                    label="이메일"
+                                    type="text"
+                                    name="id"
+                                    value={this.state.id}
+                                />
+                             
+                            
+                            
+                                <TextField
+                                    required
+                                    id="standard-required"
+                                    variant="standard"
+                                    label="비밀번호"
+                                    type="password"
+                                    name="password"
+                                    value={this.state.password}
+                                />
+                            </div>
+                        
+                            <Button id='btn' variant="contained" color="primary" onClick={this.Login}>Login</Button>
+                            
+                            
+                          
+                </div>
+                
+
+                <br /><br />
             </div>
         )
     }
 }
 
-export default login;
+export default Login;
