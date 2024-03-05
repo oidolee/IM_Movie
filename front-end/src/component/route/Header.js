@@ -45,7 +45,7 @@ function Header() {
                 <div className='right-gnb'>
                     <ul>
                         <li><a href='page_1'>멤버쉽</a></li>
-                        <li><a href='page_2'>고객센터</a></li>
+                        <li><a href='/FAQ'>고객센터</a></li>
                         <li><a href='page_3'>단체관람/대관문의</a></li>
                         <li><a href='/login'>로그인</a></li>
                     </ul>

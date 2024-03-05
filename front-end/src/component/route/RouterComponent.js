@@ -20,6 +20,10 @@ import listCustomer from '../page_4/listCustomer';
 import singupComponent from '../page_4/singupComponent';
 import loginComponent from '../page_4/loginComponent';
 
+//page_5
+import movieMain from '../page_5/main/movieMain';
+import FAQ from '../page_5/board/FAQ';
+
 
 
 const AppRouter = () => {
@@ -45,6 +49,10 @@ const AppRouter = () => {
                     <Route path="/sign-up" exact={true} component={singupComponent} />
                     <Route path="/listCustomer" exact={true} component={listCustomer} />
                     <Route path="/login" exact={true} component={loginComponent} />
+
+                    <Route path="/movieMain" exact={true} component={movieMain} />
+                    <Route path="/FAQ" exact={true} component={FAQ} />
+
 
 
                 </div>
