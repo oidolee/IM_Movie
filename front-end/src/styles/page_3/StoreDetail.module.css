@@ -21,9 +21,11 @@
     font-size: 28px;
 }
 
-.store_detail .pd_detail .pd_table th {
+.store_detail .pd_detail .pd_table th  {
     text-align: left;
 }
+
+
 
 .store_detail  .pd_detail .bx_num .txt_num {
     padding: 23px 0;
@@ -79,7 +81,7 @@
     padding: 0 40px;
 }
 
-.store_detail .bx_num .btn_mins {
+.bx_num .btn_mins {
     left: 0;
     background-image: url();
 }
@@ -90,23 +92,23 @@
     bottom: 0;
     background: no-repeat 50% 50%;
     border: 0 none;
-    text-indent: -9999em;
+
     font: 0 auto;
 }
 
-.store_detail .btn_col2.ty7 {
+.btn_col2.ty7 {
     height: 52px;
     line-height: 50px;
     padding: 0 24px;
 }
 
-.store_detail .btn_col1.ty7 {
+.btn_col1.ty7 {
     height: 52px;
     line-height: 50px;
     padding: 0 24px;
 }
 
-.store_detail .btn_col2 {
+.btn_col2 {
     display: inline-block;
     box-sizing: border-box;
     border-radius: 4px;
@@ -140,6 +142,27 @@ button {
     background-color: #fff;
 }
 
+
+
+
+.tab_tit {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #CCC;
+    font-size: 15px;
+    color: #7F7F7F;
+}
+
+
+
+
+button {
+    border: 1px solid #DDD;
+    cursor: pointer;
+    background-color: #fff;
+}
+
 .store_detail .tab_wrap {
     margin-top: 100px;
 }
+
