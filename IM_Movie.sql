@@ -36,3 +36,31 @@ insert into mvc_sample_tbl
     values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_2', 'brand_2', 'madein_2', 2 );
 commit;    
 SELECT * FROM mvc_sample_tbl;
+
+
+-- 민진 시작
+
+DROP TABLE im_parking;
+CREATE TABLE im_parking (
+    ip_no NUMBER PRIMARY KEY,
+    ip_block VARCHAR(2) NOT NULL,
+    ip_number NUMBER(20) NOT NULL,
+    ip_carnumber VARCHAR(20) NOT NULL,
+    ip_inoutcheck CHAR(1) NOT NULL, -- 예약 체크
+    ip_client VARCHAR(50) NOT NULL,
+    ip_regdate TIMESTAMP DEFAULT sysdate,
+    reservation_id NUMBER,
+    FOREIGN KEY (reservation_id) REFERENCES reservation(res_id)
+);
+insert into im_parking 
+    values( nvl( (select max(ip_no) from im_parking)+1,1 ), 'A', 1, '경기51더4433', 'Y' ,'manajini', '2024-03-05 16:00:00', 1 );
+    
+update im_parking
+set ip_block = 'B'
+where ip_no = 1;
+
+delete from im_parking  where ip_no  = 1;
+commit;
+
+
+-- 민진 끝

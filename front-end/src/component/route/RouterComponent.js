@@ -49,8 +49,7 @@ const AppRouter = () => {
                     <Route path="/login" exact={true} component={loginComponent} />
 
                     <Route path="/mypage" exact={true} component={MyPage} />
-                    <Route path="/login" exact={true} component={loginComponent} />
-                    <Route path="/login" exact={true} component={loginComponent} />
+          
 
 
                 </div>

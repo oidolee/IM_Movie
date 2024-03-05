@@ -4,9 +4,15 @@ import Header from './component/route/Header';
 import RouterComponent from './component/route/RouterComponent'
 import Footer from './component/route/Footer';
 
+//import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Test from '../src/component/main/Test';
+
+
 function App() {
   return (
     <div className="App">
+      {/* <Test /> */}
       <Header />
       <RouterComponent />
       <Footer />
@@ -15,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+
