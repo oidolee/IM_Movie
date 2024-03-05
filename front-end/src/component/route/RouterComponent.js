@@ -27,6 +27,9 @@ import signupCheck from '../page_4/signupCheck';
 import movieMain from '../page_5/main/movieMain';
 import FAQ from '../page_5/board/FAQ';
 
+//page_6
+import MyPage from '../page_6/MyPage';
+
 
 
 const AppRouter = () => {
@@ -57,6 +60,8 @@ const AppRouter = () => {
 
                     <Route path="/movieMain" exact={true} component={movieMain} />
                     <Route path="/FAQ" exact={true} component={FAQ} />
+
+                    <Route path="/MyPage" exact={true} component={MyPage} />
 
 
 
