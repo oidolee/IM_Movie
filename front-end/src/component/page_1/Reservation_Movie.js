@@ -5,13 +5,31 @@ import Reservation_Swiper from "./Reservation_Swiper.js";
 import Res_img15 from '../../assets/page_1/15.jpg';
 import Res_img12 from '../../assets/page_1/12.jpg';
 import Res_imgAll from '../../assets/page_1/all.jpg';
+import Res_screen from '../../assets/page_1/screen.png';
 
 class Reservation_Movie extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupOpen: false
+    };
+  }
+
+  handleConfirmation = () => {
+    // 팝업 확인 시 /page_1/Seat_Movie 페이지로 이동
+    this.setState({ popupOpen: false });
+    window.location.href = "/page_1/Reservation_Seat";
+  }
+
+  handleCancellation = () => {
+    // 팝업 취소 시 /page_1/Reservation_Movie 페이지로 이동
+    this.setState({ popupOpen: false });
+    window.location.href = "/page_1/Reservation_Movie";
+  }
+
   render() {
     const sysdate = moment().format("YYYY-MM-DD");
-    const year = moment().format("YYYY");
-    const month = moment().format("MM");
-    const day = moment().format("DD");
 
     return (
       <div className={`Res_menu ${style.Res_menu}`}>
@@ -195,13 +213,44 @@ class Reservation_Movie extends Component {
             <li className="Res_tit">{sysdate}</li>
             <li>
               <div className="menu4">
-                <ul className="menu4_right">
-                  <Reservation_Swiper />
+                <ul className="menu4_left">
+                  <li>
+                    <Reservation_Swiper />
+                  </li>
+                  <div className="menu4_main">
+                    <a href="#none"><img src={Res_img15} />파묘</a>
+                  </div>
+                  <div className="menu4_sub">
+                    <ul>
+                      <li>
+                      <a href="#none" onClick={() => this.setState({ popupOpen: true })}>
+                          <span>
+                            13:40<br />
+                            82/100      3관
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>               
                 </ul>
               </div>
             </li>
           </ul>
         </div>
+
+         {/* 팝업 창 */}
+         {this.state.popupOpen && (
+          <div className="popup">
+            <div className="popup_content">
+              <strong>파묘/13:40(3관)</strong>
+              <p>잔여좌석 <strong>82</strong>/100</p>
+              <p><img src={Res_img15} />본 영화는 만 15세 이상 관람가 영화입니다.</p>
+              <img className="Res_screen" src={Res_screen} />
+              <button name="n" onClick={this.handleCancellation}>취소</button>
+              <button name="y" onClick={this.handleConfirmation}>인원/좌석 선택</button>  
+            </div>
+          </div>
+        )}
       </div>
     );
   }

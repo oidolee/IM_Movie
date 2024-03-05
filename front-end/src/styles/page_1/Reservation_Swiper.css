@@ -6,7 +6,6 @@
 .Reservation_Swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,3 +17,16 @@
   height: 100%;
   object-fit: cover;
 }
+
+.Reservation_Swiper .swiper_content {
+  display: flex;
+  width: 400x;
+}
+
+.Reservation_Swiper .swiper_content li {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
