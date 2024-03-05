@@ -67,9 +67,9 @@ function Login() {
                 
             </div>
             <div id='login_bot' className={`login_bot ${style.login_bot}`}>
-                    <a href='/sign-up' id='signup' className={`signup ${style.signup}`}>회원가입</a>
+                    <a href='/sign-up' id='signupPage' className={`signup ${style.signup}`}>회원가입</a>
                     <a href='/sign-up' id='confirmID' >아이디 찾기</a>
-                    <a href='/sign-up' id='confirmPassword' className={`confirmPassword ${style.confirmPassword}`}>비밀번호 찾기</a>
+                    <a href='/sign-up' id='confrimPwd' className={`confirmPassword ${style.confirmPassword}`}>비밀번호 찾기</a>
                 </div>
 
             <br /><br />

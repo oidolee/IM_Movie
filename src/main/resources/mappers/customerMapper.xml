@@ -7,18 +7,19 @@
 	
 	<!-- 고객등록 -->
 	<insert id="insertCustomer" parameterType="springBoot.ict.movie.dto.CustomerDTO">
-		INSERT INTO mvc_customer_tbl(No, email, name, password, hp, birthday)
-		VALUES((SELECT NVL(MAX(No)+1, 1) FROM mvc_customer_tbl), #{email}, #{name}, #{password}, #{hp}, #{birthday}) 
+		INSERT INTO IM_Customer(IC_No, IC_email, IC_name, IC_password, IC_hp, IC_birthday, IC_address)
+		VALUES((SELECT NVL(MAX(IC_No)+1, 1) FROM IM_Customer), #{email}, #{name}, #{password}, #{hp}, #{birthday}, #{address}) 
 	</insert>
 	
 	<!-- 고객 리스트 -->
 	<select id="customerList" resultType="springBoot.ict.movie.dto.CustomerDTO">
-		SELECT * FROM mvc_customer_tbl
+		SELECT * FROM IM_Customer
 	</select>
+	
 	
 	<!-- 로그인 처리 -->
 	<select id="loginCustomer" parameterType="String" resultType="int">
-		SELECT COUNT(*) FROM mvc_customers WHERE email=#{email} and password=#{password} and show ='y'
+		SELECT COUNT(*) FROM IM_Customer WHERE IC_email=#{email} and IC_password=#{password} and show ='y'
 	</select>
 	
 	

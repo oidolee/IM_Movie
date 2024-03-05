@@ -314,361 +314,172 @@
     ALTER TABLE IM_MOVIES
     ADD show CHAR(1)DEFAULT 'y';
     
-    SELECT * FROM IM_MOVIES;
+  INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('2','듄:파트2','1','1','1','내용2','2024/01/01','100','15','134분');
     
-    --파트1
     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('1','파묘','1','1','1','내용1','2024/01/01','100','15','134분');
-        
-    INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('2','듄:파트2','1','1','1','내용2','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('3','건국전쟁','1','1','1','내용3','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('4','윙카','1','1','1','내용4','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('5','소풍','1','1','1','내용5','2024/01/01','100','15','134분');
-        
-        --파트 2
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('6','가여운 것들','2','1','1','내용6','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('7','패스트 라이브즈','2','1','1','내용7','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('8','벙커 게임','2','1','1','내용8','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('9','예수는 역사다','2','1','1','내용9','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('10','생츄어리2:쿼카가 너무해','2','1','1','내용10','2024/01/01','100','15','134분');
-        
-        --파트 3
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('6','가여운 것들','2','1','1','내용6','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('7','패스트 라이브즈','2','1','1','내용7','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('8','벙커 게임','2','1','1','내용8','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('9','예수는 역사다','2','1','1','내용9','2024/01/01','100','15','134분');
-        
-        INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
-        VALUES('10','생츄어리2:쿼카가 너무해','2','1','1','내용10','2024/01/01','100','15','134분');
-        
-        UPDATE IM_MOVIES SET MOV_TITLE = '택시' WHERE MOVIE_ID = '1';
-        
-        DELETE IM_MOVIES WHERE MOVIE_ID = '1';
-        
-        
-        commit;
+    VALUES('3','건국전쟁','1','1','1','내용3','2024/01/01','100','15','134분');
     
-    --------------------------------------------------------------------------------
-
-    --관람평 테이블
-
-    DROP TABLE IM_REVIEW CASCADE CONSTRAINTS;
-    CREATE TABLE IM_REVIEW(  
-        REVIEW_NUM      NUMBER          PRIMARY KEY,       -- 후기코드(PK)
-        MOVIE_ID        VARCHAR2(50)    NOT NULL,          -- 영화코드(FK)
-        CUS_ID          VARCHAR2(50)    NOT NULL,          -- 회원ID(FK)
-        REVIEW_STAR     NUMBER          NOT NULL,          -- 후기별점
-        REVIEW_CONTENTS CLOB            NOT NULL,          -- 후기내용
-        REVIEW_DATE     DATE            NOT NULL           -- 작성일
-    );
-
-    --------------------------------------------------------------------------------
-
-
-    --영화좋아요 테이블
-    DROP TABLE IM_LIKE CASCADE CONSTRAINTS;
-    CREATE TABLE IM_LIKE(  
-        LIKE_ID      NUMBER          PRIMARY KEY,        -- 좋아요코드(PK)
-        MOVIE_ID     VARCHAR2(50)    NOT NULL,           -- 영화코드(FK)
-        CUS_ID       VARCHAR2(50)    NOT NULL,           -- 회원ID(FK)
-        LIKE_DATE    DATE            NOT NULL            -- 좋아요날짜
-    );
-
-    --------------------------------------------------------------------------------
-
-    --상영시간표 테이블
-    DROP TABLE MOVIE_TIME CASCADE CONSTRAINTS;
-    CREATE TABLE MOVIE_TIME(  
-        SCHEDULE_ID     NUMBER          PRIMARY KEY,        -- 일정코드(PK)
-        SCREEN_ID       NUMBER          NOT NULL,           -- 상영관코드(FK)
-        THEATER_ID      VARCHAR2(50)    NOT NULL,           -- 영화관코드(FK)
-        MOVIE_ID        VARCHAR2(50)    NOT NULL,           -- 영화코드(FK)
-        TIME_DATE       DATE            NOT NULL,           -- 날짜
-        START_TIME      TIMESTAMP       NOT NULL,           -- 시작시간
-        END_TIME        TIMESTAMP       NOT NULL,           -- 종료시간
-        TIME_CODE       VARCHAR2(10)    NOT NULL            -- 위치코드
-    );
-
-    --------------------------------------------------------------------------------
-
-    --지역 테이블
-    DROP TABLE IM_PLACE  CASCADE CONSTRAINTS;
-    CREATE TABLE IM_PLACE(  
-        PLACE_CODE      VARCHAR2(50)      PRIMARY KEY,      --지역코드(PK)
-        PLACE_NAME      VARCHAR2(50)      NOT NULL            --지역이름
-    );
-
-    --------------------------------------------------------------------------------
-
-    --공지사항 테이블
-    DROP TABLE NOTICE_BOARD  CASCADE CONSTRAINTS;
-    CREATE TABLE NOTICE_BOARD(  
-        NOTICE_NUM      NUMBER(50)      PRIMARY KEY,       --공지번호(PK)
-        NOTICE_ONE      VARCHAR2(50)    NOT NULL,          --구분
-        NOTICE_TITLE    VARCHAR2(50)    NOT NULL,          --제목
-        NOTICE_CON      CLOB            NOT NULL,          --내용
-        NOTICE_DATE     DATE            NOT NULL           --작성일
-    );
-
-    --------------------------------------------------------------------------------
-
-    --대관신청 테이블
-    DROP TABLE GROUP_BOARD CASCADE CONSTRAINTS;
-    CREATE TABLE GROUP_BOARD(
-        GROUP_NUM           VARCHAR2(50)    PRIMARY KEY,     -- 대관신청코드(PK)
-        CUS_ID              VARCHAR2(50)    NOT NULL,        -- 회원ID(FK)
-        GROUP_LOC           VARCHAR2(100)   NOT NULL,        -- 영화관위치
-        GROUP_TYPE          VARCHAR2(50)    NOT NULL,        -- 분류
-        GROUP_EXPECTED_NUMBER   NUMBER         NOT NULL,     -- 예상인원
-        GROUP_DATE          DATE            NOT NULL,        -- 희망일
-        GROUP_TIME          TIMESTAMP       NOT NULL,        -- 희망시간
-        GROUP_MOVIE_TITLE   VARCHAR2(100)   NOT NULL,        -- 영화제목
-        GROUP_TITLE         VARCHAR2(50)    NOT NULL,        -- 제목 
-        GROUP_CON           CLOB            NOT NULL,        -- 내용 
-        GROUP_NAME          VARCHAR2(50)    NOT NULL,        -- 단체명 
-        NAME                VARCHAR2(30)    NOT NULL,        -- 신청고객명 
-        GROUP_PHONE         VARCHAR2(50)    NOT NULL,        -- 연락처 
-        GROUP_EMAIL         VARCHAR2(50)    NOT NULL        -- 이메일 
-    );
-    -------------------------------------------------------------------------------
-
-    --답변테이블
-    DROP TABLE RE_ANSWER CASCADE CONSTRAINTS;
-    CREATE TABLE RE_ANSWER(  
-        CUS_ID      VARCHAR2(50)    NOT NULL,        -- 회원ID
-        RE_TITLE    VARCHAR2(50)    NOT NULL,        -- 제목
-        RE_CON      CLOB            NOT NULL,        -- 내용
-        RE_DATE     TIMESTAMP       NOT NULL,        -- 작성일
-        CONSTRAINT PK_RE_ANSWER PRIMARY KEY (CUS_ID) -- 회원ID를 기본키로 설정
-    );
-
-    --------------------------------------------------------------------------------
-
-    -- 샘플용
-    DROP TABLE mvc_sample_tbl CASCADE CONSTRAINTS;
-    CREATE TABLE mvc_sample_tbl(
-    id      number(5)    PRIMARY KEY,
-    name    varchar2(50) NOT NULL,
-    brand   varchar2(50) NOT NULL,
-    madein  varchar2(50) NOT NULL,
-    price   number(9)    NOT NULL
-    );
-    insert into mvc_sample_tbl 
-        values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_1', 'brand_1', 'madein_1', 1 );
-    insert into mvc_sample_tbl 
-        values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_2', 'brand_2', 'madein_2', 2 );
-    commit;    
-    SELECT * FROM mvc_sample_tbl;
-
-
--- 주희 끝
-
-
--- 창해 시작 (page_6)
-    -- 1:1 문의
-    DROP TABLE IM_BOARD CASCADE CONSTRAINTS;
-    CREATE TABLE IM_BOARD(
-    ONE_ID          NUMBER          PRIMARY KEY,
-    C_EAMIL         VARCHAR2(50)    NOT NULL,
-    CUS_NAME        VARCHAR2(50)    NOT NULL,
-    IB_TYPE         VARCHAR2(50)    NOT NULL,
-    IB_TYPE_DETAIL  VARCHAR2(50)    NOT NULL,
-    IB_TITLE        VARCHAR2(50)    NOT NULL,
-    IB_CONTENT      CLOB            NOT NULL,
-    IB_DATE         DATE            DEFAULT sysdate,
-    show            CHAR(1)         DEFAULT 'y'
-    );
-
-    SELECT * FROM IM_BOARD;
-
-
-    insert into IM_BOARD(ONE_ID, C_EAMIL, CUS_NAME, IB_TYPE, IB_TYPE_DETAIL, IB_TITLE, IB_CONTENT)
-    values(1, 'asdf@asdf.com', '공주', '영화관', '영화관 좌석', '영화관 좌석이 불편해요', '영화관 좌석이 불편해요 너무너무.');
-    insert into IM_BOARD(ONE_ID, C_EAMIL, CUS_NAME, IB_TYPE, IB_TYPE_DETAIL, IB_TITLE, IB_CONTENT)
-    values(2, 'asdf@asdf.com', '공주', '영화관', '영화관 좌석', '영화관 좌석이 불편해요', '영화관 좌석이 불편해요 너무너무.');
-    insert into IM_BOARD(ONE_ID, C_EAMIL, CUS_NAME, IB_TYPE, IB_TYPE_DETAIL, IB_TITLE, IB_CONTENT)
-    values(3, 'asdf@asdf.com', '공주', '영화관', '영화관 좌석', '영화관 좌석이 불편해요', '영화관 좌석이 불편해요 너무너무.');
+    INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('4','윙카','1','1','1','내용4','2024/01/01','100','15','134분');
+    
+    INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('5','소풍','1','1','1','내용5','2024/01/01','100','15','134분');
+    
+    --파트 2
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('6','가여운 것들','2','1','1','내용6','2024/01/01','100','15','134분');
+    
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('7','패스트 라이브즈','2','1','1','내용7','2024/01/01','100','15','134분');
+    
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('8','벙커 게임','2','1','1','내용8','2024/01/01','100','15','134분');
+    
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('9','예수는 역사다','2','1','1','내용9','2024/01/01','100','15','134분');
+    
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('10','생츄어리2:쿼카가 너무해','2','1','1','내용10','2024/01/01','100','15','134분');
+    
+    --파트 3
+    INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('6','가여운 것들','2','1','1','내용6','2024/01/01','100','15','134분');
+    
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('7','패스트 라이브즈','2','1','1','내용7','2024/01/01','100','15','134분');
+    
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('8','벙커 게임','2','1','1','내용8','2024/01/01','100','15','134분');
+    
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('9','예수는 역사다','2','1','1','내용9','2024/01/01','100','15','134분');
+    
+     INSERT INTO IM_MOVIES(MOVIE_ID,MOV_TITLE,MOV_PART,MOV_TRAILER,MOV_IMAGE,MOV_CONTENTS,MOV_DATE,MOV_VISITOR,MOV_AGE,MOV_TIME)
+    VALUES('10','생츄어리2:쿼카가 너무해','2','1','1','내용10','2024/01/01','100','15','134분');
+    
+    UPDATE IM_MOVIES SET MOV_TITLE = '택시' WHERE MOVIE_ID = '1';
+    
+    DELETE IM_MOVIES WHERE MOVIE_ID = '1';
+    
+    
     commit;
+  
+--------------------------------------------------------------------------------
 
-    UPDATE IM_BOARD
-    SET IB_TYPE = '스토어'
-    WHERE c_eamil = 'asdf@asdf.com';
+--관람평 테이블
 
-    DELETE FROM IM_BOARD
-    WHERE ONE_ID = 1;
-    -----------------------------------------------------------------------------------
-    -- 1:1 문의 답변 테이블
-    DROP TABLE IM_BOARD_ANSWER CASCADE CONSTRAINTS;
-    CREATE TABLE IM_BOARD_ANSWER(
-    ONE_ID_ANSWER   NUMBER          PRIMARY KEY,
-    IBA_TITLE        VARCHAR2(50)    NOT NULL,
-    IBA_CONTENT      CLOB            NOT NULL,
-    IBA_DATE         DATE            DEFAULT sysdate
-    );
+DROP TABLE IM_REVIEW CASCADE CONSTRAINTS;
+CREATE TABLE IM_REVIEW(  
+    REVIEW_NUM      NUMBER          PRIMARY KEY,       -- 후기코드(PK)
+    MOVIE_ID        VARCHAR2(50)    NOT NULL,          -- 영화코드(FK)
+    CUS_ID          VARCHAR2(50)    NOT NULL,          -- 회원ID(FK)
+    REVIEW_STAR     NUMBER          NOT NULL,          -- 후기별점
+    REVIEW_CONTENTS CLOB            NOT NULL,          -- 후기내용
+    REVIEW_DATE     DATE            NOT NULL           -- 작성일
+);
 
-    SELECT * FROM IM_BOARD_ANSWER;
-
-    INSERT INTO IM_BOARD_ANSWER
-    VALUES(1, '영화관 좌석이 불편해요', '죄송해요 어쩔 수 없어요', sysdate);
-
-    INSERT INTO IM_BOARD_ANSWER
-    VALUES(2, '영화관 좌석이 불편해요2', '죄송해요 어쩔 수 없어요', sysdate);
-
-    INSERT INTO IM_BOARD_ANSWER
-    VALUES(3, '영화관 좌석이 불편해요3', '죄송해요 어쩔 수 없어요', sysdate);
-
-    COMMIT;
-
-    UPDATE IM_BOARD_ANSWER
-    SET IBA_CONTENT = '바꿔줄 수 없어요'
-    WHERE IBA_TITLE = '영화관 좌석이 불편해요';
-
-    DELETE FROM IM_BOARD_ANSWER
-    WHERE ONE_ID_ANSWER = 2;
-    -----------------------------------------------------------------------------------
-
-    -- 이벤트 페이지 테이블
-    DROP TABLE IM_EVENT CASCADE CONSTRAINTS;
-    CREATE TABLE IM_EVENT(
-    e_ID          NUMBER          PRIMARY KEY,
-    e_name        VARCHAR2(50)    NOT NULL,
-    e_category    VARCHAR2(50)    NOT NULL,
-    e_board       VARCHAR2(50)    NOT NULL,
-    e_date        DATE            NOT NULL,
-    e_regDate     DATE            DEFAULT sysdate,
-    show          CHAR(1)         DEFAULT 'y'
-    );
-
-    SELECT * FROM IM_EVENT;
+--------------------------------------------------------------------------------
 
 
-    insert into IM_EVENT(e_ID, e_name, e_category, e_board, e_date)
-    values(1, '이벤트1', '쿠폰', '쿠폰받자', sysdate);
-    insert into IM_EVENT(e_ID, e_name, e_category, e_board, e_date)
-    values(2, '이벤트2', '시사회', '시사회가자', sysdate);
-    insert into IM_EVENT(e_ID, e_name, e_category, e_board, e_date)
-    values(3, '이벤트3', '시사회', '시사회', sysdate);
-    commit;
+--영화좋아요 테이블
+DROP TABLE IM_LIKE CASCADE CONSTRAINTS;
+CREATE TABLE IM_LIKE(  
+    LIKE_ID      NUMBER          PRIMARY KEY,        -- 좋아요코드(PK)
+    MOVIE_ID     VARCHAR2(50)    NOT NULL,           -- 영화코드(FK)
+    CUS_ID       VARCHAR2(50)    NOT NULL,           -- 회원ID(FK)
+    LIKE_DATE    DATE            NOT NULL            -- 좋아요날짜
+);
 
-    UPDATE IM_EVENT
-    SET e_name = '가자이벤트'
-    WHERE e_ID = '1';
+--------------------------------------------------------------------------------
 
-    DELETE FROM IM_EVENT
-    WHERE e_ID = 1;
+--상영시간표 테이블
+DROP TABLE MOVIE_TIME CASCADE CONSTRAINTS;
+CREATE TABLE MOVIE_TIME(  
+    SCHEDULE_ID     NUMBER          PRIMARY KEY,        -- 일정코드(PK)
+    SCREEN_ID       NUMBER          NOT NULL,           -- 상영관코드(FK)
+    THEATER_ID      VARCHAR2(50)    NOT NULL,           -- 영화관코드(FK)
+    MOVIE_ID        VARCHAR2(50)    NOT NULL,           -- 영화코드(FK)
+    TIME_DATE       DATE            NOT NULL,           -- 날짜
+    START_TIME      TIMESTAMP       NOT NULL,           -- 시작시간
+    END_TIME        TIMESTAMP       NOT NULL,           -- 종료시간
+    TIME_CODE       VARCHAR2(10)    NOT NULL            -- 위치코드
+);
+
+--------------------------------------------------------------------------------
+
+--지역 테이블
+DROP TABLE IM_PLACE  CASCADE CONSTRAINTS;
+CREATE TABLE IM_PLACE(  
+    PLACE_CODE      VARCHAR2(50)      PRIMARY KEY,      --지역코드(PK)
+    PLACE_NAME      VARCHAR2(50)      NOT NULL            --지역이름
+);
+
+--------------------------------------------------------------------------------
+
+--공지사항 테이블
+DROP TABLE NOTICE_BOARD  CASCADE CONSTRAINTS;
+CREATE TABLE NOTICE_BOARD(  
+    NOTICE_NUM      NUMBER      PRIMARY KEY,       --공지번호(PK)
+    NOTICE_ONE      VARCHAR2(50)    NOT NULL,          --구분
+    NOTICE_TITLE    VARCHAR2(50)    NOT NULL,          --제목
+    NOTICE_CON      CLOB            NOT NULL,          --내용
+    NOTICE_DATE     DATE            NOT NULL           --작성일
+);
+
+--------------------------------------------------------------------------------
+
+--대관신청 테이블
+DROP TABLE GROUP_BOARD CASCADE CONSTRAINTS;
+CREATE TABLE GROUP_BOARD(
+    GROUP_NUM           VARCHAR2(50)    PRIMARY KEY,     -- 대관신청코드(PK)
+    CUS_ID              VARCHAR2(50)    NOT NULL,        -- 회원ID(FK)
+    GROUP_LOC           VARCHAR2(100)   NOT NULL,        -- 영화관위치
+    GROUP_TYPE          VARCHAR2(50)    NOT NULL,        -- 분류
+    GROUP_EXPECTED_NUMBER   NUMBER         NOT NULL,     -- 예상인원
+    GROUP_DATE          DATE            NOT NULL,        -- 희망일
+    GROUP_TIME          TIMESTAMP       NOT NULL,        -- 희망시간
+    GROUP_MOVIE_TITLE   VARCHAR2(100)   NOT NULL,        -- 영화제목
+    GROUP_TITLE         VARCHAR2(50)    NOT NULL,        -- 제목 
+    GROUP_CON           CLOB            NOT NULL,        -- 내용 
+    GROUP_NAME          VARCHAR2(50)    NOT NULL,        -- 단체명 
+    NAME                VARCHAR2(30)    NOT NULL,        -- 신청고객명 
+    GROUP_PHONE         VARCHAR2(50)    NOT NULL,        -- 연락처 
+    GROUP_EMAIL         VARCHAR2(50)    NOT NULL        -- 이메일 
+);
+ -------------------------------------------------------------------------------
+
+--답변테이블
+DROP TABLE RE_ANSWER CASCADE CONSTRAINTS;
+CREATE TABLE RE_ANSWER(  
+    CUS_ID      VARCHAR2(50)    NOT NULL,        -- 회원ID
+    RE_TITLE    VARCHAR2(50)    NOT NULL,        -- 제목
+    RE_CON      CLOB            NOT NULL,        -- 내용
+    RE_DATE     TIMESTAMP       NOT NULL,        -- 작성일
+    CONSTRAINT PK_RE_ANSWER PRIMARY KEY (CUS_ID) -- 회원ID를 기본키로 설정
+);
+
+--------------------------------------------------------------------------------
+
+-- 샘플용
+DROP TABLE mvc_sample_tbl CASCADE CONSTRAINTS;
+CREATE TABLE mvc_sample_tbl(
+   id      number(5)    PRIMARY KEY,
+   name    varchar2(50) NOT NULL,
+   brand   varchar2(50) NOT NULL,
+   madein  varchar2(50) NOT NULL,
+   price   number(9)    NOT NULL
+);
+insert into mvc_sample_tbl 
+    values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_1', 'brand_1', 'madein_1', 1 );
+insert into mvc_sample_tbl 
+    values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_2', 'brand_2', 'madein_2', 2 );
+commit;    
+SELECT * FROM mvc_sample_tbl;
 
 
-    -----------------------------------------------------------------------------------
-    -- 쿠폰 테이블
-    DROP TABLE IM_COUPON CASCADE CONSTRAINTS;
-    CREATE TABLE IM_COUPON(
-    ic_num          NUMBER          PRIMARY KEY,
-    ic_name         VARCHAR2(50)    NOT NULL,
-    ic_category     VARCHAR2(50)    NOT NULL,
-    ic_sale         NUMBER          NOT NULL,
-    ic_useDate      DATE            NOT NULL,
-    ic_regDate      DATE            DEFAULT sysdate,
-    ic_status       CHAR(1)         DEFAULT 'y'
-    );
-
-    SELECT * FROM IM_COUPON;
 
 
-    insert into IM_COUPON(ic_num, ic_name, ic_category, ic_sale, ic_useDate)
-    values(1, '쿠폰1', '영화', 10000, sysdate);
-    insert into IM_COUPON(ic_num, ic_name, ic_category, ic_sale, ic_useDate)
-    values(2, '쿠폰2', '스토어', 10000, sysdate);
-    insert into IM_COUPON(ic_num, ic_name, ic_category, ic_sale, ic_useDate)
-    values(3, '쿠폰3', '음료', 10000, sysdate);
-    commit;
-
-    UPDATE IM_COUPON
-    SET ic_name = '쿠쿠폰폰'
-    WHERE ic_num = 1;
-
-    DELETE FROM IM_COUPON
-    WHERE ic_num = 3;
-    -----------------------------------------------------------------------------------
-    -- 고객 쿠폰 테이블
-    DROP TABLE IM_CUS_COUPON CASCADE CONSTRAINTS;
-    CREATE TABLE IM_CUS_COUPON(
-    c_email         VARCHAR2(50)    PRIMARY KEY, -- PK,FK
-    ic_num          NUMBER          NOT NULL, -- FK
-    ic_name         VARCHAR2(50)    NOT NULL, 
-    ic_category     VARCHAR2(50)    NOT NULL,
-    ic_sale         NUMBER          NOT NULL,
-    ic_useDate      DATE            NOT NULL,
-    ic_regDate      DATE            DEFAULT sysdate,
-    ic_status       CHAR(1)         DEFAULT 'y'
-    );
-
-    SELECT * FROM IM_CUS_COUPON;
 
 
-    insert into IM_CUS_COUPON(c_email, ic_num, ic_name, ic_category, ic_sale, ic_useDate)
-    values('asdf@asdf.com', 1, '쿠폰1', '영화', 10000, sysdate);
-    insert into IM_CUS_COUPON(c_email, ic_num, ic_name, ic_category, ic_sale, ic_useDate)
-    values('qwer@asdf.com', 2, '쿠폰2', '영화', 10000, sysdate);
-    insert into IM_CUS_COUPON(c_email, ic_num, ic_name, ic_category, ic_sale, ic_useDate)
-    values('zxcv@asdf.com', 3, '쿠폰3', '영화', 10000, sysdate);
-    commit;
 
-    UPDATE IM_CUS_COUPON
-    SET ic_name = '쿠쿠폰폰'
-    WHERE ic_num = 1;
-
-    DELETE FROM IM_CUS_COUPON
-    WHERE ic_num = 3;
-
-    -----------------------------------------------------------------------------------
-    -- 포인트 테이블
-    DROP TABLE IM_POINT CASCADE CONSTRAINTS;
-    CREATE TABLE IM_POINT(
-    C_EMAIL         VARCHAR2(50)    PRIMARY KEY,
-    ip_usePoint     NUMBER          NOT NULL,
-    ip_havePoint    NUMBER          NOT NULL
-    );
-
-    SELECT * FROM IM_POINT;
-
-
-    insert into IM_POINT(c_email, ip_usePoint, ip_havePoint)
-    values('asdf@asdf.com', 10000, 30000);
-    insert into IM_POINT(c_email, ip_usePoint, ip_havePoint)
-    values('qwer@asdf.com', 10000, 30000);
-    insert into IM_POINT(c_email, ip_usePoint, ip_havePoint)
-    values('zxcv@asdf.com', 10000, 30000);
-    commit;
-
-    UPDATE IM_POINT
-    SET ip_usePoint = 15000
-    WHERE c_email = 'asdf@asdf.com';
-
-    DELETE FROM IM_POINT
-    WHERE c_email = 'zxcv@asdf.com';
-
-    -----------------------------------------------------------------------------------
--- 창해 끝 

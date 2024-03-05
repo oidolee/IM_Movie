@@ -45,14 +45,14 @@ function Header() {
                 <div className='right-gnb'>
                     <ul>
                         <li><a href='page_1'>멤버쉽</a></li>
-                        <li><a href='page_2'>고객센터</a></li>
+                        <li><a href='/FAQ'>고객센터</a></li>
                         <li><a href='page_3'>단체관람/대관문의</a></li>
                         <li><a href='/login'>로그인</a></li>
                     </ul>
                     <ul className='header-member-box'>
                         <li>
                             <i class="bi bi-person" className='bi-person'></i>
-                            <a href='/sign-up'>회원가입</a>
+                            <a href='/signCheck'>회원가입</a>
                         </li>
                         <li><a href='#' class="btn_reserve">바로예매</a></li>
                         <li><i class="bi bi-list" className='bi-list'></i></li>
@@ -80,7 +80,7 @@ function Header() {
                         {isSubMenuVisible && currentMenuValue === 2 && (
                             <div>
                                 <ul>
-                                    <li><a href="#">홈</a></li>
+                                    <li><a href="/movieMain">홈</a></li>
                                     <li><a href="#">현재상영작</a></li>
                                     <li><a href="#">상영예정작</a></li>
                                     <li><a href="#">아르뗴</a></li>
@@ -122,10 +122,9 @@ function Header() {
                         {isSubMenuVisible && currentMenuValue === 5 && (
                             <div>
                                 <ul>
-                                    <li><a href="#">베스트</a></li>
-                                    <li><a href="#">관람권</a></li>
-                                    <li><a href="#">스낵음료</a></li>
-                                    <li><a href="#">포토카드</a></li>
+                                    <li><a href="page3#store1">베스트</a></li>
+                                    <li><a href="page3#store2">관람권</a></li>
+                                    <li><a href="page3#store3">스낵음료</a></li>
                                 </ul>
                             </div>
                         )}

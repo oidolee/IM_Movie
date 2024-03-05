@@ -5,6 +5,7 @@ import AddSampleComponent from "../sample/AddSampleComponent";
 import ListSampleComponent from "../sample/ListSampleComponent";
 import EditSampleComponent from "../sample/EditSampleComponent";
 
+
 //main
 import MainBody from '../main/MainBody';
 
@@ -20,9 +21,11 @@ import StoreDetail from '../page_3/StoreDetail';
 import listCustomer from '../page_4/listCustomer';
 import singupComponent from '../page_4/singupComponent';
 import loginComponent from '../page_4/loginComponent';
+import signupCheck from '../page_4/signupCheck';
 
-// page_6
-import MyPage from '../page_6/MyPage';
+//page_5
+import movieMain from '../page_5/main/movieMain';
+import FAQ from '../page_5/board/FAQ';
 
 
 
@@ -50,15 +53,18 @@ const AppRouter = () => {
                     <Route path="/sign-up" exact={true} component={singupComponent} />
                     <Route path="/listCustomer" exact={true} component={listCustomer} />
                     <Route path="/login" exact={true} component={loginComponent} />
+                    <Route path="/signCheck" exact={true} component={signupCheck} />
+
+                    <Route path="/movieMain" exact={true} component={movieMain} />
+                    <Route path="/FAQ" exact={true} component={FAQ} />
 
                     <Route path="/mypage" exact={true} component={MyPage} />
-          
+                    
 
 
                 </div>
             </BrowserRouter>
         </div>
-    )
 }
 
 const style = {

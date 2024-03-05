@@ -24,8 +24,12 @@
 
 
 .singupComponent .singupComponent_btn {
-    margin-left: 250px;
+    margin-left: 200px;
 }
 
+.singupComponent .addressBtn {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
 
 
