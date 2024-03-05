@@ -65,6 +65,7 @@ const AppRouter = () => {
                 </div>
             </BrowserRouter>
         </div>
+    )
 }
 
 const style = {
