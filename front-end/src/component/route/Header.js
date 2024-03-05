@@ -120,10 +120,9 @@ function Header() {
                         {isSubMenuVisible && currentMenuValue === 5 && (
                             <div>
                                 <ul>
-                                    <li><a href="#">베스트</a></li>
-                                    <li><a href="#">관람권</a></li>
-                                    <li><a href="#">스낵음료</a></li>
-                                    <li><a href="#">포토카드</a></li>
+                                    <li><a href="page3#store1">베스트</a></li>
+                                    <li><a href="page3#store2">관람권</a></li>
+                                    <li><a href="page3#store3">스낵음료</a></li>
                                 </ul>
                             </div>
                         )}

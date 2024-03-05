@@ -94,12 +94,13 @@ class StoreDetail extends Component {
 
 
                 <ul class={`tab_wrap ${style.tab_wrap}`}>
-                    <button type="button" className={`tab_tit ${style.tab_tit}`} style={{ width: '50%', left: '0%' }}>
+                    <button type="button" className={`tab_tit ${style.tab_tit}`} style={{ width: '50%', left: '0%' }} >
                         <span>사용방법</span>
                     </button>
                     <button type="button" className={`tab_tit ${style.tab_tit}`} style={{ width: '50%', left: '0%' }}>
                         <span>유의사항</span>
                     </button>
+                    
                 </ul>
                 
                 
