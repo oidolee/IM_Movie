@@ -35,7 +35,7 @@ class Reservation_Movie extends Component {
       <div className={`Res_menu ${style.Res_menu}`}>
         <div id="Res_menu1">
           <ul>
-            <li className="step">
+            <li className="step" id="step1">
               <a href="#Res_step01">
                 <strong>
                   <span>

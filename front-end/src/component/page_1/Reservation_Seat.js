@@ -1,29 +1,29 @@
 import React, { Component } from "react";
 import moment from "moment";
-import style from  "../../styles/page_1/Reservation_Seat.css";
-import Res_movie from '../../assets/page_1/movie.jpg';
-import Res_img15 from '../../assets/page_1/15.jpg';
-import Res_img12 from '../../assets/page_1/12.jpg';
-import Res_imgAll from '../../assets/page_1/all.jpg';
+import style from "../../styles/page_1/Reservation_Seat.css";
+import Res_movie from "../../assets/page_1/movie.jpg";
+import Res_img15 from "../../assets/page_1/15.jpg";
+import Res_img12 from "../../assets/page_1/12.jpg";
+import Res_imgAll from "../../assets/page_1/all.jpg";
 
 class QuantityCounter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quantity: 1
+      quantity: 0,
     };
   }
 
   handleIncrement = () => {
     this.setState((prevState) => ({
-      quantity: prevState.quantity + 1
+      quantity: prevState.quantity + 1,
     }));
   };
 
   handleDecrement = () => {
     if (this.state.quantity > 1) {
       this.setState((prevState) => ({
-        quantity: prevState.quantity - 1
+        quantity: prevState.quantity - 1,
       }));
     }
   };
@@ -40,7 +40,6 @@ class QuantityCounter extends Component {
 }
 
 class Reservation_Movie extends Component {
-
   render() {
     const sysdate = moment().format("YYYY-MM-DD");
 
@@ -48,7 +47,7 @@ class Reservation_Movie extends Component {
       <div className={`Res_seat ${style.Res_seat}`}>
         <div className="Res_seat1">
           <ul>
-            <li className="step">
+            <li className="step" id="step2">
               <a href="#Res_step01">
                 <strong>
                   <span>
@@ -71,7 +70,7 @@ class Reservation_Movie extends Component {
                 </div>
               </a>
             </li>
-            <li className="step">
+            <li className="step" id="step1">
               <a href="#Res_step02">
                 <strong>
                   <span>
@@ -125,29 +124,53 @@ class Reservation_Movie extends Component {
           </ul>
         </div>
         <div className="Res_seat2">
-          <h4 className="Res_tit">인원/좌석 선택</h4>   
-          <div className="Res_seat2_header">
-            <ul className="Res_movie">
-              <li><img src={Res_movie} className="movie_img" /></li>
-              <ul className="Res_movie_content">
-                <li><img src={Res_img15} className="age_img" /><strong className="movie_name">파묘</strong> | 24.03.10(일) | 20:30 ~ 22:54 | 영등포 1관</li>
+          <ul className="Res_left">
+            <li className="Res_tit">
+              인원/좌석 선택 <p>인원은 최대 8명까지 가능합니다.</p>
+            </li>
+            <div className="Res_seat2_header">
+              <ul className="Res_movie">
+                <li>
+                  <img src={Res_movie} className="movie_img" />
+                </li>
+                <ul className="Res_movie_content">
+                  <li>
+                    <img src={Res_img15} className="age_img" />
+                    <strong className="movie_name">파묘</strong> | 24.03.10(일)
+                    | 20:30 ~ 22:54 | 영등포 1관
+                  </li>
                   <li>
                     <div>
                       <ul className="Res_cnt">
-                        <li>성인<QuantityCounter /></li>
-                        <li>청소년<QuantityCounter /></li>
-                        <li>경로<QuantityCounter /></li>
-                        <li>장애인<QuantityCounter /></li>
+                        <li>
+                          성인
+                          <QuantityCounter />
+                        </li>
+                        <li>
+                          청소년
+                          <QuantityCounter />
+                        </li>
+                        <li>
+                          경로
+                          <QuantityCounter />
+                        </li>
+                        <li>
+                          장애인
+                          <QuantityCounter />
+                        </li>
                       </ul>
                     </div>
                   </li>
-              </ul>              
-            </ul>           
-          </div> 
+                </ul>
+              </ul>
+            </div>
+          </ul>
+
           <div className="Res_seat2_main">
-            
-            </div>                 
-        </div> 
+            <span className="Res_screen">SCREEN</span>
+            <div>좌석출력</div>
+          </div>
+        </div>
       </div>
     );
   }
