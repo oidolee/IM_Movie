@@ -78,7 +78,7 @@ function Header() {
                         {isSubMenuVisible && currentMenuValue === 2 && (
                             <div>
                                 <ul>
-                                    <li><a href="#">홈</a></li>
+                                    <li><a href="/movieMain">홈</a></li>
                                     <li><a href="#">현재상영작</a></li>
                                     <li><a href="#">상영예정작</a></li>
                                     <li><a href="#">아르뗴</a></li>
