@@ -45,7 +45,7 @@ function Header() {
                 <div className='right-gnb'>
                     <ul>
                         <li><a href='page_1'>멤버쉽</a></li>
-                        <li><a href='page_2'>고객센터</a></li>
+                        <li><a href='/FAQ'>고객센터</a></li>
                         <li><a href='page_3'>단체관람/대관문의</a></li>
                         <li><a href='/login'>로그인</a></li>
                     </ul>
@@ -80,7 +80,7 @@ function Header() {
                         {isSubMenuVisible && currentMenuValue === 2 && (
                             <div>
                                 <ul>
-                                    <li><a href="#">홈</a></li>
+                                    <li><a href="/movieMain">홈</a></li>
                                     <li><a href="#">현재상영작</a></li>
                                     <li><a href="#">상영예정작</a></li>
                                     <li><a href="#">아르뗴</a></li>
