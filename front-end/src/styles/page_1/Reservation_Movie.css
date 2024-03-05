@@ -74,6 +74,14 @@
     cursor: pointer;
 }
 
+.Res_menu #step1 {
+    background-color: #FF243E;
+}
+
+.Res_menu #step1 a {
+    color: white;
+}
+
 .Res_menu .step:hover a {
     color: white;
 }

@@ -287,8 +287,8 @@
         IC_show            VARCHAR2(1)        DEFAULT 'y'
     );
     DROP TABLE IM_Customer;
-    SELECT * FROM IM_Customer;
-
+    
+    SELECT * FROM IM_Customer ORDER BY IC_No ASC;
     INSERT INTO IM_Customer(IC_No, IC_email, IC_name, IC_password, IC_hp, IC_birthday, IC_address)
         VALUES((SELECT NVL(MAX(IC_No)+1, 1) FROM IM_Customer), '57', '55', '55', '010', '2024-05-15','서울시 강남구'); 
     COMMIT;

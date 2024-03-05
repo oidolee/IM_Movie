@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import style from '../../styles/page_6/Mypage.module.css'
 import Mypage_mid_nav from './Mypage_mid_nav'
 import MyPage_top from './MyPage_top'
+import Mypage_res from './MyPage_res'
 class MyPage extends Component{
     render(){
         return(
@@ -13,7 +14,12 @@ class MyPage extends Component{
                         <MyPage_top />
                     </div>
                     <div className={`MyPage_menu2 ${style.MyPage_menu2}`} id="MyPage_menu2">
-                        <Mypage_mid_nav />
+                        <div>
+                            <Mypage_mid_nav />
+                        </div>
+                        <div>
+                            <Mypage_res />    
+                        </div>
                     </div>
                     <div className={`MyPage_banner ${style.MyPage_banner}`} id='MyPage_banner'>
 
