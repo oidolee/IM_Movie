@@ -54,7 +54,13 @@ CREATE TABLE im_parking (
 );
 insert into im_parking 
     values( nvl( (select max(ip_no) from im_parking)+1,1 ), 'A', 1, '경기51더4433', 'Y' ,'manajini', '2024-03-05 16:00:00', 1 );
+    
+update im_parking
+set ip_block = 'B'
+where ip_no = 1;
+
 delete from im_parking  where ip_no  = 1;
 commit;
+
 
 -- 민진 끝
