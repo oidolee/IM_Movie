@@ -71,7 +71,7 @@ public class CustomerController {
 			throws ServletException, IOException {
 		logger.info("<<< url -> customerList");
 		
-		return service.listAll();
+		return service.listcustomer();
 	}
 		
 	// 로그인 처리
