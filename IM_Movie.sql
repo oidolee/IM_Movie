@@ -1,24 +1,29 @@
 ---------------------------------------파이널 플젝
+-- 커넥션
+-- ID : IM_Movie
+-- PW : movie
 
-CREATE TABLE mvc_customer_tbl(
-    c_No              VARCHAR2(20)       PRIMARY KEY,
-    c_email           VARCHAR2(50)       NOT NULL,
-    c_name            VARCHAR2(20)       NOT NULL,
-    c_password        VARCHAR2(30)       NOT NULL,
-    c_hp              VARCHAR2(20)       NOT NULL,
-    c_birthday        DATE               NOT NULL,
-    c_regdate         DATE               DEFAULT sysdate,
-    c_show            VARCHAR2(1)        DEFAULT 'y'
+
+CREATE TABLE IM_Customer(
+    IC_No              VARCHAR2(20)       PRIMARY KEY,
+    IC_email           VARCHAR2(50)       NOT NULL,
+    IC_name            VARCHAR2(20)       NOT NULL,
+    IC_password        VARCHAR2(30)       NOT NULL,
+    IC_hp              VARCHAR2(20)       NOT NULL,
+    IC_birthday        DATE               NOT NULL,
+    IC_address		  VARCHAR2(100)		 NOT NULL,
+    IC_regdate         DATE               DEFAULT sysdate,
+    IC_show            VARCHAR2(1)        DEFAULT 'y'
 );
-DROP TABLE mvc_customer_tbl;
-SELECT * FROM mvc_customer_tbl;
+DROP TABLE IM_Customer;
+SELECT * FROM IM_Customer;
 
-INSERT INTO mvc_customer_tbl(No, email, name, password, hp, birthday)
-    VALUES((SELECT NVL(MAX(No)+1, 1) FROM mvc_customer_tbl), '55', '55', '55', '010', '2024-05-15'); 
+INSERT INTO IM_Customer(IC_No, IC_email, IC_name, IC_password, IC_hp, IC_birthday, IC_address)
+    VALUES((SELECT NVL(MAX(IC_No)+1, 1) FROM mvc_customer_tbl), '55', '55', '55', '010', '2024-05-15',''); 
 
 
-INSERT INTO mvc_customer_tbl(email, name, password, hp, birthday)
- VALUES('12344', '1234', '1234', '01055554444', '19951204') ;
+INSERT INTO IM_Customer(IC_email, IC_name, IC_password, IC_hp, IC_birthday, IC_address)
+ VALUES('12344', '1234', '1234', '01055554444', '19951204', '서울시 강남구') ;
 
 COMMIT;
 -------------------------------------------------------------------------

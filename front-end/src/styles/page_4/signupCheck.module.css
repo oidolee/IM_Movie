@@ -1,0 +1,24 @@
+.wrappage {
+    width: 940px;
+    text-align: left;
+    margin: auto;
+}
+
+.signBtn {
+    text-align: center;
+
+}
+
+.wrappage .redBtn {
+    background-color: red;
+    color: white;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.wrappage .blackBtn {
+    background-color: black;
+    color: white;
+    width: 100px;
+}
+
