@@ -13,7 +13,7 @@
 	
 	<!-- 고객 리스트 -->
 	<select id="customerList" resultType="springBoot.ict.movie.dto.CustomerDTO">
-		SELECT * FROM IM_Customer;
+		SELECT * FROM IM_Customer
 	</select>
 	
 	

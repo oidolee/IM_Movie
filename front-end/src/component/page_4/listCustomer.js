@@ -47,6 +47,7 @@ class listCustomer extends Component {
                             <TableCell> password </TableCell>
                             <TableCell> hp </TableCell>
                             <TableCell> birthday </TableCell>
+                            <TableCell> address </TableCell>
                             <TableCell> regdate </TableCell>
                         </TableRow>
                     </TableHead>
@@ -60,6 +61,7 @@ class listCustomer extends Component {
                             <TableCell> {list.password} </TableCell>
                             <TableCell> {list.hp} </TableCell>
                             <TableCell> {list.birthday} </TableCell>
+                            <TableCell> {list.address} </TableCell>
                             <TableCell> {list.regdate} </TableCell>
                         </TableRow>
                             )}
