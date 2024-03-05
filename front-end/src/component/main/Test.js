@@ -4,7 +4,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function NavDropdownExample() {
   const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 
-  return (
+  return ( 
     <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
       <Nav.Item>
         <Nav.Link eventKey="1" href="#/home">
