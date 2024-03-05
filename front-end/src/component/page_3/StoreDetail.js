@@ -11,23 +11,46 @@ class StoreDetail extends Component {
         super(props);
         this.state = {
             isStoreGiftOpen: false, // 선물하기 모달 열림 여부를 추적하는 상태
+            quantity: 1, // 초기 수량 값
+            price: 22000, // 초기 상품 가격 값
         };
     }
 
     // 선물하기 버튼 클릭시 모달 열기
     openStoreGift = () => {
         this.setState({ isStoreGiftOpen: true });
+        document.body.style.overflow = 'hidden';
     };
 
     // 선물하기 모달 닫기
     closeStoreGift = () => {
         this.setState({ isStoreGiftOpen: false });
+        document.body.style.overflow = 'auto'; 
     };
 
 
+
+    // 수량 증가
+    increaseQuantity = () => {
+        this.setState((prevState) => ({
+            quantity: prevState.quantity + 1,
+            price: prevState.price + 22000, // 가격에 22000원 추가
+        }));
+    };
+
+    // 수량 감소
+    decreaseQuantity = () => {
+        if (this.state.quantity > 1) {
+            this.setState((prevState) => ({
+                quantity: prevState.quantity - 1,
+                price: prevState.price - 22000, // 가격에 22000원 감소
+            }));
+        }
+    };
+
     render() {
         return (
-            <div className={`store_d ${style.store_d}`}>
+            <div c >
                 <div className={`store_detail ${style.store_detail}`}>
                     <div className={`main_img ${style.main_img}`}>
                         <img src={package1} alt="[롯시와 봄] 패키지" />
@@ -35,7 +58,6 @@ class StoreDetail extends Component {
 
                     <div className={`pd_detail ${style.pd_detail}`}>
                         <table className={`pd_table ${style.pd_table}`} summary="상품 상세설명에 대한 표입니다">
-                            <caption>상품 상세내용</caption>
                             <colgroup>
                                 <col style={{ width: '30%' }} />
                                 <col style={{ width: 'auto' }} />
@@ -74,12 +96,12 @@ class StoreDetail extends Component {
                             </tbody>
                         </table>
                         <div className={`bx_num ${style.bx_num}`}>
-                            <button className={`btn_mins ${style.btn_mins}`}>삭제</button>
-                            <div className={`txt_num ${style.txt_num}`}>1</div>
-                            <button className={`txt_pbtn_plusrice ${style.btn_plus}`}>추가</button>
+                            <button className={`btn_mins ${style.btn_mins}`} onClick={this.decreaseQuantity}>-</button>
+                            <div className={`txt_num ${style.txt_num}`}>{this.state.quantity}</div>
+                            <button className={`btn_plus ${style.btn_plus}`} onClick={this.increaseQuantity}>+</button>
                         </div>
                         <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
-                            총 상품금액<strong className={`txt_price_str ${style.txt_price_str}`}>22,000<em>원</em></strong>
+                            총 상품금액<strong className={`txt_price_str ${style.txt_price_str}`}> {this.state.price.toLocaleString()}<em>원</em></strong>
                         </div>
                         <div className={`btn_wrap ${style.btn_wrap}`}>
                             <button className="btn_col2 ty7" onClick={this.openStoreGift}>선물하기</button>
