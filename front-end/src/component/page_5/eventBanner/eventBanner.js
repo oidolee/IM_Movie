@@ -1,5 +1,6 @@
 import styles from "./eventBanner.module.css";
 
+
 export const EventBanner = () => {
   return (
     <article
