@@ -39,6 +39,16 @@ public class CustomerServiceImpl implements CustomerService {
 		
 		return insertCnt;
 	}
+
+	// 로그인
+	@Override
+	public int loginCustomer(String email) throws ServletException, IOException {
+		System.out.println("CustomerServiceImpl - loginCustomer");
+		
+		int selectCnt = dao.loginCustomer(email);
+		
+		return selectCnt;
+	}
 	
 
 }

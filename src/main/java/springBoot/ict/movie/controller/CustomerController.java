@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,13 +66,24 @@ public class CustomerController {
 	}
 	
 	// 고객 리스트
-		@GetMapping
-		public List<CustomerDTO> customerList(HttpServletRequest req, HttpServletResponse res,Model model)
-				throws ServletException, IOException {
-			logger.info("<<< url -> customerList");
-			
-			return service.listAll();
-		}
+	@GetMapping
+	public List<CustomerDTO> customerList(HttpServletRequest req, HttpServletResponse res,Model model)
+			throws ServletException, IOException {
+		logger.info("<<< url -> customerList");
+		
+		return service.listAll();
+	}
+		
+	// 로그인 처리
+	@GetMapping("/index")
+	public int login(@PathVariable String email)
+			throws ServletException, IOException {
+		logger.info("<<< url -> customerList");
+		
+		return service.loginCustomer(email);
+	} 
+	
+	
 		
 
 }
