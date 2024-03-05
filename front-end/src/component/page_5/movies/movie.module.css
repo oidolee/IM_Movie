@@ -5,19 +5,17 @@
 }
 
 .productItem {
-  flex: 0 0 calc(20% - 20px); /* 5개의 아이템을 가로로 배열하므로 20%로 설정합니다. 여유 여백은 20px으로 설정합니다. */
-  margin: 10px; /* 아이템 사이의 여백 */
-  width: 20%;
-  padding: 10px;
+  flex: 0 0 calc(20% - 30px); /* 5개의 아이템을 가로로 배열하므로 20%로 설정합니다. 여유 여백은 20px으로 설정합니다. */
+  margin: 50px; /* 아이템 사이의 여백 */
 }
 
 .product_image {
-  width: 100%; 
-  height: auto;
+  width: 100%; /* 이미지를 가로로 꽉 차게 설정합니다. */
+  height: auto; /* 높이는 자동으로 설정합니다. */
 }
   
   .product_image img {
-    width: 100%;
+    width: 300%;
     height: 100%;
     border-radius: 10px;
     border: 1px solid #c4c4c4;

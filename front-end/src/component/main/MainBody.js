@@ -8,12 +8,8 @@ class MainBody extends Component{
     render(){
         return(
             <div>
-                <div className='slide-box'>
-                    <div className='slide_1'>
-                        <img src={slide_1}></img>
-                        <Main_Swiper />
-                    </div>
-
+                <div className='slide_box'>
+                    <Main_Swiper />
                 </div>
                 <div className='contents'>contents</div>
             </div>

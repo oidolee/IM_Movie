@@ -53,12 +53,13 @@ const AppRouter = () => {
                     <Route path="/movieMain" exact={true} component={movieMain} />
                     <Route path="/FAQ" exact={true} component={FAQ} />
 
+                    <Route path="/mypage" exact={true} component={MyPage} />
+          
 
 
                 </div>
             </BrowserRouter>
         </div>
-    )
 }
 
 const style = {
