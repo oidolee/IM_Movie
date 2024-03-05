@@ -1,67 +1,21 @@
 
 import React, {Component} from 'react';
-import style from '../../styles/page_6/Mypage.css'
+import style from '../../styles/page_6/Mypage.module.css'
+import Mypage_mid_nav from './Mypage_mid_nav'
+import MyPage_top from './MyPage_top'
 class MyPage extends Component{
     render(){
         return(
             <div>
-               <div id="contents" className="mypage_area_movingbar">
+               <div id="contents" className={`mypage_area_movingbar ${style.mypage_area_movingbar}`}>
                     {/* 마이페이지 공통부분 */}
-                    <div className="mypage_top_infor" id="mypage_top_infor">
-                        <div className="mypage_box">
-                            <div className="my_info">
-                                <div className="grade_area">
-                                    <span className="txt_rank_common">일반</span>
-                                </div>
-                                <p className="name">
-                                    <strong>아이디들어갈 곳 님</strong>
-                                    "반가워요!"
-                                </p>
-                                <div className="profile_set">
-                                    <button type="button" className="btn_txt_edit" title="레이어 팝업 열기">편집</button>
-                                </div>
-                                <div className="next_rank">
-                                    <p>
-                                        "VIP"
-                                        "까지 남은 금액"
-                                        <em>260,000(VIP달성할 금액 - 지금까지 사용할 금액)</em>
-                                        "원"
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="bx_grade merge2020">
-                                <div className="area_gauge">
-                                    <div className="gauge" ></div>
-                                    <ul className="infograde">
-                                        <li>
-                                            <strong>일반(현재등급)</strong>
-                                            <em>0</em>
-                                        </li>
-                                        <li>
-                                            <strong>다음등급</strong>
-                                            <em>달성금액0</em>
-                                            <em className="won">원</em>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href='#' className="btn_col5 ty5 rnd">MEMBERSHIP ZONE</a>
-                            </div>
-                            <div className="btn_wrap">
-                                <a herf="#" target='_blank' title="포인트 페이지 이동">
-                                    <span className="txt_img">
-                                        <img src='#' alt="IM_POINT" />
-                                    </span>
-                                    <em>총 포인트</em>
-                                </a>
-                                <a href="#" title='쿠폰함 페이지 이동'>
-                                    "쿠폰함"
-                                    <em className='txt_color'>총 쿠폰갯수</em>
-                                </a>
-                            </div>
-                        </div>
-
+                    <div className={`mypage_top_infor ${style.mypage_top_infor}`} id="mypage_top_infor">
+                        <MyPage_top />
                     </div>
-                    <div id="mypage_top_menu">
+                    <div className={`MyPage_menu2 ${style.MyPage_menu2}`} id="MyPage_menu2">
+                        <Mypage_mid_nav />
+                    </div>
+                    <div className={`MyPage_banner ${style.MyPage_banner}`} id='MyPage_banner'>
 
                     </div>
                </div>
