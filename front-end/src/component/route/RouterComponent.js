@@ -58,6 +58,7 @@ const AppRouter = () => {
                     <Route path="/movieMain" exact={true} component={movieMain} />
                     <Route path="/FAQ" exact={true} component={FAQ} />
 
+                    
 
 
                 </div>
