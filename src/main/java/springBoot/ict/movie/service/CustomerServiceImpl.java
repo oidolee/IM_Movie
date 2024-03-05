@@ -20,11 +20,13 @@ public class CustomerServiceImpl implements CustomerService {
 	
 	// 고객 목록
 	@Override
-	public List<CustomerDTO> listAll() 
+	public List<CustomerDTO> listcustomer() 
 			throws ServletException, IOException {
 		System.out.println("CustomerServiceImpl - listAll");
 		
 		List<CustomerDTO> list = dao.customerList();
+		
+		System.out.println("list : " + list);
 		
 		return list;
 	}

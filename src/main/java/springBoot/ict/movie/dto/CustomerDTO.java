@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name="IM_Customer")	// 생략시 table or view not found
 public class CustomerDTO {
 	
-	private String email;
+	private String email; 
 	private String name;
 	private String password;
 	private String hp;

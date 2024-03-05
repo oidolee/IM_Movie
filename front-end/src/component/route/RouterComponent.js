@@ -51,7 +51,7 @@ const AppRouter = () => {
                     <Route path="/edit-sample" exact={true} component={EditSampleComponent} />
 
                     <Route path="/sign-up" exact={true} component={singupComponent} />
-                    <Route path="/listCustomer" exact={true} component={listCustomer} />
+                    <Route path="/customerlist" exact={true} component={listCustomer} />
                     <Route path="/login" exact={true} component={loginComponent} />
                     <Route path="/signCheck" exact={true} component={signupCheck} />
 
