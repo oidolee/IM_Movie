@@ -67,6 +67,7 @@
 }
 
 .layer_wrap .layer_header .tit {
+    margin-top: 5%;
     font-size: 18px;
     color: #000;
 }
@@ -100,9 +101,12 @@
 }
 
 .input{
+    margin: 2%;
     width: 550px;
     height: 5vh;
     margin-left: 5%;
+    background-color: #F8F8F8;
+    border-color: transparent;
 }
 
 .StoreGift_inputButton {
@@ -119,4 +123,5 @@
     align-items: center;
     text-align: center;
     margin: 20px;
+    
 }
