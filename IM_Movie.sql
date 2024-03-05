@@ -160,14 +160,14 @@
     -- 스토어 상품
     DROP TABLE IM_STORE_ITEM CASCADE constraints;
     CREATE TABLE IM_STORE_ITEM (
-        item_code 	        number(10) 	Not null, --상품코드 
-        item_type 	        varchar(20) Not null, --상품종류 
-        item_name 	        varchar(50) Not null, --상품명 
-        item_detail 	    varchar(50) Not null, --상품구성 
-        item_price 	        number(10)  Not null, --판매금액 
-        item_sale_price 	number(10)  Not null, --할인금액 
-        item_image 	        varchar(255)Not null, --상품사진 
-        item_exp 	        varchar(50)  Not null --유효기간 
+        item_code            number(10)    Not null, --상품코드 
+        item_type            varchar(20) Not null, --상품종류 
+        item_name            varchar(50) Not null, --상품명 
+        item_detail        varchar(50) Not null, --상품구성 
+        item_price            number(10)  Not null, --판매금액 
+        item_sale_price    number(10)  Not null, --할인금액 
+        item_image            varchar(255)Not null, --상품사진 
+        item_exp            varchar(50)  Not null --유효기간 
     );
 
     INSERT INTO IM_STORE_ITEM 
