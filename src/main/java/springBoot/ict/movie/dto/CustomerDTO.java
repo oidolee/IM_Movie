@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="mvc_customer_tbl")	// 생략시 table or view not found
+@Table(name="IM_Customer")	// 생략시 table or view not found
 public class CustomerDTO {
 	
 	private String email;
@@ -15,6 +15,7 @@ public class CustomerDTO {
 	private String password;
 	private String hp;
 	private Date birthday;
+	private String address;
 	private Date regdate;
 	private String show;
 	
@@ -24,6 +25,14 @@ public class CustomerDTO {
 		return email;
 	}
 	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}

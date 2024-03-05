@@ -21,6 +21,7 @@ import StoreDetail from '../page_3/StoreDetail';
 import listCustomer from '../page_4/listCustomer';
 import singupComponent from '../page_4/singupComponent';
 import loginComponent from '../page_4/loginComponent';
+import signupCheck from '../page_4/signupCheck';
 
 //page_5
 import movieMain from '../page_5/main/movieMain';
@@ -52,12 +53,13 @@ const AppRouter = () => {
                     <Route path="/sign-up" exact={true} component={singupComponent} />
                     <Route path="/listCustomer" exact={true} component={listCustomer} />
                     <Route path="/login" exact={true} component={loginComponent} />
+                    <Route path="/signCheck" exact={true} component={signupCheck} />
 
                     <Route path="/movieMain" exact={true} component={movieMain} />
                     <Route path="/FAQ" exact={true} component={FAQ} />
 
                     <Route path="/mypage" exact={true} component={MyPage} />
-          
+                    
 
 
                 </div>

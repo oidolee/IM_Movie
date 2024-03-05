@@ -52,7 +52,7 @@ function Header() {
                     <ul className='header-member-box'>
                         <li>
                             <i class="bi bi-person" className='bi-person'></i>
-                            <a href='/sign-up'>회원가입</a>
+                            <a href='/signCheck'>회원가입</a>
                         </li>
                         <li><a href='#' class="btn_reserve">바로예매</a></li>
                         <li><i class="bi bi-list" className='bi-list'></i></li>
