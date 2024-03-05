@@ -1,0 +1,160 @@
+.Res_seat a {
+    text-decoration: none;
+    color: #666;
+}
+
+.Res_seat ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.Res_seat li {
+    list-style: none;
+}
+
+.Res_seat {
+    display: flex;
+    padding: 0;
+    text-align: center; 
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.Res_seat1 li {
+    border: 1px solid #666;
+    border-bottom: none;
+    width: 100px;
+}
+
+.Res_seat .step {
+    padding: 100px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+}
+
+.Res_seat .step_content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+    left: 100%;
+    top: 0;
+    padding-left: 20px;
+}
+
+.Res_seat .step_content dt {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.Res_seat .step:hover .step_content {
+    background-color: #FF243E;
+    display: flex;
+    align-items: center;
+    height: 100%; 
+}
+
+.Res_seat .step:hover {
+    background-color: #FF243E;
+    cursor: pointer;
+}
+
+.Res_seat .step:hover a {
+    color: white;
+}
+
+.Res_seat .Res_tit {
+    font-size: 18px;
+    padding: 20px 150px;
+    border: 1px solid #666;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    width: 1200px;
+    height: 80px;
+}
+
+.Res_seat2_header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .movie_img, .age_img {
+    display: inline-block;
+    vertical-align: middle; /* 수직 가운데 정렬 */
+    
+  }
+
+.Res_seat .Res_seat2 p {
+    font-size: 12px;
+    text-align: right;
+}
+
+.Res_seat .movie_img {
+    width: 65px;
+    height: 80px;
+}
+
+.Res_seat .age_img  {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.Res_seat .movie_name {
+    font-size: 15px;
+}
+
+.Res_seat .Res_movie_content li {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .Res_seat .Res_cnt li {
+    padding-right: 10px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .Res_seat .Res_cnt button {
+    border: none;
+    outline: none;   
+  }
+
+  .Res_seat .Res_cnt span {
+    padding: 10px;
+  }
+
+  .Res_seat .Res_cnt div {
+    border: 1px solid #DDD;
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .Res_seat .Res_seat2_main {
+    width: 1200px;
+    height: 636px;
+    background-color: black;
+  }
