@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import '../../styles/main/MainBody.module.css'
+
 import slide_1 from '../../assets/main/slide_1.jpg'
+import Main_Swiper from "./Main_Swiper";
 
 class MainBody extends Component{
     render(){
@@ -9,7 +11,7 @@ class MainBody extends Component{
                 <div className='slide-box'>
                     <div className='slide_1'>
                         <img src={slide_1}></img>
-                        
+                        <Main_Swiper />
                     </div>
 
                 </div>
@@ -18,5 +20,5 @@ class MainBody extends Component{
         );
     }
 }
-
+  
 export default MainBody;

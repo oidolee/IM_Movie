@@ -16,5 +16,11 @@
 		SELECT * FROM mvc_customer_tbl
 	</select>
 	
+	<!-- 로그인 처리 -->
+	<select id="loginCustomer" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM mvc_customers WHERE email=#{email} and password=#{password} and show ='y'
+	</select>
+	
+	
 	
 </mapper>

@@ -1,0 +1,150 @@
+.Res_menu a {
+    text-decoration: none;
+    color: #666;
+}
+
+.Res_menu ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.Res_menu li {
+    list-style: none;
+}
+
+.Res_menu {
+    display: flex;
+    padding: 0;
+    text-align: center; 
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#Res_menu1 li {
+    border: 1px solid #666;
+    border-bottom: none;
+    width: 100px;
+}
+
+.Res_menu .step {
+    padding: 100px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+}
+
+.Res_menu .step_content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+    left: 100%;
+    top: 0;
+    padding-left: 20px;
+}
+
+.Res_menu .step_content dt {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.Res_menu .step:hover .step_content {
+    background-color: #FF243E;
+    display: flex;
+    align-items: center;
+    height: 100%; 
+}
+
+.Res_menu .step:hover {
+    background-color: #FF243E;
+    cursor: pointer;
+}
+
+.Res_menu .step:hover a {
+    color: white;
+}
+
+.Res_menu .menu2,
+.Res_menu .menu3,
+.Res_menu .menu4 {
+    display: flex;
+    flex-direction: row;
+}
+
+.Res_menu .menu2 ul {
+    list-style: none;
+    width: 200px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.Res_menu .menu3 ul,
+.Res_menu .menu4 ul {
+    list-style: none;
+    width: 400px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.Res_menu .menu2 ul li,
+.Res_menu .menu3 ul li,
+.Res_menu .menu4 ul li {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.Res_menu .menu2_left,
+.Res_menu .menu3_left {
+    background-color: #F5F5F5;
+}
+
+.Res_menu .Res_tit {
+    font-size: 18px;
+    padding: 20px 150px;
+    border: 1px solid #666;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+
+.Res_menu .Res_left > li:nth-of-type(2) {
+    height: -webkit-calc(100% - 65px); /* google, safari */
+}
+
+.Res_menu .Res_left,
+.Res_menu .menu2,
+.Res_menu .menu3,
+.Res_menu .menu4 {
+    height: 100%;
+}
+
+.Res_menu .menu2_left a {
+    font-weight: 500;
+    color: black;
+}
+
+.Res_menu .menu3_left a {
+    font-weight: 600;
+    color: black;
+}
+
+.Res_menu img {
+    width: 20px;
+    margin-right: 10px;
+}

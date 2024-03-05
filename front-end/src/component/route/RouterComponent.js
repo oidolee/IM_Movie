@@ -10,7 +10,7 @@ import EditSampleComponent from "../sample/EditSampleComponent";
 import MainBody from '../main/MainBody';
 
 //page_1
-import Page1 from '../page_1/Page1';
+import Reservation_Movie from '../page_1/Reservation_Movie';
 import Page2 from '../page_2/Page2';
 import Page3 from '../page_3/Page3';
 import StoreDetail from '../page_3/StoreDetail';
@@ -19,9 +19,6 @@ import StoreDetail from '../page_3/StoreDetail';
 import listCustomer from '../page_4/listCustomer';
 import singupComponent from '../page_4/singupComponent';
 import loginComponent from '../page_4/loginComponent';
-
-//page_5
-import movieMain from '../page_5/movieMain';
 
 
 
@@ -32,7 +29,11 @@ const AppRouter = () => {
             <BrowserRouter>
                 <div style={style}>
                     <Route path="/" exact={true} component={MainBody} />
-                    <Route path="/page_1" exact={true} component={Page1} />
+
+                    <Route>
+                        <Route path="/page_1/Reservation_Movie" exact={true} component={Reservation_Movie} />
+                    </Route>
+
                     <Route path="/page_2" exact={true} component={Page2} />
                     <Route path="/Page3" exact={true} component={Page3} />
                     <Route path="/StoreDetail" exact={true} component={StoreDetail} />
@@ -44,9 +45,6 @@ const AppRouter = () => {
                     <Route path="/sign-up" exact={true} component={singupComponent} />
                     <Route path="/listCustomer" exact={true} component={listCustomer} />
                     <Route path="/login" exact={true} component={loginComponent} />
-
-                    <Route path="/movieMain" exact={true} component={movieMain} />
-
 
 
                 </div>
