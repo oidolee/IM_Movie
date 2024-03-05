@@ -127,7 +127,7 @@ CREATE TABLE IM_PLACE(
 --공지사항 테이블
 DROP TABLE NOTICE_BOARD  CASCADE CONSTRAINTS;
 CREATE TABLE NOTICE_BOARD(  
-    NOTICE_NUM      NUMBER(50)      PRIMARY KEY,       --공지번호(PK)
+    NOTICE_NUM      NUMBER      PRIMARY KEY,       --공지번호(PK)
     NOTICE_ONE      VARCHAR2(50)    NOT NULL,          --구분
     NOTICE_TITLE    VARCHAR2(50)    NOT NULL,          --제목
     NOTICE_CON      CLOB            NOT NULL,          --내용
@@ -183,6 +183,9 @@ insert into mvc_sample_tbl
     values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_2', 'brand_2', 'madein_2', 2 );
 commit;    
 SELECT * FROM mvc_sample_tbl;
+
+
+
 
 
 

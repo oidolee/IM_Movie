@@ -15,7 +15,7 @@ import movie10 from '../../../assets/page_5/movie10.jpg'
 const Movie = () => {
   return (
     <React.Fragment>
-    <div className={styles.product}>
+    <div className={'product ${styles.product}'}>
       <div className={styles.productItem}>
         <Link to="./detail.js">
           <div className={styles.product_image}>
