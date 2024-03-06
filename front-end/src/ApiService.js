@@ -44,10 +44,10 @@ class ApiService {
     }
 
     // 고객리스트
-    // listCustomer(inputData) {
-    //     console.log('listCustomer 호출');
-    //     return axios.get(url + "/index");
-    // }
+     listCustomer(inputData) {
+         console.log('listCustomer 호출');
+         return axios.get(url + "/index");
+     }
 
     login(inputData) {
         console.log("login start:")
