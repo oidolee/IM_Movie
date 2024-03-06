@@ -22,6 +22,7 @@ import listCustomer from '../page_4/listCustomer';
 import singupComponent from '../page_4/singupComponent';
 import loginComponent from '../page_4/loginComponent';
 import signupCheck from '../page_4/signupCheck';
+import searchID from '../page_4/searchID';
 
 //page_5
 import movieMain from '../page_5/main/movieMain';
@@ -67,6 +68,7 @@ const AppRouter = () => {
                         <Route path="/sign-up" exact={true} component={singupComponent} />
                         <Route path="/signCheck" exact={true} component={signupCheck} />
                         <Route path="/customerlist" exact={true} component={listCustomer} />
+                        <Route path="/searchID" exact={true} component={searchID} />
                     </Route>
                    
                     {/* page_5 */}

@@ -41,7 +41,7 @@ class listCustomer extends Component {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell> no </TableCell>
+                            <TableCell> No </TableCell>
                             <TableCell> email </TableCell>
                             <TableCell> name </TableCell>
                             <TableCell> password </TableCell>
@@ -49,12 +49,13 @@ class listCustomer extends Component {
                             <TableCell> birthday </TableCell>
                             <TableCell> address </TableCell>
                             <TableCell> regdate </TableCell>
+                            <TableCell> show </TableCell>
                         </TableRow>
                     </TableHead>
 
                     <TableBody>
                         {this.state.lists.map(list =>
-                        <TableRow key={list.no}>
+                        <TableRow key={list.No}>
                             <TableCell component="th" scope="list"> {list.no} </TableCell>
                             <TableCell> {list.email} </TableCell>
                             <TableCell> {list.name} </TableCell>
@@ -63,6 +64,7 @@ class listCustomer extends Component {
                             <TableCell> {list.birthday} </TableCell>
                             <TableCell> {list.address} </TableCell>
                             <TableCell> {list.regdate} </TableCell>
+                            <TableCell> {list.show} </TableCell>
                         </TableRow>
                             )}
                     </TableBody>

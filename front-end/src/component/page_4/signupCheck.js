@@ -57,22 +57,24 @@ class SignupCheck extends Component {
                 <br/><br/>
                 <h5>회원가입</h5>
                 <br />
-                필수 약관에 동의해주세요
+                <h6>필수 약관에 동의해주세요</h6>
                 <hr />
                 <br />
                 <h6>약관</h6>
                 <hr />
                 {/* 전체 동의 체크박스 */}
-                <Checkbox
-                    checked={this.state.checked}
-                    onChange={this.handleCheck}
-                    inputProps={{ 'aria-label': '전체 동의' }}
-                />
-                <label><h5>전체 동의</h5></label>
+                <div className={style.checkboxContainer}> {/* 왼쪽 정렬을 위한 스타일 추가 */}
+                    <Checkbox
+                        checked={this.state.checked}
+                        onChange={this.handleCheck}
+                        inputProps={{ 'aria-label': '전체 동의' }}
+                    />
+                    <label><h5>전체 동의</h5></label>
+                </div>
                 <hr />
 
                 {/* 필수 약관 1 아코디언 */}
-                <div>
+                <div className={style.checkboxContainer}> {/* 왼쪽 정렬을 위한 스타일 추가 */}
                     <Checkbox
                         checked={this.state.requiredAgreement1}
                         onChange={() => this.handleRequiredAgreementChange('requiredAgreement1')}
@@ -80,7 +82,6 @@ class SignupCheck extends Component {
                     />
                     <label>약관1 (필수)</label>
                     <br />
-
                 </div>
                 <Accordion>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
@@ -92,7 +93,7 @@ class SignupCheck extends Component {
                 </Accordion>
 
                 {/* 필수 약관 2 아코디언 */}
-                <div>
+                <div className={style.checkboxContainer}> {/* 왼쪽 정렬을 위한 스타일 추가 */}
                     <Checkbox
                         checked={this.state.requiredAgreement2}
                         onChange={() => this.handleRequiredAgreementChange('requiredAgreement2')}
@@ -100,7 +101,6 @@ class SignupCheck extends Component {
                     />
                     <label>약관2 (필수)</label>
                     <br />
-
                 </div>
                 <Accordion>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
@@ -112,7 +112,7 @@ class SignupCheck extends Component {
                 </Accordion>
 
                 {/* 선택 약관 아코디언 */}
-                <div>
+                <div className={style.checkboxContainer}> {/* 왼쪽 정렬을 위한 스타일 추가 */}
                     <Checkbox
                         checked={this.state.optionalAgreement}
                         onChange={this.handleOptionalAgreementChange}
@@ -120,7 +120,6 @@ class SignupCheck extends Component {
                     />
                     <label>약관3 (선택)</label>
                     <br />
-
                 </div>
                 <Accordion>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
@@ -143,4 +142,5 @@ class SignupCheck extends Component {
     }
 }
 
-export default SignupCheck;
+export default withRouter(SignupCheck);
+

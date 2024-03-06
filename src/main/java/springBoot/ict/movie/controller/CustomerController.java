@@ -66,14 +66,14 @@ public class CustomerController {
 		return map;
 	}
 	
-	// 고객 리스트
-//	@GetMapping()
-//	public List<CustomerDTO> customerList(HttpServletRequest req, HttpServletResponse res,Model model)
-//			throws ServletException, IOException {
-//		logger.info("<<< url -> customerList");
-//		
-//		return service.listcustomer();
-//	}
+	 //고객 리스트
+	@GetMapping()
+	public List<CustomerDTO> customerList(HttpServletRequest req, HttpServletResponse res,Model model)
+			throws ServletException, IOException {
+		logger.info("<<< url -> customerList");
+		
+		return service.listcustomer();
+	}
 		
 	
 	
@@ -91,10 +91,11 @@ public class CustomerController {
 		Map<String, Object> response = new HashMap<String, Object>();
 		
 		try {
-			int insertCnt = service.loginCustomer(dto);
-			if(insertCnt == 1) {
+			int selectCnt = service.loginCustomer(dto);
+			if(selectCnt == 1) {
 				resultCode = "200";
 				resultMsg = "sampleInsert Success";
+				System.out.println(" [ loginCustomer 성공 ] ");
 			}
 		} catch(Exception e) {
 			resultCode = "400";
@@ -104,7 +105,7 @@ public class CustomerController {
 		response.put("resultCode", resultCode);
 		response.put("resultMsg", resultMsg);
 		
-		System.out.println(" [ loginCustomer 성공 ] ");
+		
 		return response;
 	} 
 	
