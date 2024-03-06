@@ -146,9 +146,6 @@ class Reservation_Movie extends Component {
                     <dd></dd>
                     <dt>좌석</dt>
                     <dd>
-                      <div id="Res_menu">
-                        <SeatMap rows={12} columns={16} />
-                      </div>
                     </dd>
                   </dl>
                 </div>
