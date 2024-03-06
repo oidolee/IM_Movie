@@ -208,4 +208,65 @@
     width: 1200px;
     height: 636px;
     background-color: black;
+     margin-top: 20px;
+  }
+
+  .Res_seat .MovieSeats {
+    margin-top: 20px;
+  }
+
+  .Res_seat .Res_seat2_bottom {
+    color: white;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+
+  .Res_seat .square {
+    width: 35px;
+    height: 20px;
+    display: inline-block;
+    margin: 3px;
+    padding: 20px;
+    border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  }
+  
+  .Res_seat .square.checked {
+    background-color: #FF243E;
+  }
+  
+  .Res_seat .square:not(.checked) {
+    background-color: #FFF;
+  }
+
+  .Res_seat .single-square1 {
+    width: 15px;
+    height: 15px;
+    background-color: #FF243E;
+    margin-right: 5px;
+    border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  }
+
+  .Res_seat .single-square2 {
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    margin-right: 5px;
+    border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  }
+
+  .Res_seat .single-square3 {
+    width: 15px;
+    height: 15px;
+    background-color: #666;
+    margin-right: 5px;
+    border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   }
