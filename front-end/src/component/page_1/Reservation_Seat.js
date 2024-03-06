@@ -39,6 +39,67 @@ class QuantityCounter extends Component {
   }
 }
 
+
+class SingleSquare1 extends Component {
+  render() {
+    return <div className="single-square1" />;
+  }
+}
+
+class SingleSquare2 extends Component {
+  render() {
+    return <div className="single-square2" />;
+  }
+}
+
+class SingleSquare3 extends Component {
+  render() {
+    return <div className="single-square3" />;
+  }
+}
+
+class SeatMap extends Component {
+  render() {
+    const { rows, columns } = this.props;
+    const seats = [];
+
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < columns; j++) {
+        seats.push(<Square key={`${i}-${j}`} row={i} column={j} />);
+      }
+      seats.push(<br key={`br-${i}`} />);
+    }
+
+    return <div className="MovieSeats">{seats}</div>;
+  }
+}
+
+class Square extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      checked: false
+    };
+  }
+
+  handleChange = () => {
+    this.setState(prevState => ({
+      checked: !prevState.checked
+    }));
+  };
+
+  render() {
+    const { checked } = this.state;
+    const squareClass = checked ? "square checked" : "square";
+
+    return (
+      <div className={squareClass} onClick={this.handleChange}>
+        {checked && <div className="checked-square" />}
+      </div>
+    );
+  }
+}
+
 class Reservation_Movie extends Component {
   render() {
     const sysdate = moment().format("YYYY-MM-DD");
@@ -84,7 +145,11 @@ class Reservation_Movie extends Component {
                     <dt>인원</dt>
                     <dd></dd>
                     <dt>좌석</dt>
-                    <dd></dd>
+                    <dd>
+                      <div id="Res_menu">
+                        <SeatMap rows={12} columns={16} />
+                      </div>
+                    </dd>
                   </dl>
                 </div>
               </a>
@@ -168,8 +233,15 @@ class Reservation_Movie extends Component {
 
           <div className="Res_seat2_main">
             <span className="Res_screen">SCREEN</span>
-            <div>좌석출력</div>
-          </div>
+            <div className="seatOutput">
+              <SeatMap rows={8} columns={12} />
+            </div>  
+            <div className="Res_seat2_bottom">
+              <SingleSquare1 />선택좌석
+              <SingleSquare2 /> 선택가능
+              <SingleSquare3 /> 예매완료
+            </div>         
+          </div>         
         </div>
       </div>
     );
