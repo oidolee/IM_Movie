@@ -40,30 +40,48 @@ const AppRouter = () => {
                 <div style={style}>
                     <Route path="/" exact={true} component={MainBody} />
 
+                    {/* page_1 */}
                     <Route>
                         <Route path="/page_1/Reservation_Movie" exact={true} component={Reservation_Movie} />
                         <Route path="/page_1/Reservation_Seat" exact={true} component={Reservation_Seat} />
                     </Route>
 
-                    <Route path="/page_2" exact={true} component={Page2} />
-                    <Route path="/Page3" exact={true} component={Page3} />
-                    <Route path="/StoreDetail" exact={true} component={StoreDetail} />
+                    {/* page_2 */}
+                    <Route>
+                        <Route path="/page_2" exact={true} component={Page2} />
+                    </Route>
 
-                    <Route path="/add-sample" exact={true} component={AddSampleComponent} />
-                    <Route path="/samples" exact={true} component={ListSampleComponent} />
-                    <Route path="/edit-sample" exact={true} component={EditSampleComponent} />
+                    {/* page_3 */}
+                    <Route>
+                        <Route path="/Page3" exact={true} component={Page3} />
+                        <Route path="/StoreDetail" exact={true} component={StoreDetail} />
+                    </Route>
 
-                    <Route path="/sign-up" exact={true} component={singupComponent} />
-                    <Route path="/customerlist" exact={true} component={listCustomer} />
-                    <Route path="/login" exact={true} component={loginComponent} />
-                    <Route path="/signCheck" exact={true} component={signupCheck} />
+                    {/* page_4 */}
+                    <Route>
+                        <Route path="/login" exact={true} component={loginComponent} />
+                        <Route path="/sign-up" exact={true} component={singupComponent} />
+                        <Route path="/signCheck" exact={true} component={signupCheck} />
+                        <Route path="/customerlist" exact={true} component={listCustomer} />
+                    </Route>
+                   
+                    {/* page_5 */}
+                    <Route>
+                        <Route path="/movieMain" exact={true} component={movieMain} />
+                        <Route path="/FAQ" exact={true} component={FAQ} />
+                    </Route>
 
-                    <Route path="/movieMain" exact={true} component={movieMain} />
-                    <Route path="/FAQ" exact={true} component={FAQ} />
+                    {/* page_6 */}
+                    <Route>
+                        <Route path="/MyPage" exact={true} component={MyPage} />
+                    </Route>
 
-                    <Route path="/MyPage" exact={true} component={MyPage} />
-
-
+                    {/* sample */}
+                    <Route>
+                        <Route path="/add-sample" exact={true} component={AddSampleComponent} />
+                        <Route path="/samples" exact={true} component={ListSampleComponent} />
+                        <Route path="/edit-sample" exact={true} component={EditSampleComponent} />
+                    </Route>
 
                 </div>
             </BrowserRouter>

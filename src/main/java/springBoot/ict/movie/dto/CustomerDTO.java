@@ -84,6 +84,13 @@ public class CustomerDTO {
 	public void setShow(String show) {
 		this.show = show;
 	}
+
+	@Override
+	public String toString() {
+		return "CustomerDTO [email=" + email + ", name=" + name + ", password=" + password + ", hp=" + hp
+				+ ", birthday=" + birthday + ", address=" + address + ", regdate=" + regdate + ", show=" + show + "]";
+	}
+	
 	
 
 }

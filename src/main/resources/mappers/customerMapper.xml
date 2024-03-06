@@ -19,7 +19,7 @@
 	
 	<!-- 로그인 처리 -->
 	<select id="loginCustomer" parameterType="String" resultType="int">
-		SELECT COUNT(*) FROM IM_Customer WHERE IC_email=#{email} and IC_password=#{password} and show ='y'
+		SELECT COUNT(*) FROM IM_Customer WHERE IC_email=#{email} and IC_password=#{password} and IC_show ='y'
 	</select>
 	
 	
