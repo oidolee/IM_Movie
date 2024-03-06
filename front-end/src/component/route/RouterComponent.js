@@ -52,6 +52,7 @@ const AppRouter = () => {
                     {/* page_2 */}
                     <Route>
                         <Route path="/page_2" exact={true} component={Page2} />
+                         
                     </Route>
 
                     {/* page_3 */}
