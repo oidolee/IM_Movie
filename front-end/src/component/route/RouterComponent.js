@@ -17,6 +17,7 @@ import Page2 from '../page_2/Page2';
 import Page3 from '../page_3/Page3';
 import StoreDetail from '../page_3/StoreDetail';
 
+
 //page_4
 import listCustomer from '../page_4/listCustomer';
 import singupComponent from '../page_4/singupComponent';
@@ -60,6 +61,8 @@ const AppRouter = () => {
                     <Route>
                         <Route path="/Page3" exact={true} component={Page3} />
                         <Route path="/StoreDetail" exact={true} component={StoreDetail} />
+
+                        
                     </Route>
 
                     {/* page_4 */}
