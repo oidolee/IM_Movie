@@ -12,3 +12,19 @@
     border: 1px solid;
 }
 
+.MainBody_contents .MainBody_section_1{
+    display: flex;
+    justify-content: space-between;
+}
+.MainBody_contents .MainBody_section_1 .MainBody_contents_left{
+    width: 680px;
+    border: 1px solid;
+}
+
+.MainBody_contents .MainBody_section_1 .MainBody_contents_right{
+    width: 290px;
+}
+
+.MainBody_contents .MainBody_section_1 .MainBody_contents_right img{
+    width: 100%;
+}
