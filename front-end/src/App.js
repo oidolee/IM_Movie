@@ -2,7 +2,7 @@ import './styles/common/App.css';
 import React from 'react';
 import Header from './component/route/Header';
 import RouterComponent from './component/route/RouterComponent'
-import Footer from './component/route/Footer';
+import Footer from './component/main/Footer.js';
 
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
