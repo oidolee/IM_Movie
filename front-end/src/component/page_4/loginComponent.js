@@ -54,6 +54,7 @@ function Login() {
                         type="text"
                         name="id"
                         value={id}
+                        InputProps={{ style: { width: '300px' } }}
                         onChange={(e) => setId(e.target.value)}
                     />
 
@@ -65,6 +66,7 @@ function Login() {
                         type="password"
                         name="password"
                         value={password}
+                        InputProps={{ style: { width: '300px' } }}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
@@ -75,8 +77,8 @@ function Login() {
             </div>
             <div id='login_bot' className={`login_bot ${style.login_bot}`}>
                     <a href='/sign-up' id='signupPage' className={`signup ${style.signup}`}>회원가입</a>
-                    <a href='/sign-up' id='confirmID' >아이디 찾기</a>
-                    <a href='/sign-up' id='confrimPwd' className={`confirmPassword ${style.confirmPassword}`}>비밀번호 찾기</a>
+                    <a href='/searchID' id='confirmID' >아이디 찾기</a>
+                    <a href='/searchPWD' id='confrimPwd' className={`confirmPassword ${style.confirmPassword}`}>비밀번호 찾기</a>
                 </div>
 
             <br /><br />
