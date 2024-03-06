@@ -18,7 +18,7 @@ public class CustomerServiceImpl implements CustomerService {
 	private CustomerMapper dao;
 	
 	
-	// 고객 목록
+	// 고객 목록ㄴ
 	@Override
 	public List<CustomerDTO> listcustomer() 
 			throws ServletException, IOException {
@@ -44,10 +44,12 @@ public class CustomerServiceImpl implements CustomerService {
 
 	// 로그인
 	@Override
-	public int loginCustomer(String email) throws ServletException, IOException {
+	public int loginCustomer(CustomerDTO dto) throws ServletException, IOException {
 		System.out.println("CustomerServiceImpl - loginCustomer");
+		System.out.println(" login dto " + dto.toString());
 		
-		int selectCnt = dao.loginCustomer(email);
+		int selectCnt = dao.loginCustomer(dto.getEmail(), dto.getPassword());
+		System.out.println(" selectCnt " + selectCnt);
 		
 		return selectCnt;
 	}

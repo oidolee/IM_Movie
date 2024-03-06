@@ -21,8 +21,15 @@ function Login() {
         //로그인
         ApiService.login(inputData)
             .then(res => {
-                sessionStorage.setItem('user', JSON.stringify(res.data)); // 예시: res.data에는 사용자 정보가 들어있다고 가정
-                history.push('/'); // history 객체를 사용하여 페이지 이동
+                console.log(res.data);
+                if(res.data.resultCode == 200){
+                    alert("로그인 성공")
+                    history.push('/'); // history 객체를 사용하여 페이지 이동
+                } else {
+                    alert("로그인 실패")
+                }
+                // sessionStorage.setItem('user', JSON.stringify(res.data)); // 예시: res.data에는 사용자 정보가 들어있다고 가정
+                
             })
             .catch(err => {
                 console.log('에러', err);
