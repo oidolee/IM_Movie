@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import style from '../../styles/page_6/MyPage_res.module.css'
+import style from '../../../styles/page_6/MyPage_res.module.css'
 
 
-class MyPage_res extends Component {
+class MyPage_res_part extends Component {
     render() {
         return (
             <div className={`MyPage_resMoive ${style.MyPage_resMoive}`}>
@@ -96,4 +96,4 @@ class MyPage_res extends Component {
     }
 }
 
-export default MyPage_res;
+export default MyPage_res_part;

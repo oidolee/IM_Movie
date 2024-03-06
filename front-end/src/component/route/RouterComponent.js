@@ -29,6 +29,8 @@ import FAQ from '../page_5/board/FAQ';
 
 //page_6
 import MyPage from '../page_6/MyPage';
+import MyPage_res from '../page_6/reservation/MyPage_res';
+import MyPage_resCancle from '../page_6/reservation/MyPage_resCancle';
 
 
 
@@ -75,6 +77,8 @@ const AppRouter = () => {
                     {/* page_6 */}
                     <Route>
                         <Route path="/MyPage" exact={true} component={MyPage} />
+                        <Route path="/MyPage_res" exact={true} component={MyPage_res} />
+                        <Route path="/MyPage_resCancle" exact={true} component={MyPage_resCancle} />
                     </Route>
 
                     {/* sample */}
