@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import springBoot.ict.movie.dto.CustomerDTO;
+import springBoot.ict.movie.dto.SampleDTO;
 import springBoot.ict.movie.service.CustomerServiceImpl;
 
 @CrossOrigin(origins="**", maxAge=3600)
@@ -66,21 +67,45 @@ public class CustomerController {
 	}
 	
 	// 고객 리스트
-	@GetMapping
-	public List<CustomerDTO> customerList(HttpServletRequest req, HttpServletResponse res,Model model)
-			throws ServletException, IOException {
-		logger.info("<<< url -> customerList");
+//	@GetMapping()
+//	public List<CustomerDTO> customerList(HttpServletRequest req, HttpServletResponse res,Model model)
+//			throws ServletException, IOException {
+//		logger.info("<<< url -> customerList");
+//		
+//		return service.listcustomer();
+//	}
 		
-		return service.listAll();
-	}
-		
+	
+	
 	// 로그인 처리
-	@GetMapping("/index")
-	public int login(@PathVariable String email)
+	@PostMapping("/login")
+	public Map<String, Object> login(@RequestBody CustomerDTO dto)
 			throws ServletException, IOException {
-		logger.info("<<< url -> customerList");
+		logger.info("<<< url -> login start");
+		System.out.println("dto" + dto.toString());
 		
-		return service.loginCustomer(email);
+
+		String resultCode = "";
+		String resultMsg = "";
+		
+		Map<String, Object> response = new HashMap<String, Object>();
+		
+		try {
+			int insertCnt = service.loginCustomer(dto);
+			if(insertCnt == 1) {
+				resultCode = "200";
+				resultMsg = "sampleInsert Success";
+			}
+		} catch(Exception e) {
+			resultCode = "400";
+			resultMsg = e.getMessage();
+			e.printStackTrace();
+		}
+		response.put("resultCode", resultCode);
+		response.put("resultMsg", resultMsg);
+		
+		System.out.println(" [ loginCustomer 성공 ] ");
+		return response;
 	} 
 	
 	

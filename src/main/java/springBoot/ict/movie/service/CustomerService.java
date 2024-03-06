@@ -10,7 +10,7 @@ import springBoot.ict.movie.dto.CustomerDTO;
 public interface CustomerService {
 	
 	// 고객목록
-	public List<CustomerDTO> listAll()
+	public List<CustomerDTO> listcustomer()
 			throws ServletException, IOException;
 	
 	// 고객 추가 
@@ -18,6 +18,6 @@ public interface CustomerService {
 			throws ServletException, IOException;
 
 	// 로그인
-	public int loginCustomer(String email)
+	public int loginCustomer(CustomerDTO dto)
 			throws ServletException, IOException;
 }

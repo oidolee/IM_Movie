@@ -16,6 +16,6 @@ public interface CustomerMapper {
 	public int insertCustomer(CustomerDTO dto);
 	
 	// 로그인
-	public int loginCustomer(String email);
+	public int loginCustomer(String email, String password);
 
 }

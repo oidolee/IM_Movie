@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name="IM_Customer")	// 생략시 table or view not found
 public class CustomerDTO {
 	
-	private String email;
+	private String email; 
 	private String name;
 	private String password;
 	private String hp;
@@ -84,6 +84,13 @@ public class CustomerDTO {
 	public void setShow(String show) {
 		this.show = show;
 	}
+
+	@Override
+	public String toString() {
+		return "CustomerDTO [email=" + email + ", name=" + name + ", password=" + password + ", hp=" + hp
+				+ ", birthday=" + birthday + ", address=" + address + ", regdate=" + regdate + ", show=" + show + "]";
+	}
+	
 	
 
 }
