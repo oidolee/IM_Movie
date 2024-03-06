@@ -111,8 +111,6 @@ class SignupComponent extends Component {
                     alert("회원가입 실패")
                     this.props.history.push('/signCheck');
                 }
-
-
             })
             .catch(err => {
                 console.log('addCustomer() 에러 ', err);
