@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import style from '../../styles/page_6/MyPage_res.module.css'
+import style from '../../../styles/page_6/MyPage_res.module.css'
 import { red } from '@mui/material/colors';
 
 
-class Mypage_resCancle extends Component {
+class MyPage_resCancle_part extends Component {
     render() {
         return (
             <div className={`MyPage_resMoive ${style.MyPage_resMoive}`}>
@@ -95,4 +95,4 @@ class Mypage_resCancle extends Component {
     }
 }
 
-export default Mypage_resCancle;
+export default MyPage_resCancle_part;
