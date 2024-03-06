@@ -33,6 +33,7 @@ import FAQ from '../page_5/board/FAQ';
 import MyPage from '../page_6/MyPage';
 import MyPage_res from '../page_6/reservation/MyPage_res';
 import MyPage_resCancle from '../page_6/reservation/MyPage_resCancle';
+import MyPage_coupon from '../page_6/coupon/MyPage_coupon';
 
 
 
@@ -85,7 +86,8 @@ const AppRouter = () => {
                         <Route path="/MyPage" exact={true} component={MyPage} />
                         <Route path="/MyPage_res" exact={true} component={MyPage_res} />
                         <Route path="/MyPage_resCancle" exact={true} component={MyPage_resCancle} />
-                        
+                        <Route path="/MyPage_coupon" exact={true} component={MyPage_coupon} />
+
                     </Route>
 
                     {/* sample */}
