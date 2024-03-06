@@ -272,7 +272,6 @@
 
 
 
-
 -- 호진 시작 (page_4)
 
     CREATE TABLE IM_Customer(

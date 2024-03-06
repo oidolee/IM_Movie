@@ -18,6 +18,6 @@ public interface CustomerService {
 			throws ServletException, IOException;
 
 	// 로그인
-	public int loginCustomer(String email)
+	public int loginCustomer(CustomerDTO dto)
 			throws ServletException, IOException;
 }
