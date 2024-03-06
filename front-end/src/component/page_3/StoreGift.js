@@ -16,31 +16,38 @@ class StoreGift extends Component {
         <strong className={`hidden ${style.hidden}`}>레이어 팝업 시작</strong>
 
         <div className={`layer_header ${style.layer_header}`}>
-          <h4 className={`tit ${style.tit}`}>선물하기</h4>
-          <button
-            type="button"
-            className={`btn_close ${style.btn_close}`}
-            onClick={this.closeStoreGift}
-          >
-            <img src={cancel} alt="팝업 닫기" />
-          </button>
+          <div>
+            <h4 className={`tit ${style.tit}`}>선물하기</h4>
+          </div>
+          <div>
+            <button
+              type="button"
+              className={`btn_close ${style.btn_close}`}
+              onClick={this.closeStoreGift}
+            >
+              <img src={cancel} alt="팝업 닫기" />
+            </button>
+          </div>
         </div>
 
         <div className={`coupon_gift_top ${style.coupon_gift_top}`}>
           <div className="bx_thm">
-            <img src={package1} alt="[롯시와 봄] 패키지" width={250} />
+            <img src={package1} alt="[롯시와 봄] 패키지" width={200} />
           </div>
           <div className={`bx_tit ${style.bx_tit}`}>
-            <strong>[롯시와 봄] 패키지</strong>
-            <span>총 수량 0개</span>
+            <div>
+              <h5><strong>[롯시와 봄] 패키지</strong></h5>
+            <div>
+
+            </div>
+              <span>총 수량 0개</span>
+            </div>
           </div>
           <div className={`bx_cnt ${style.bx_cnt}`}>
-            <dl className={`total_price ${style.bx_total_pricecnt}`}>
               <dt>총 합계</dt>
               <dd>
                 <strong>0</strong>원
               </dd>
-            </dl>
           </div>
         </div>
 
@@ -99,6 +106,7 @@ class StoreGift extends Component {
                 </td>
               </tr>
             </table>
+            <div className="storeGift_bg_color"></div>
           </div>
         </div>
       </div>
