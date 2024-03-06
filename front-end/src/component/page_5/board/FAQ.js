@@ -3,8 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-
-
+import style from '../../../styles/page_5/FAQ.css';
 
 
 function SearchBox() {
@@ -20,30 +19,33 @@ function SearchBox() {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
-      <input
-        type="text"
-        placeholder="검색어를 입력하세요"
-        value={searchTerm}
-        onChange={handleSearchChange}
-        style={{ width: '300px', padding: '10px', border: '1px solid #ccc', borderRadius: '5px', outline: 'none' }}
-      />
-      <button
-        onClick={handleSearchSubmit}
-        style={{ backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '5px', padding: '10px 20px', cursor: 'pointer', marginLeft: '10px' }}
-      >
-        검색
-      </button>
-    </div>
+    <fieldset style={{ border: 'none', margin: 0, padding: 0 }}>
+      <legend style={{ display: 'none' }}>검색</legend>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
+        <div style={{ border: '1px solid #ccc', borderRadius: '5px', display: 'flex' }}>
+          <input
+            type="text"
+            placeholder="검색어를 입력하세요"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            style={{ width: '300px', padding: '10px', border: 'none', outline: 'none' }}
+          />
+          <button
+            onClick={handleSearchSubmit}
+            style={{ backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '0 5px 5px 0', padding: '10px 20px', cursor: 'pointer' }}
+          >
+            검색
+          </button>
+        </div>
+      </div>
+    </fieldset>
   );
 }
 
 
-
-
 function FAQ() {
   return (
-    <div>
+    <div id='wrappage' className={`wrappage ${style.wrappage}`}>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="#home">고객센터</Navbar.Brand> {/* 고객센터 제목 */}
       </Navbar>
@@ -62,65 +64,85 @@ function FAQ() {
           <Nav.Link href="/home">단체관람/대관문의</Nav.Link>
         </Nav.Item>
       </Nav>
+
+      <div class = "icon_wrap">
+        <h3 class="hidden">FAQ</h3>
+        <button class = "active ico_01" id="7">영화관 이용</button>
+        <button class = "ico_02" id="14">스폐셜관</button>
+        <button class = "ico_03" id="3">회원</button>
+        <button class = "ico_04" id="5">온라인</button>
+        <button class = "ico_05" id="6">할인혜택</button>
+        <button class = "ico_06" id="12">관람권</button>
+        <button class = "ico_07" id="13">스토어</button>
+      </div>
+
       <SearchBox /> {/* 검색창 컴포넌트 추가 */}
 
-  <Accordion defaultActiveKey="0">
-  <Accordion.Item eventKey="0">
-    <Accordion.Header>군인 할인은 어떻게 받나요?</Accordion.Header>
-    <Accordion.Body>
-      [군인할인] 군인 고객님들에게 할인 혜택을 제공하고 있습니다.
-      <br/><br/>
+      <thead>
+        <tr>
+          <th scope="col" id="thread0">구분</th>
+          <th scope="col" id="thread1">질문</th>
+        </tr>
+      </thead>
 
-      ■ 대상:
-      <br/>
-      대한민국 군장변(ROTC, 사관생도, 부사관후보생, 상근예비역, 간부포함) / 대한민국 예비군 1~2년차 / 국방부 공,군무원, 한국 국방연구원, 병무청 전직원 / 방위사업청, 방위산업기술지원센터, 국방과학연구소 전직원 / 20년 이상 복무 후 전역한 예비역, 군인공제회 전직원 / 사회복무요원, 병역명문가 병역 이행자 및 가족 / 주한미군, 한국전 참전국 주한군인, 국방부 공무직
-      <br/><br/>
-      ■ 2D 영화:
-      주중 9,000원 / 주말 10,000원 관람 (동반 3인)
-      <br/>
-      ■ 3D 영화:
-      주중 10,000원 / 주말 11,000원 관람 (동반 3인)
-      <br/><br/>
-      ■ 매점 콤보 세트:
-      2,000원 할인(더블콤보 4,000원 할인)
-      <br/>
-      * 일부 영화관에 따라 매점혜택 적용 불가
-      <br/><br/>
-      ※ 현장 할인 적용방법:
-      <br/>
-      - 병사: 휴가증, 외박/외출증 제시 시 적용
-      <br/>
-      - 부사관 후보생: 외박/외출증 제시 시 적용
-      <br/>
-      - 현역간부: 공무원증 제시 시 적용
-      <br/>
-      - 사관생도/ROTC: 사관생도증, 학군사관후보생증 제시 시 적용
-      <br/>
-      - 예비군(1~2년차): 24년 예비군 교육훈련 필증 및 신분증 제시 시 적용
-      <br/>
-      - 방위사업청/방위산업기술지원센터/국방과학연구소/국방기술품질원/국방연구원병무청/군인공제회: 소속기관 신분증 제시 시 적용
-      <br/>
-      - 병역명문가: 병역명문가증 및 가족관계 증명서 제시 시 적용
-      <br/>
-      - 20년 이상 복무 전역한 예비역: 군인연금증, 군인연금카드 제시 시 적용
-      <br/>
-      - 국방부 공무직: 공무원증 제시 시 적용
-      <br/><br/>
-      ※ 온라인 예매 방법:
-      <br/>
-      - 결제단계 시 [제휴포인트/할인] - [군인할인] 선택 시 적용 가능
-      <br/><br/>
-      ※ 타인의 신분증 제시 시 입장에 제한이 있을 수 있으므로, 반드시 입장하시는 당사자 본인의 신분증을 지참해주시기 바랍니다. (온라인 예매 시에도 동일 정책 적용)
-      <br/>
-    ※ 유의사항
-    <br/>
-    - 4D, 샤롯데관 등 스페셜관은 할인대상에 포함되지 않습니다.
-    <br/>
-    - 기타할인과 중복 할인 불가합니다.
-    <br/>
-    - 본 이벤트의 혜택은 일부 영화관에서 사용 불가합니다.(전주송천) 
-  </Accordion.Body>
-  </Accordion.Item>
+
+      <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="0">
+       <Accordion.Header>군인 할인은 어떻게 받나요?</Accordion.Header>
+        <Accordion.Body>
+          [군인할인] 군인 고객님들에게 할인 혜택을 제공하고 있습니다.
+          <br/><br/>
+
+          ■ 대상:
+          <br/>
+          대한민국 군장변(ROTC, 사관생도, 부사관후보생, 상근예비역, 간부포함) / 대한민국 예비군 1~2년차 / 국방부 공,군무원, 한국 국방연구원, 병무청 전직원 / 방위사업청, 방위산업기술지원센터, 국방과학연구소 전직원 / 20년 이상 복무 후 전역한 예비역, 군인공제회 전직원 / 사회복무요원, 병역명문가 병역 이행자 및 가족 / 주한미군, 한국전 참전국 주한군인, 국방부 공무직
+          <br/><br/>
+          ■ 2D 영화:
+          주중 9,000원 / 주말 10,000원 관람 (동반 3인)
+          <br/>
+          ■ 3D 영화:
+          주중 10,000원 / 주말 11,000원 관람 (동반 3인)
+          <br/><br/>
+          ■ 매점 콤보 세트:
+          2,000원 할인(더블콤보 4,000원 할인)
+          <br/>
+          * 일부 영화관에 따라 매점혜택 적용 불가
+          <br/><br/>
+          ※ 현장 할인 적용방법:
+          <br/>
+          - 병사: 휴가증, 외박/외출증 제시 시 적용
+          <br/>
+          - 부사관 후보생: 외박/외출증 제시 시 적용
+          <br/>
+          - 현역간부: 공무원증 제시 시 적용
+          <br/>
+          - 사관생도/ROTC: 사관생도증, 학군사관후보생증 제시 시 적용
+          <br/>
+          - 예비군(1~2년차): 24년 예비군 교육훈련 필증 및 신분증 제시 시 적용
+          <br/>
+          - 방위사업청/방위산업기술지원센터/국방과학연구소/국방기술품질원/국방연구원병무청/군인공제회: 소속기관 신분증 제시 시 적용
+          <br/>
+          - 병역명문가: 병역명문가증 및 가족관계 증명서 제시 시 적용
+          <br/>
+          - 20년 이상 복무 전역한 예비역: 군인연금증, 군인연금카드 제시 시 적용
+          <br/>
+          - 국방부 공무직: 공무원증 제시 시 적용
+          <br/><br/>
+          ※ 온라인 예매 방법:
+          <br/>
+          - 결제단계 시 [제휴포인트/할인] - [군인할인] 선택 시 적용 가능
+          <br/><br/>
+          ※ 타인의 신분증 제시 시 입장에 제한이 있을 수 있으므로, 반드시 입장하시는 당사자 본인의 신분증을 지참해주시기 바랍니다. (온라인 예매 시에도 동일 정책 적용)
+          <br/>
+        ※ 유의사항
+        <br/>
+        - 4D, 샤롯데관 등 스페셜관은 할인대상에 포함되지 않습니다.
+        <br/>
+        - 기타할인과 중복 할인 불가합니다.
+        <br/>
+        - 본 이벤트의 혜택은 일부 영화관에서 사용 불가합니다.(전주송천) 
+      </Accordion.Body>
+      </Accordion.Item>
 
         
         <Accordion.Item eventKey="1">
