@@ -32,6 +32,7 @@ import MyPage from '../page_6/MyPage';
 
 
 
+
 const AppRouter = () => {
 
     return(
