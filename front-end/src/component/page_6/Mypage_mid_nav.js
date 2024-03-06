@@ -10,14 +10,14 @@ function Mypage_mid_nav() {
       <Navbar bg="light" data-bs-theme="light">
         <Container className={`Mypage_mid_nav ${style.Mypage_mid_nav}`}>
           <Nav className="me-auto">
-            <NavDropdown title="결제내역" href="#purchasing">
+            <NavDropdown title="결제내역" href="/MyPage_res">
               <Nav.Link href="/MyPage_res">예매내역</Nav.Link>
-              <Nav.Link href="/Mypage_resCancle">취소내역</Nav.Link>
+              <Nav.Link href="/MyPage_resCancle">취소내역</Nav.Link>
             </NavDropdown>
-            <Nav.Link href="/Mypage_coupon">쿠폰함</Nav.Link>
+            <Nav.Link href="/MyPage_coupon">쿠폰함</Nav.Link>
             <Nav.Link href="/MyPage_event">MY 이벤트</Nav.Link>
-            <NavDropdown title="MY 무비로그" href="/MyPage_wishMoivie">
-              <Nav.Link href="/MyPage_wishMoivie">보고싶어요</Nav.Link>
+            <NavDropdown title="MY 무비로그" href="/MyPage_wishMovie">
+              <Nav.Link href="/MyPage_wishMovie">보고싶어요</Nav.Link>
             </NavDropdown>
             <Nav.Link href="/consult">1:1 문의</Nav.Link>
             <NavDropdown title="MY 정보 관리" href="/MyPage_myinfo">
