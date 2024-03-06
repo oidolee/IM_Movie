@@ -103,7 +103,16 @@ class SignupComponent extends Component {
             .then(res => {
                 this.setState({})
                 console.log('input 성공 : ', res.data);
-                this.props.history.push('/index');
+
+                if(res.data.resultCode == 200){
+                    alert("회원가입 성공")
+                    this.props.history.push('/login');
+                } else {
+                    alert("회원가입 실패")
+                    this.props.history.push('/signCheck');
+                }
+
+
             })
             .catch(err => {
                 console.log('addCustomer() 에러 ', err);
