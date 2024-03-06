@@ -79,6 +79,7 @@ const AppRouter = () => {
                         <Route path="/MyPage" exact={true} component={MyPage} />
                         <Route path="/MyPage_res" exact={true} component={MyPage_res} />
                         <Route path="/MyPage_resCancle" exact={true} component={MyPage_resCancle} />
+                        
                     </Route>
 
                     {/* sample */}
