@@ -19,26 +19,23 @@ function SearchBox() {
   };
 
   return (
-    <fieldset style={{ border: 'none', margin: 0, padding: 0 }}>
-      <legend style={{ display: 'none' }}>검색</legend>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
-        <div style={{ border: '1px solid #ccc', borderRadius: '5px', display: 'flex' }}>
-          <input
-            type="text"
-            placeholder="검색어를 입력하세요"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            style={{ width: '300px', padding: '10px', border: 'none', outline: 'none' }}
-          />
-          <button
-            onClick={handleSearchSubmit}
-            style={{ backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '0 5px 5px 0', padding: '10px 20px', cursor: 'pointer' }}
-          >
-            검색
-          </button>
-        </div>
+    <div className='search_box'>
+      <div className='search'>
+        <input
+          type="text"
+          placeholder="검색어를 입력하세요"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className="search-input"/>
+        <button
+          onClick={handleSearchSubmit}
+          className="search-button">검색</button>     
       </div>
-    </fieldset>
+      <div class = "help_wrap">
+          <p>더 궁금한 점이 있거나, 이미 문의한 내용과 답변을 확인하려면?</p>
+          <a href = "#none">1:1문의 바로가기</a>
+      </div>
+    </div>
   );
 }
 
@@ -65,19 +62,17 @@ function FAQ() {
         </Nav.Item>
       </Nav>
 
-      <div class = "icon_wrap">
-        <h3 class="hidden">FAQ</h3>
-        <button class = "active ico_01" id="7">영화관 이용</button>
-        <button class = "ico_02" id="14">스폐셜관</button>
-        <button class = "ico_03" id="3">회원</button>
-        <button class = "ico_04" id="5">온라인</button>
-        <button class = "ico_05" id="6">할인혜택</button>
-        <button class = "ico_06" id="12">관람권</button>
-        <button class = "ico_07" id="13">스토어</button>
+    <div className = "box">
+      <div className="icon_wrap">
+        <button className="ico_01" id="7"><img src="../../assets/page_5_2/movieuse.png"/></button>
+        
+        
       </div>
+    </div>
 
-      <SearchBox /> {/* 검색창 컴포넌트 추가 */}
+    <SearchBox /> {/* 검색창 컴포넌트 추가 */}
 
+      <div id='accordian_all' className={`accordian_all ${style.accordian_all}`}>
       <thead>
         <tr>
           <th scope="col" id="thread0">구분</th>
@@ -284,6 +279,7 @@ function FAQ() {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
+    </div>
     </div>
   );
 }

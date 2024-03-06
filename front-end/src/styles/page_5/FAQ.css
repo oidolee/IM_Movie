@@ -6,7 +6,80 @@
     
 }
 
+.box {
+  margin-top: 20px;
+  position: relative;
+  width: 100%; /* 적절한 너비 설정 */
+  height: 90px; /* 적절한 높이 설정 */
+  background-color: #d3d3d348; /* 적절한 배경색 설정 */
+  padding: 20px; /* 적절한 안쪽 여백 설정 */
+}
+
+.icon_wrap {
+  position: absolute;
+  top: 50%; /* 부모 요소의 세로 중앙 정렬 */
+  left: 50%; /* 부모 요소의 가로 중앙 정렬 */
+  transform: translate(-50%, -50%); /* 요소를 가로/세로 중앙으로 이동 */
+  text-align: center; /* 버튼을 가로 중앙 정렬 */
+}
+
+.icon_wrap button {
+  /* 필요한 스타일링 */
+}
+
+.search_box{
+  margin-top: 100px;
+  margin-top: 20px;
+  position: relative;
+  width: 100%; /* 적절한 너비 설정 */
+  height: 80px; /* 적절한 높이 설정 */
+  background-color: #d3d3d348; /* 적절한 배경색 설정 */
+  padding: 20px; /* 적절한 안쪽 여백 설정 */
+  border:1px solid lightgray;
+}
+
+.search{
+  margin-right: 50%; /* 왼쪽 여백 설정 */
+}
+
+.search-input {
+  width: 350px;
+  height: 35px; 
+  padding: 10px;
+  border:1px solid lightgray;
+  border-radius:4px;
+  font-size: 13px;
+}
+
+.search-button {
+  background-color: rgba(0, 0, 0, 0.767);
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 25px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.search-label {
+  align-self: flex-start; /* 요소를 위로 정렬 */
+  margin-right: 10px; /* 오른쪽 여백 설정 */
+}
+
+.help_wrap {
+  margin-left: 55%; /* 오른쪽으로 이동 */
+  margin-top:-40px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
 /* 전체 Accordion 스타일 */
+
+.accordian_all{
+  margin-top: 40px;;
+}
+
 .Accordion {
     width: 80%;
   }
