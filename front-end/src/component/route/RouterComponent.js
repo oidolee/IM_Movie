@@ -13,7 +13,11 @@ import MainBody from '../main/MainBody';
 import Reservation_Movie from '../page_1/Reservation_Movie';
 import Reservation_Seat from '../page_1/Reservation_Seat';
 
+//page_2
 import Page2 from '../page_2/Page2';
+import Parking from '../page_2/Parking';
+
+//page_3
 import Page3 from '../page_3/Page3';
 import StoreDetail from '../page_3/StoreDetail';
 
@@ -52,6 +56,7 @@ const AppRouter = () => {
                     {/* page_2 */}
                     <Route>
                         <Route path="/page_2" exact={true} component={Page2} />
+                        <Route path="/parking" exact={true} component={Parking} />
                          
                     </Route>
 
