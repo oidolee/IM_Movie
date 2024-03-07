@@ -11,13 +11,12 @@
 
 .second_menu{
     display: flex;
+    border-bottom: 1px solid #CCC;
 }
 
 
 .second_menu > li > a {
-    display: block;
     line-height: 50px;
-    border-bottom: 1px solid #CCC;
     font-size: 18px;
     color: #7F7F7F;
 }
@@ -27,6 +26,7 @@
     font-size: 16px;
     text-align: left; /* 왼쪽 정렬 스타일 추가 */
     color: #7F7F7F;
+    margin-top: 80px;
 }
 
 .page3_store2 {
@@ -64,19 +64,14 @@ h1, h2, h3, h4, h5, h6, address, caption, em, th {
 }
 
 .store_item .item_title p {
-    height: 28px;
     font-size: 11px;
     color: #999;
 }
 
-
-.page3_store .page3_store2 .store_item {
-    display: inline-block;
-    width: 33%;
-    min-height: 320px;
-    margin-bottom: 35px;
-    text-align: center;
-    vertical-align: top;
+.page3_flex {
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .item_title {

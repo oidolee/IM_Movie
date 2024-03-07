@@ -47,7 +47,11 @@ const StoreDetail = () => {
     }
   };
 
+  const [selectedValue, setSelectedValue] = useState(1);
 
+  const handleSelect = (value) => {
+    setSelectedValue(value);
+  };
 
 
   const [swiperRef, setSwiperRef] = useState(null);
@@ -198,12 +202,60 @@ const StoreDetail = () => {
       
 
       <ul className={`tab_wrap ${style.tab_wrap}`}>
-        <button type="button" className={`tab_tit ${style.tab_tit}`} style={{ width: '50%', left: '0%' }}>
+        <button type="button" className={`tab_tit ${style.tab_tit}`} onClick={() => handleSelect(1)} style={{ width: '50%', left: '0%', height:'70px'}}>
           <span>사용방법</span>
         </button>
-        <button type="button" className={`tab_tit ${style.tab_tit}`} style={{ width: '50%', left: '0%' }}>
+        <button type="button" className={`tab_tit ${style.tab_tit}`} onClick={() => handleSelect(2)} style={{ width: '50%', left: '0%', height:'70px' }}>
           <span>유의사항</span>
         </button>
+        <div>
+        <li className={`StoreDetail_bottom ${style.StoreDetail_bottom}`}>
+        {selectedValue === 1 && 
+          <div>
+              - 구성 : 2D영화관람권 2매 (롯데시네마 회원 ID당 1일 4매 구매 가능)<br/>
+
+
+              - 유효기간 : 구매일로부터 6개월(관람일 기준), 유효기간 내 사용가능<br/>
+
+
+              - 영화관람권은 <span style={{ color: 'red' }}>2D 일반영화에만 적용 가능</span>,, 스페셜관 및 좌석에 적용 불가(일부 특수관 및 좌석에 한해 별도 업차지 금액 지불 시 적용가능)/ 영화관람권은 L.point적립 불가, 관람권 사용 시 VIP 승급금액은 관람권 판매금액으로 반영<br/>
+
+
+              - 상품 확인은 마이시네마 > 나의 쿠폰함에서 가능, 영화관람권은 롯데시네마 홈페이지, 모바일 웹/앱에서 사용가능, 매점교환권은 롯데시네마 매점에서 쿠폰 제시 후 사용가능 (매점 사용불가 매장 확인 요망)<br/>
+          </div>}
+        {selectedValue === 2 && 
+          <div>
+              <b>취소/환불</b><br/>
+
+              - 롯시몰 상품의 취소기한은 구매일로부터 70일 입니다.<br/>
+
+
+              - 구매취소는 취소기한 내 마이시네마 > 예매/구매내역에서만 가능합니다.(현장취소 불가)<br/>
+
+
+              - 구매하신 상품은 부분환불 및 현금환불이 되지 않습니다.<br/>
+
+
+              - 동일 거래 혹은 패키지 상품 중 1장이라도 사용한 경우 환불이 불가합니다.<br/>
+
+
+
+
+              <b>기타</b><br/>
+
+              - 선물한 상품은 마이시네마 > 예매/구매내역 > 선물내역 메뉴에서 30일 내 1회 재발송가능 (단, 받는 사람 번호는 변경 불가)<br/>
+
+
+              - 이벤트로 판매되는 상품의 구매/사용/취소 규정은 해당 이벤트 페이지를 확인해주세요.<br/>
+
+
+              - 유효기간 만료일 전 연장 요청 시, 1회에 한하여 3개월 연장 가능합니다.<br/>
+
+
+              - 고객센터: 1544-8855 (유료)<br/>
+          </div>}
+        </li>
+        </div>
       </ul>
     </div>
   );
