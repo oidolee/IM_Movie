@@ -17,5 +17,8 @@ public interface CustomerMapper {
 	
 	// 로그인
 	public int loginCustomer(String email, String password);
+	
+	// 아이디 찾기
+    public String findID(String name, String hp);
 
 }

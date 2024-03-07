@@ -182,13 +182,13 @@
   font-size: 14px;
 }
 
-.Res_seat .Res_seat2_Res_screen {
+.Res_seat .Res_seat2_main {
   width: 1200px;
   height: 620px;
   background-color: black;
 }
 
-.Res_seat .Res_screen {
+.Res_seat .Res_screen_top {
   color: #fff;
   background-color: #6E6E6E;
   font-size: 16px;
@@ -224,8 +224,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  margin-left: 50px;
-  margin-top: 130px;
+  margin: 100px 0 42px 50px;
 }
 
 .Res_seat .square {
@@ -288,4 +287,23 @@
 .single-square4::after {
   content: "X";
   color: black;
+}
+
+.Res_seat .seat_payment {
+  color: #fff;
+  background-color: #6E6E6E;
+  font-size: 16px;
+  padding: 20px;
+  letter-spacing: 15px;
+  text-align: center;
+  display: block;
+  height: 50px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between; /* 요소들을 컨테이너 양쪽 끝에 배치 */
+  align-items: center; 
+}
+
+.Res_seat .paymentBtn {
+  background-color: #FF243E;
 }

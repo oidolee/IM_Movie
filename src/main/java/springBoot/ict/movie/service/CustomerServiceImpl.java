@@ -54,5 +54,13 @@ public class CustomerServiceImpl implements CustomerService {
 		return selectCnt;
 	}
 	
-
+	// 아이디 찾기 
+    @Override
+    public String findID(String name, String hp) throws ServletException, IOException {
+        System.out.println("CustomerServiceImpl - findID");
+        
+        String foundEmail = dao.findID(name, hp);
+        
+        return foundEmail;
+    }
 }
