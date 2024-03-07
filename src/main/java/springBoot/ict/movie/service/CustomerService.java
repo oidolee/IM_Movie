@@ -20,4 +20,9 @@ public interface CustomerService {
 	// 로그인
 	public int loginCustomer(CustomerDTO dto)
 			throws ServletException, IOException;
+	
+	// 아이디 찾기
+	public String findID(String name, String hp)
+			throws ServletException, IOException; 
+	
 }

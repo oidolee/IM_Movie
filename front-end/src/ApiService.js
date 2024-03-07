@@ -54,6 +54,11 @@ class ApiService {
         console.log(inputData)
         return axios.post("http://localhost:8081/index/login", inputData);
     }
+    findID(inputData) {
+        console.log("findID 호출")
+        console.log(inputData)
+        return axios.post("http://localhost:8081/index/findID", inputData);
+    }
 
 }
 export default new ApiService();

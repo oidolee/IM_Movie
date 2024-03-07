@@ -24,13 +24,13 @@ class AddSampleComponent extends Component {
     saveSample = (e) => {
         e.preventDefault();
 
-        let inpuData = {
+        let inputData = {
             name : this.state.name,
             brand : this.state.brand,
             madein : this.state.madein,
             price : this.state.price
         }
-        ApiService.addSample(inpuData)
+        ApiService.addSample(inputData)
             .then(res => {
                 this.setState({
 

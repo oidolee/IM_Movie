@@ -27,6 +27,16 @@ class SignupComponent extends Component {
         };
     }
 
+    // 모달 열기
+    handleDaumPostcode = () => {
+        this.setState({ isModalOpen: true });
+    };
+
+    // 모달 닫기
+    handleCloseModal = () => {
+        this.setState({ isModalOpen: false });
+    };
+
     // 유효성검사
     validateEmail = (email) => {
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -49,28 +59,46 @@ class SignupComponent extends Component {
         this.setState({ passwordMatched: isMatched });
     };
 
+    // 주소 선택이 완료되었을 때 호출되는 메서드
+    handleAddressComplete = (data) => {
+        let fullAddress = data.address;
+        let extraAddress = '';
+
+        if (data.addressType === 'R') {
+            if (data.bname !== '') {
+                extraAddress += data.bname;
+            }
+            if (data.buildingName !== '') {
+                extraAddress += (extraAddress !== '' ? `, ${data.buildingName}` : data.buildingName);
+            }
+            fullAddress += (extraAddress !== '' ? ` (${extraAddress})` : '');
+        }
+
+        this.setState({
+            zipcode: data.zonecode,
+            addr1: fullAddress,
+        });
+
+        // 모달을 닫습니다.
+        this.handleCloseModal();
+    };
+
     onChange = (e) => {
-        // 비밀번호 확인 필드에 입력이 들어왔을 때, 입력한 비밀번호와 일치하는지 확인합니다.
         if (e.target.name === 'passwordConfirm') {
             this.setState({ passwordConfirm: e.target.value }, this.checkPasswordMatch);
-        }
-
-        // 이메일 유효성 검사를 수행하고, 결과를 상태에 반영합니다.
-        if (e.target.name === 'email') {
+        } else if (e.target.name === 'email') {
             const isValid = this.validateEmail(e.target.value);
             this.setState({ email: e.target.value, emailValid: isValid });
-        }
-
-        // 비밀번호 유효성 검사를 수행하고, 결과를 상태에 반영합니다.
-        if (e.target.name === 'password') {
+        } else if (e.target.name === 'password') {
             const isValid = this.validatePassword(e.target.value);
             this.setState({ password: e.target.value, passwordValid: isValid });
-        }
-
-        // 핸드폰 번호 유효성 검사를 수행하고, 결과를 상태에 반영합니다.
-        if (e.target.name === 'hp') {
+        } else if (e.target.name === 'hp') {
             const isValid = this.validatePhone(e.target.value);
             this.setState({ hp: e.target.value, phoneValid: isValid });
+        } else if (e.target.name === 'name') {
+            this.setState({ name: e.target.value });
+        } else if (e.target.name === 'birthday') { // 이 부분을 수정
+            this.setState({ birthday: e.target.value });
         }
     };
 
