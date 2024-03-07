@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import style from  '../../styles/main/MainBody.module.css'
 
 import slide_1 from '../../assets/main/slide_1.jpg'
+
+import event_1 from '../../assets/main/event_1.jpg'
 import Hyundaicard from '../../assets/main/Hyundaicard_296511.jpg'
 import Main_Swiper from "./Main_Swiper";
 
@@ -34,7 +36,6 @@ class MainBody extends Component{
                             <a href='#'>
                                 <img src={Hyundaicard} alt="Hyundaicard" />
                             </a>
-                            
                         </div>
                     </div>
 
