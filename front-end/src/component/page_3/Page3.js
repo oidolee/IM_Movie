@@ -22,7 +22,7 @@ class Page3 extends Component{
                     <div className={`page3_store2 ${style.page3_store2}`}>
                         <h3 className={`store_title ${style.store_title}`} id='store1'>베스트</h3>
                         <div className={`page3_flex ${style.page3_flex}`}>
-                            <a href="/StoreDetail" className={`store_item ${style.store_item}`}>
+                            <a href="/StoreDetail?num=1" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
                                     <img src={package1}></img>
                                 </div>
@@ -34,6 +34,46 @@ class Page3 extends Component{
                                     <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
                                         <span className={`txt_sale ${style.txt_sale}`}>15%&nbsp;</span>
                                         <span className={`txt_price ${style.txt_price}`}>22,000<em>원</em></span>
+                                        &nbsp;
+                                        <span className={`txt_price_ins ${style.txt_price_ins}`}>26,000원</span>
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className={`page3_flex ${style.page3_flex}`}>
+                            <a href="/StoreDetail?num=2" className={`store_item ${style.store_item}`}>
+                                <div className={`store_img ${style.store_img}`}>
+                                    <img src={package1}></img>
+                                </div>
+                                <div className={`item_content ${style.item_content}`}>
+                                    <div className={`item_title ${style.item_title}`}>
+                                    <h4>[IM,와봄?] 패키지</h4>
+                                    <p>	2D영화관람권 2매 + 스위트콤보 교환권 1매</p>
+                                    </div>
+                                    <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
+                                        <span className={`txt_sale ${style.txt_sale}`}>22%&nbsp;</span>
+                                        <span className={`txt_price ${style.txt_price}`}>28,000<em>원</em></span>
+                                        &nbsp;
+                                        <span className={`txt_price_ins ${style.txt_price_ins}`}>36,000원</span>
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className={`page3_flex ${style.page3_flex}`}>
+                            <a href="/StoreDetail?num=3" className={`store_item ${style.store_item}`}>
+                                <div className={`store_img ${style.store_img}`}>
+                                    <img src={package1}></img>
+                                </div>
+                                <div className={`item_content ${style.item_content}`}>
+                                    <div className={`item_title ${style.item_title}`}>
+                                    <h4>IMPICK♥ [브레드이발소] 2인관람권</h4>
+                                    <p>	[브레드이발소:셀럽in베이커리타운] 전용 2D영화관람권 2매</p>
+                                    </div>
+                                    <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
+                                        <span className={`txt_sale ${style.txt_sale}`}>38%&nbsp;</span>
+                                        <span className={`txt_price ${style.txt_price}`}>16,000<em>원</em></span>
                                         &nbsp;
                                         <span className={`txt_price_ins ${style.txt_price_ins}`}>26,000원</span>
                                         &nbsp;
@@ -43,43 +83,102 @@ class Page3 extends Component{
                         </div>
                         <h3 className={`store_title ${style.store_title}`} id='store2'>관람권</h3>
                         <div className={`page3_flex ${style.page3_flex}`}>
-                            <a href="/StoreDetail" className={`store_item ${style.store_item}`}>
+                            <a href="/StoreDetail?num=4" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
                                     <img src={package1}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
-                                    <h4>[IM과 봄] 패키지</h4>
-                                    <p>2D일반관람권 2매</p>
+                                    <h4>일반 관람권</h4>
+                                    <p>일반 관람권 1매</p>
                                     </div>
                                     <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
-                                        <span className={`txt_sale ${style.txt_sale}`}>15%&nbsp;</span>
-                                        <span className={`txt_price ${style.txt_price}`}>22,000<em>원</em></span>
+                                        <span className={`txt_sale ${style.txt_sale}`}>&nbsp;</span>
+                                        <span className={`txt_price ${style.txt_price}`}>13,000<em>원</em></span>
                                         &nbsp;
-                                        <span className={`txt_price_ins ${style.txt_price_ins}`}>26,000원</span>
+                                        <span className={`txt_price_ins ${style.txt_price_ins}`}></span>
                                         &nbsp;
                                     </div>
                                 </div>
                             </a>
                         </div>
-
-
-                        <h3 className={`store_title ${style.store_title}`} id='store3'>스낵음료</h3>
                         <div className={`page3_flex ${style.page3_flex}`}>
-                            <a href="/StoreDetail" className={`store_item ${style.store_item}`}>
+                            <a href="/StoreDetail?num=5" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
                                     <img src={package1}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
-                                    <h4>[IM과 봄] 패키지</h4>
-                                    <p>2D일반관람권 2매</p>
+                                    <h4>IM 관람권</h4>
+                                    <p>IM관람권 1매</p>
                                     </div>
                                     <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
-                                        <span className={`txt_sale ${style.txt_sale}`}>15%&nbsp;</span>
-                                        <span className={`txt_price ${style.txt_price}`}>22,000<em>원</em></span>
+                                        <span className={`txt_sale ${style.txt_sale}`}>&nbsp;</span>
+                                        <span className={`txt_price ${style.txt_price}`}>35,000<em>원</em></span>
                                         &nbsp;
-                                        <span className={`txt_price_ins ${style.txt_price_ins}`}>26,000원</span>
+                                        <span className={`txt_price_ins ${style.txt_price_ins}`}></span>
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                      
+                        <h3 className={`store_title ${style.store_title}`} id='store3'>스낵음료</h3>
+                        <div className={`page3_flex ${style.page3_flex}`}>
+                            <a href="/StoreDetail?num=6" className={`store_item ${style.store_item}`}>
+                                <div className={`store_img ${style.store_img}`}>
+                                    <img src={package1}></img>
+                                </div>
+                                <div className={`item_content ${style.item_content}`}>
+                                    <div className={`item_title ${style.item_title}`}>
+                                    <h4>스위트콤보</h4>
+                                    <p>오리지널L + 탄산음료M2</p>
+                                    </div>
+                                    <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
+                                        <span className={`txt_sale ${style.txt_sale}`}>&nbsp;</span>
+                                        <span className={`txt_price ${style.txt_price}`}>10,000<em>원</em></span>
+                                        &nbsp;
+                                        <span className={`txt_price_ins ${style.txt_price_ins}`}></span>
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className={`page3_flex ${style.page3_flex}`}>
+                            <a href="/StoreDetail?num=7" className={`store_item ${style.store_item}`}>
+                                <div className={`store_img ${style.store_img}`}>
+                                    <img src={package1}></img>
+                                </div>
+                                <div className={`item_content ${style.item_content}`}>
+                                    <div className={`item_title ${style.item_title}`}>
+                                    <h4>더블콤보</h4>
+                                    <p>오리지널팝콘M2 + 탄산음료M2</p>
+                                    </div>
+                                    <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
+                                        <span className={`txt_sale ${style.txt_sale}`}>&nbsp;</span>
+                                        <span className={`txt_price ${style.txt_price}`}>14,000<em>원</em></span>
+                                        &nbsp;
+                                        <span className={`txt_price_ins ${style.txt_price_ins}`}></span>
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className={`page3_flex ${style.page3_flex}`}>
+                            <a href="/StoreDetail?num=8" className={`store_item ${style.store_item}`}>
+                                <div className={`store_img ${style.store_img}`}>
+                                    <img src={package1}></img>
+                                </div>
+                                <div className={`item_content ${style.item_content}`}>
+                                    <div className={`item_title ${style.item_title}`}>
+                                    <h4>콜라M</h4>
+                                    <p>콜라M</p>
+                                    </div>
+                                    <div className={`txt_price_wrap ${style.txt_price_wrap}`}>
+                                        <span className={`txt_sale ${style.txt_sale}`}>&nbsp;</span>
+                                        <span className={`txt_price ${style.txt_price}`}>3,000<em>원</em></span>
+                                        &nbsp;
+                                        <span className={`txt_price_ins ${style.txt_price_ins}`}></span>
                                         &nbsp;
                                     </div>
                                 </div>
