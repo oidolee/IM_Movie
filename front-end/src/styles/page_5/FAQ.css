@@ -2,8 +2,12 @@
 .wrappage {
     width: 950px;
     margin: 0 auto; /* 가운데 정렬을 위한 방법 */
-    text-align: center; /* 내부 요소의 가운데 정렬을 위한 방법 */
-    
+    text-align: center; /* 내부 요소의 가운데 정렬을 위한 방법 */  
+}
+
+.title{
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .box {
@@ -13,6 +17,7 @@
   height: 90px; /* 적절한 높이 설정 */
   background-color: #d3d3d348; /* 적절한 배경색 설정 */
   padding: 20px; /* 적절한 안쪽 여백 설정 */
+  overflow-x: auto; /* 가로 스크롤을 허용 */
 }
 
 .icon_wrap {
@@ -21,10 +26,17 @@
   left: 50%; /* 부모 요소의 가로 중앙 정렬 */
   transform: translate(-50%, -50%); /* 요소를 가로/세로 중앙으로 이동 */
   text-align: center; /* 버튼을 가로 중앙 정렬 */
+  white-space: nowrap; /* 줄 바꿈 방지 */
 }
 
-.icon_wrap button {
-  /* 필요한 스타일링 */
+.ico_01{
+  display: inline-block; /* 가로로 배열 */
+  margin-right: 10px; /* 이미지 사이의 간격 조절 */
+}
+
+.ico_01 img{
+  width: 73px;
+  height: 76px;
 }
 
 .search_box{
@@ -74,28 +86,41 @@
   font-weight: bold;
 }
 
-/* 전체 Accordion 스타일 */
+.test1{
+  display: flex;
+}
+.test1 > p:nth-of-type(1){
+  margin-left: 40px;
+  font-weight: bold;
+}
+.test1 > p:nth-of-type(2){
+  margin-left: 300px;
+  font-weight: bold;
+}
 
+/* 전체 Accordion 스타일 */
 .accordian_all{
-  margin-top: 40px;;
+  margin-top: 50px;;
 }
 
 .Accordion {
-    width: 80%;
+    width: 20%;
   }
   
+  .accordian_all p{
+    display: block;
+    margin-left:20px;
+  }
   /* 각 Accordion.Item의 헤더 스타일 */
-  .Accordion.Header {
-    background-color: #f8f9fa; /* 헤더 배경색 */
-    padding: 15px; /* 내부 여백 */
+  .header { 
     font-weight: bold; /* 글자 굵게 */
     cursor: pointer; /* 포인터 커서로 변경 */
-    border-bottom: 1px solid #dee2e6; /* 헤더 하단 테두리 */
   }
-  
+
   /* 활성화된 Accordion.Item의 헤더 스타일 */
   .Accordion.Header.active {
     background-color: #e9ecef; /* 활성화된 헤더 배경색 */
+
   }
   
   /* Accordion.Item의 내용(바디) 스타일 */
@@ -120,4 +145,16 @@
   .Accordion.Body br {
     margin-bottom: 10px; /* 줄 바꿈 아래 여백 */
   }
+
+  .page{
+    text-align: center;
+  }
+
+  .pagination {
+    display: flex;
+    padding-left: 450px;
+    list-style: none;
+    color: black;
+    margin: 50px 0 ;
+}
   
