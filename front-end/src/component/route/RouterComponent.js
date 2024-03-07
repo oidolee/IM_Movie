@@ -21,11 +21,13 @@ import Parking from '../page_2/Parking';
 import Page3 from '../page_3/Page3';
 import StoreDetail from '../page_3/StoreDetail';
 
+
 //page_4
 import listCustomer from '../page_4/listCustomer';
 import singupComponent from '../page_4/singupComponent';
 import loginComponent from '../page_4/loginComponent';
 import signupCheck from '../page_4/signupCheck';
+import searchID from '../page_4/searchID';
 
 //page_5
 import movieMain from '../page_5/main/movieMain';
@@ -35,6 +37,7 @@ import FAQ from '../page_5/board/FAQ';
 import MyPage from '../page_6/MyPage';
 import MyPage_res from '../page_6/reservation/MyPage_res';
 import MyPage_resCancle from '../page_6/reservation/MyPage_resCancle';
+import MyPage_coupon from '../page_6/coupon/MyPage_coupon';
 
 
 
@@ -64,6 +67,8 @@ const AppRouter = () => {
                     <Route>
                         <Route path="/Page3" exact={true} component={Page3} />
                         <Route path="/StoreDetail" exact={true} component={StoreDetail} />
+
+                        
                     </Route>
 
                     {/* page_4 */}
@@ -72,6 +77,7 @@ const AppRouter = () => {
                         <Route path="/sign-up" exact={true} component={singupComponent} />
                         <Route path="/signCheck" exact={true} component={signupCheck} />
                         <Route path="/customerlist" exact={true} component={listCustomer} />
+                        <Route path="/searchID" exact={true} component={searchID} />
                     </Route>
                    
                     {/* page_5 */}
@@ -85,7 +91,8 @@ const AppRouter = () => {
                         <Route path="/MyPage" exact={true} component={MyPage} />
                         <Route path="/MyPage_res" exact={true} component={MyPage_res} />
                         <Route path="/MyPage_resCancle" exact={true} component={MyPage_resCancle} />
-                        
+                        <Route path="/MyPage_coupon" exact={true} component={MyPage_coupon} />
+
                     </Route>
 
                     {/* sample */}

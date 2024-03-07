@@ -291,6 +291,15 @@
     INSERT INTO IM_Customer(IC_No, IC_email, IC_name, IC_password, IC_hp, IC_birthday, IC_address)
         VALUES((SELECT NVL(MAX(IC_No)+1, 1) FROM IM_Customer), '57', '55', '55', '010', '2024-05-15','서울시 강남구'); 
     COMMIT;
+    -- 아이디찾기 (휴대폰번호, 이름)
+    SELECT IC_email 
+    FROM IM_Customer 
+    WHERE IC_name = '홍길동' AND IC_hp = '01011112222';
+    -- 아이디찾기 (생년월일 , 이름)
+   SELECT *
+FROM IM_Customer
+WHERE IC_birthday = '2024-02-29';
+
 
 -- 호진 시작 끝
 
@@ -477,10 +486,5 @@ insert into mvc_sample_tbl
     values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_2', 'brand_2', 'madein_2', 2 );
 commit;    
 SELECT * FROM mvc_sample_tbl;
-
-
-
-
-
 
 
