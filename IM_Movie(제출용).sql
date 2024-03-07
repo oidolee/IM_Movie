@@ -1,11 +1,11 @@
 -- 예진 시작 (page_1)
     DROP TABLE mvc_sample_tbl CASCADE CONSTRAINTS;
     CREATE TABLE mvc_sample_tbl(
-    id      number(5)    PRIMARY KEY,
-    name    varchar2(50) NOT NULL,
-    brand   varchar2(50) NOT NULL,
-    madein  varchar2(50) NOT NULL,
-    price   number(9)    NOT NULL
+        id      number(5)    PRIMARY KEY,
+        name    varchar2(50) NOT NULL,
+        brand   varchar2(50) NOT NULL,
+        madein  varchar2(50) NOT NULL,
+        price   number(9)    NOT NULL
     );
     insert into mvc_sample_tbl 
         values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_1', 'brand_1', 'madein_1', 1 );
@@ -17,20 +17,20 @@
     ---------------------------------------------------------------
     DROP TABLE mvc_Reservation_tbl CASCADE CONSTRAINTS;
     CREATE TABLE mvc_Reservation_tbl(
-    Res_id           NUMBER          PRIMARY KEY,
-    c_email          VARCHAR2(50)    NOT NULL,
-    THEATER_ID       VARCHAR2(50)    NOT NULL,
-    SCREEN_ID        VARCHAR2(50)    NOT NULL,
-    MOV_AGE          VARCHAR2(255)   NOT NULL,
-    Res_movieDate    Date            DEFAULT sysdate,
-    Res_movieID      VARCHAR2(50)    NOT NULL,
-    Res_movieName    VARCHAR2(100)   NOT NULL,
-    Res_movieTime    VARCHAR2(100)   NOT NULL,
-    Res_seat         VARCHAR2(50)    NOT NULL,
-    Res_count        NUMBER          NOT NULL,
-    Res_ticketPrice  NUMBER          NOT NULL,
-    Res_sysdate      DATE            DEFAULT sysdate,
-    Res_check        CHAR(1)         DEFAULT 'n'
+        Res_id           NUMBER          PRIMARY KEY,
+        c_email          VARCHAR2(50)    NOT NULL,
+        THEATER_ID       VARCHAR2(50)    NOT NULL,
+        SCREEN_ID        VARCHAR2(50)    NOT NULL,
+        MOV_AGE          VARCHAR2(255)   NOT NULL,
+        Res_movieDate    Date            DEFAULT sysdate,
+        Res_movieID      VARCHAR2(50)    NOT NULL,
+        Res_movieName    VARCHAR2(100)   NOT NULL,
+        Res_movieTime    VARCHAR2(100)   NOT NULL,
+        Res_seat         VARCHAR2(50)    NOT NULL,
+        Res_count        NUMBER          NOT NULL,
+        Res_ticketPrice  NUMBER          NOT NULL,
+        Res_sysdate      DATE            DEFAULT sysdate,
+        Res_check        CHAR(1)         DEFAULT 'n'
     );
 
     select * from mvc_Reservation_tbl;
@@ -49,17 +49,17 @@
 
     DROP TABLE mvc_PayMent_tbl CASCADE CONSTRAINTS;
     CREATE TABLE mvc_PayMent_tbl(
-    Pay_id           NUMBER          PRIMARY KEY,
-    Res_id           NUMBER          NOT NULL,
-    c_email          VARCHAR2(50)    NOT NULL,
-    c_grade          VARCHAR2(50)    NOT NULL,
-    Pay_method       VARCHAR2(50)    NOT NULL,
-    Pay_payCompany   VARCHAR2(50)    NOT NULL,
-    Res_movieName    VARCHAR2(100)   NOT NULL,
-    Pay_cardNum      VARCHAR2(100)   NOT NULL,
-    Pay_tel          VARCHAR2(50)    NOT NULL,
-    Pay_sysdate      DATE            DEFAULT sysdate,
-    Pay_check        CHAR(1)         DEFAULT 'n'
+        Pay_id           NUMBER          PRIMARY KEY,
+        Res_id           NUMBER          NOT NULL,
+        c_email          VARCHAR2(50)    NOT NULL,
+        c_grade          VARCHAR2(50)    NOT NULL,
+        Pay_method       VARCHAR2(50)    NOT NULL,
+        Pay_payCompany   VARCHAR2(50)    NOT NULL,
+        Res_movieName    VARCHAR2(100)   NOT NULL,
+        Pay_cardNum      VARCHAR2(100)   NOT NULL,
+        Pay_tel          VARCHAR2(50)    NOT NULL,
+        Pay_sysdate      DATE            DEFAULT sysdate,
+        Pay_check        CHAR(1)         DEFAULT 'n'
     );
 
     select * from mvc_PayMent_tbl;
@@ -78,13 +78,13 @@
 
     DROP TABLE mvc_Seat_tbl CASCADE CONSTRAINTS;
     CREATE TABLE mvc_Seat_tbl(
-    St_id            NUMBER          PRIMARY KEY,
-    THEATER_ID       VARCHAR2(50)    NOT NULL,
-    SCREEN_ID        VARCHAR2(50)    NOT NULL,
-    St_seatGroup     VARCHAR2(50)    NOT NULL,
-    St_num           VARCHAR2(50)    NOT NULL,
-    St_lineNum       VARCHAR2(50)    NOT NULL,
-    St_check         CHAR(1)         DEFAULT 'n'
+        St_id            NUMBER          PRIMARY KEY,
+        THEATER_ID       VARCHAR2(50)    NOT NULL,
+        SCREEN_ID        VARCHAR2(50)    NOT NULL,
+        St_seatGroup     VARCHAR2(50)    NOT NULL,
+        St_num           VARCHAR2(50)    NOT NULL,
+        St_lineNum       VARCHAR2(50)    NOT NULL,
+        St_check         CHAR(1)         DEFAULT 'n'
     );
 
     select * from mvc_Seat_tbl;
@@ -103,12 +103,12 @@
 
     DROP TABLE mvc_Discount_tbl CASCADE CONSTRAINTS;
     CREATE TABLE mvc_Discount_tbl(
-    Dc_num            NUMBER          PRIMARY KEY,
-    Dc_mainTitle      VARCHAR2(50)    NOT NULL,
-    Dc_subTitle       VARCHAR2(50),
-    Dc_mainImg        VARCHAR2(255)   NOT NULL,
-    Dc_subImg         VARCHAR2(255)   NOT NULL,
-    Dc_show           CHAR(1)         DEFAULT 'n'
+        Dc_num            NUMBER          PRIMARY KEY,
+        Dc_mainTitle      VARCHAR2(50)    NOT NULL,
+        Dc_subTitle       VARCHAR2(50),
+        Dc_mainImg        VARCHAR2(255)   NOT NULL,
+        Dc_subImg         VARCHAR2(255)   NOT NULL,
+        Dc_show           CHAR(1)         DEFAULT 'n'
     );
 
     select * from mvc_Discount_tbl;
@@ -291,15 +291,6 @@
     INSERT INTO IM_Customer(IC_No, IC_email, IC_name, IC_password, IC_hp, IC_birthday, IC_address)
         VALUES((SELECT NVL(MAX(IC_No)+1, 1) FROM IM_Customer), '57', '55', '55', '010', '2024-05-15','서울시 강남구'); 
     COMMIT;
-    -- 아이디찾기 (휴대폰번호, 이름)
-    SELECT IC_email 
-    FROM IM_Customer 
-    WHERE IC_name = '홍길동' AND IC_hp = '01011112222';
-    -- 아이디찾기 (생년월일 , 이름)
-   SELECT *
-FROM IM_Customer
-WHERE IC_birthday = '2024-02-29';
-
 
 -- 호진 시작 끝
 
@@ -486,5 +477,10 @@ insert into mvc_sample_tbl
     values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_2', 'brand_2', 'madein_2', 2 );
 commit;    
 SELECT * FROM mvc_sample_tbl;
+
+
+
+
+
 
 

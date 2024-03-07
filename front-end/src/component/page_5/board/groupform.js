@@ -1,68 +1,145 @@
 import React, { useState } from 'react';
-import style from '../../../styles/page_5/groupform.css';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import style from '../../../styles/page_5/groupform.module.css';
+import group1 from '../../../assets/page_5_3/group1.png';
 
-const GroupReservationForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    event: '',
-    message: ''
-  });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+function Form() {
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    };  
+  
+    return (
+      <div id='Form_wrappage' className={`Form_wrappage ${style.Form_wrappage}`}>
+        <Navbar expand="lg">
+          <Navbar.Brand href="#home" className={`Form_title ${style.Form_title}`}>고객센터</Navbar.Brand> {/* 고객센터 제목 */}
+        </Navbar>
+  
+        <Nav fill variant="tabs" defaultActiveKey="/home">
+          <Nav.Item>
+            <Nav.Link href="/FAQ">FAQ</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/NOTICE">공지사항</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/home">1:1문의</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/groupform">단체관람/대관문의</Nav.Link>
+          </Nav.Item>
+        </Nav>
+  
+        <div className={`Form_box ${style.Form_box}`}>
+          <button className={`Form_grp01 ${style.Form_grp01}`} id="8"><img src={group1} alt='그룹1'/></button>
+        </div>
+  
+        <div className={`Form_make ${style.Form_make}`}>
+          <p>문의내용</p>
+          <hr></hr>
+        </div>
 
-  //78
+        <div id='Form_content' className={`Form_content ${style.Form_content}`}>
+          <form onSubmit={handleSubmit}>
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="g_movie">영화관</label>
+              <button className={`mvchsbtn ${style.mvchsbtn}`} onClick>영화관선택</button>
+             <hr></hr>
+            </div>
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // 여기서 폼 데이터를 처리하거나 서버로 전송할 수 있습니다.
-    console.log(formData);
-  };
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="g_type">분류</label>
+                <input type="radio" id="category1" className={`category1 ${style.category1}`}  name="category" value="category1" />
+                <label for="category1">단체관람</label>
+                
+                <input type="radio" id="category2" className={`category2 ${style.category2}`} name="category" value="category2" />
+                <label for="category2">대관</label>
+                <hr></hr>
+            </div>
 
-  return (
-    <div id='wrappage2' className={`wrappage ${style.wrappage2}`}>
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="name">이름</label>
-        <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="이름을 입력하세요" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">이메일 주소</label>
-        <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="이메일을 입력하세요" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="phone">전화번호</label>
-        <input type="tel" className="form-control" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="전화번호를 입력하세요" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="company">회사명</label>
-        <input type="text" className="form-control" id="company" name="company" value={formData.company} onChange={handleChange} placeholder="회사명을 입력하세요" />
-      </div>
-      <div className="form-group">
-        <label htmlFor="event">이벤트 종류</label>
-        <select className="form-control" id="event" name="event" value={formData.event} onChange={handleChange}>
-          <option>이벤트 종류를 선택하세요</option>
-          <option>단체 관람</option>
-          <option>대관 문의</option>
-          <option>기타</option>
-        </select>
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">문의 내용</label>
-        <textarea className="form-control" id="message" name="message" value={formData.message} onChange={handleChange} rows="3" placeholder="문의 내용을 입력하세요" required></textarea>
-      </div>
-      <button type="submit" className="btn btn-primary">문의하기</button>
-    </form>
-    </div>
-  );
-};
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="g_num">예상인원</label>
+              <input type="text" id="num1" className={`num1 ${style.num1}`}  name="num" />&nbsp;
+              <label>명</label>
+              <hr></hr>
+            </div>
 
-export default GroupReservationForm;
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="g_date">희망일</label>
+                  <input type="date" id="date1" className={`date1 ${style.date1}`}  maxlength="4" placeholder="연도 월 일"/>
+              <hr></hr>
+              </div>
+            
+
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="g_time">희망시간</label>
+              <input type="text" id="time1" className={`time1 ${style.time1}`}  name="time1" />&nbsp;
+              <label>시~</label>
+              <input type="text" id="time2" className={`time2 ${style.time2}`}  name="time2" />&nbsp;
+              <label>시 사이</label>
+              <hr></hr>
+            </div>
+
+            <div className={`Form_group ${style.Form_group}`}>
+            <label for="g_con">내용</label>
+            <div className={`con ${style.con}`}>
+                <input type="text" id="con1" className={`con1 ${style.con1}`}  name="con1" placeholder="영화명을 입력해주세요" required /> 
+                <input type="text" id="con2" className={`con1 ${style.con2}`}  name="con2" placeholder="제목을 입력해주세요" required /> 
+            </div>
+                <textarea className={`con3 ${style.con3}`} id="con3" name="con3" rows="3" placeholder="내용 및 첨부파일에 개인정보(카드번호,계좌번호,주민번호)가 포함되지 않도록 유의하여 입력해주세요." required></textarea>
+            <hr></hr>
+            </div>
+
+            <div className={`Form_group1 ${style.Form_group1}`}>
+              <label for="g_recol">답변수신 여부</label>
+              <input type="checkbox" id="category3" className={`category3 ${style.category3}`}  name="category" value="category3" />
+                <label for="category3">이메일 알림받기</label>
+                
+                <input type="checkbox" id="category4" className={`category4 ${style.category4}`} name="category" value="category4" />
+                <label for="category4">SMS 알림받기</label>
+              <hr></hr>
+            </div>
+
+            <div className={`Form_make2 ${style.Form_make2}`}>
+                <p>신청자 정보</p>
+                <hr></hr>
+            </div>
+
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="gg_group">단체명</label>
+              <input type="text" id="group_name" className={`group_name ${style.group_name}`}  name="groupname" />
+              <hr></hr>
+            </div>
+
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="gg_name">성명</label>
+              <input type="text" id="name1" className={`name1 ${style.name1}`}  name="name" />
+              <hr></hr>
+            </div>
+
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="gg_tel">연락처</label>
+              <input type="text" id="tel1" className={`tel1 ${style.tel1}`}  name="tel" />
+              <input type="text" id="tel2" className={`tel2 ${style.tel2}`}  name="tel" />
+              <input type="text" id="tel3" className={`tel3 ${style.tel3}`}  name="tel" />
+              
+              <hr></hr>
+            </div>
+
+            <div className={`Form_group ${style.Form_group}`}>
+              <label for="gg_email">이메일</label>
+              <input type="text" id="num1" className={`num1 ${style.num1}`}  name="num" />
+              
+              <hr></hr>
+            </div>
+
+            
+          </form>
+        </div>
+      </div>
+    );
+  }
+  
+  export default Form;

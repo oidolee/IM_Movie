@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Pagination from 'react-bootstrap/Pagination';
 import { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import style from '../../../styles/page_5/FAQ.css';
+import style from '../../../styles/page_5/FAQ.module.css';
 import movieuse from '../../../assets/page_5_2/movieuse.png';
 import special from '../../../assets/page_5_2/special.png';
 import user from '../../../assets/page_5_2/user.png';
@@ -14,7 +14,7 @@ import ticket from '../../../assets/page_5_2/ticket.png';
 import store from '../../../assets/page_5_2/store.png';
 
 
-function SearchBox() {
+function FIND() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearchChange = (event) => {
@@ -27,32 +27,32 @@ function SearchBox() {
   };
 
   return (
-    <div className={`search_box ${style.search_box}`}>
-      <div className='search'>
+    <div className={`FIND_search_box ${style.FIND_search_box}`}>
+      <div className={`FIND_search ${style.FIND_search}`}>
         <input
           type="text"
           placeholder="검색어를 입력하세요"
           value={searchTerm}
           onChange={handleSearchChange}
-          className="search-input"/>
+          className={`FIND_search_input ${style.FIND_search_input}`}/>
         <button
           onClick={handleSearchSubmit}
-          className="search-button">검색</button>     
+          className={`FIND_search_button ${style.FIND_search_button}`}>검색</button>     
       </div>
-      <div class = "help_wrap">
+      <div className={`FIND_help_wrap ${style.FIND_help_wrap}`}>
           <p>더 궁금한 점이 있거나, 이미 문의한 내용과 답변을 확인하려면?</p>
           <a href = "#none">1:1문의 바로가기</a>
       </div>
-    </div> //d
+    </div> 
   );
 }
 
 
 function FAQ() {
   return (
-    <div id='wrappage' className={`wrappage ${style.wrappage}`}>
+    <div id='FAQ_wrappage' className={`FAQ_wrappage ${style.FAQ_wrappage}`}>
       <Navbar expand="lg">
-        <Navbar.Brand href="#home" className='title'>고객센터</Navbar.Brand> {/* 고객센터 제목 */}
+        <Navbar.Brand href="#home" className={`FAQ_title ${style.FAQ_title}`}>고객센터</Navbar.Brand> {/* 고객센터 제목 */}
       </Navbar>
 
       <Nav fill variant="tabs" defaultActiveKey="/home">
@@ -63,27 +63,27 @@ function FAQ() {
           <Nav.Link href="/NOTICE">공지사항</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/groupform">1:1문의</Nav.Link>
+          <Nav.Link href="/home">1:1문의</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/home">단체관람/대관문의</Nav.Link>
+          <Nav.Link href="/groupform">단체관람/대관문의</Nav.Link>
         </Nav.Item>
       </Nav>
 
-      <div className = "box">
-      <div className="icon_wrap">
-        <button className="ico_01" id="7"><img src={movieuse} alt='영화관 이용 '/></button>
-        <button className="ico_01" id="7"><img src={special} alt='스페셜관'/></button>
-        <button className="ico_01" id="7"><img src={user} alt='회원'/></button>
-        <button className="ico_01" id="7"><img src={online} alt='온라인'/></button>
-        <button className="ico_01" id="7"><img src={sale} alt='할인혜택'/></button>
-        <button className="ico_01" id="7"><img src={ticket} alt='관람권'/></button>
-        <button className="ico_01" id="7"><img src={store} alt='스토어'/></button>
+      <div className={`box ${style.box}`}>
+      <div className={`icon_wrap ${style.icon_wrap}`}>
+        <button className={`ico_01 ${style.ico_01}`} id="1"><img src={movieuse} alt='영화관 이용 '/></button>
+        <button className={`ico_01 ${style.ico_01}`} id="2"><img src={special} alt='스페셜관'/></button>
+        <button className={`ico_01 ${style.ico_01}`} id="3"><img src={user} alt='회원'/></button>
+        <button className={`ico_01 ${style.ico_01}`} id="4"><img src={online} alt='온라인'/></button>
+        <button className={`ico_01 ${style.ico_01}`} id="5"><img src={sale} alt='할인혜택'/></button>
+        <button className={`ico_01 ${style.ico_01}`} id="6"><img src={ticket} alt='관람권'/></button>
+        <button className={`ico_01 ${style.ico_01}`} id="7"><img src={store} alt='스토어'/></button>
                
       </div>
     </div>
 
-    <SearchBox /> {/* 검색창 컴포넌트 추가 */}
+    < FIND /> {/* 검색창 컴포넌트 추가 */}
 
       <div id='accordian_all' className={`accordian_all ${style.accordian_all}`}>
       <div className={`test1 ${style.test1}`}>
@@ -152,7 +152,7 @@ function FAQ() {
 
         
         <Accordion.Item eventKey="1">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소방/경찰 할인은 어떻게 받나요?</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소방/경찰 할인은 어떻게 받나요?</Accordion.Header>
           <Accordion.Body>
           [경찰할인] 경찰 & 해양경찰 소속 공무원 고객님들에게 할인 혜택을 제공하고 있습니다.
 
@@ -187,7 +187,7 @@ function FAQ() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="2">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;영화 경품(굿즈)수량 확인은 어떻게 하나요?</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;영화 경품(굿즈)수량 확인은 어떻게 하나요?</Accordion.Header>
           <Accordion.Body>
           ■ 영화 경품(굿즈) 수량 확인 방법
 
@@ -204,7 +204,7 @@ function FAQ() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="3">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;카드로 결제할 경우 환불은 언제 되나요?</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;카드로 결제할 경우 환불은 언제 되나요?</Accordion.Header>
           <Accordion.Body>
           ■ 환불안내
  
@@ -233,7 +233,7 @@ function FAQ() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="4">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;국가유공자 할인은 어떻게 받나요?</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;국가유공자 할인은 어떻게 받나요?</Accordion.Header>
           <Accordion.Body>
           국가보훈처에서 지정한 보훈대상임을 증명할 수 있는 국가유공자증 및 유족증 소지자 본인에 한해 일반 2D 영화 5천원, 3D 영화 8천원 관람이 가능합니다. (특수관의 경우, 일부 추가금액이 발생할 수 있습니다.)
 
@@ -244,7 +244,7 @@ function FAQ() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="5">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SWEET SPOT이 무엇인가요?</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SWEET SPOT이 무엇인가요?</Accordion.Header>
           <Accordion.Body>
           SWEET SPOT이란, 스크린 가운데에서 상영관 뒤 벽까지 직선 거리의 2/3 지점으로, 롯데시네마가 추천하는 최적의 화면과 사운드를 즐길 수 있는 좌석입니다.
           별도의 추가 요금은 없습니다.
@@ -252,7 +252,7 @@ function FAQ() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="6">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;분실물을 찾고 싶어요</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;분실물을 찾고 싶어요</Accordion.Header>
           <Accordion.Body>
           영화관을 이용하시다가 소지물품을 분실하신 경우에는
           롯데시네마 홈페이지 [고객센터] - [분실물문의]에서 분실물 접수 시 담당자 확인 후 안내드리고 있습니다.
@@ -260,7 +260,7 @@ function FAQ() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="7">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;단체 관람의 경우 할인 혜택이 어떻게 되나요?</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;단체 관람의 경우 할인 혜택이 어떻게 되나요?</Accordion.Header>
           <Accordion.Body>
           단체 관람의 경우, 10명 이상 티켓 구매 시 1인당 1,000원씩 할인 혜택을 받으실 수 있습니다.
           단체 관람과 관련하여 문의가 있으실 경우 롯데시네마 [홈페이지] → [고객센터] → [단체관람/대관문의]로 내용 접수해주시기 바랍니다.
@@ -270,7 +270,7 @@ function FAQ() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="8">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;장애인 할인 혜택에 대해 알려 주세요</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;장애인 할인 혜택에 대해 알려 주세요</Accordion.Header>
           <Accordion.Body>
           ■ 일반 2D 영화 : 5,000원 관람 /  3D 영화 : 8,000원 관람
           ■ 장애의 정도가 심한 장애인(중증) : 본인 및 동반 1인 할인적용 가능
@@ -281,7 +281,7 @@ function FAQ() {
         </Accordion.Item>
 
         <Accordion.Item eventKey="9">
-          <Accordion.Header className='header'>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;경로 할인 혜택에 대해 알려주세요</Accordion.Header>
+          <Accordion.Header className={`header ${style.header}`}>영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;경로 할인 혜택에 대해 알려주세요</Accordion.Header>
           <Accordion.Body>
           만 65세 이상의 고객님들에게 할인 혜택을 제공하고 있습니다.
           ■ 일반 2D 영화 : 7,000원
@@ -291,13 +291,12 @@ function FAQ() {
         </Accordion.Item>
       </Accordion>
 
-       
-      <Pagination className={`page ${style.page}`}>
-      <Pagination.Item active>{1}</Pagination.Item>
-      <Pagination.Item >{2}</Pagination.Item> 
+      <Pagination className={`FAQ_pagination ${style.page}`}>
+        <Pagination.Item active>{1}</Pagination.Item>
+        <Pagination.Item>{2}</Pagination.Item> 
       </Pagination>
     </div>
-    </div>
+  </div>
 
       
   );

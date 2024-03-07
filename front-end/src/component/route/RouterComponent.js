@@ -12,8 +12,13 @@ import MainBody from '../main/MainBody';
 //page_1
 import Reservation_Movie from '../page_1/Reservation_Movie';
 import Reservation_Seat from '../page_1/Reservation_Seat';
+import Reservation_Payment from '../page_1/Reservation_Payment';
 
+//page_2
 import Page2 from '../page_2/Page2';
+import Parking from '../page_2/Parking';
+
+//page_3
 import Page3 from '../page_3/Page3';
 import StoreDetail from '../page_3/StoreDetail';
 
@@ -24,18 +29,22 @@ import singupComponent from '../page_4/singupComponent';
 import loginComponent from '../page_4/loginComponent';
 import signupCheck from '../page_4/signupCheck';
 import searchID from '../page_4/searchID';
+import resultFindID from '../page_4/resultFindID';
 
 //page_5
 import movieMain from '../page_5/main/movieMain';
 import FAQ from '../page_5/board/FAQ';
-import NOTICE from '../page_5/board/NOTICE.js';
+import NOTICE from '../page_5/board/NOTICE';
 import groupform from '../page_5/board/groupform';
+
 
 //page_6
 import MyPage from '../page_6/MyPage';
 import MyPage_res from '../page_6/reservation/MyPage_res';
 import MyPage_resCancle from '../page_6/reservation/MyPage_resCancle';
 import MyPage_coupon from '../page_6/coupon/MyPage_coupon';
+import MyPage_wishMovie from '../page_6/movielog/MyPage_wishMovie';
+import Consult_part from '../page_6/consult/Consult_part';
 
 
 
@@ -52,11 +61,13 @@ const AppRouter = () => {
                     <Route>
                         <Route path="/page_1/Reservation_Movie" exact={true} component={Reservation_Movie} />
                         <Route path="/page_1/Reservation_Seat" exact={true} component={Reservation_Seat} />
+                        <Route path="/page_1/Reservation_Payment" exact={true} component={Reservation_Payment} />
                     </Route>
 
                     {/* page_2 */}
                     <Route>
                         <Route path="/page_2" exact={true} component={Page2} />
+                        <Route path="/parking" exact={true} component={Parking} />
                          
                     </Route>
 
@@ -75,6 +86,7 @@ const AppRouter = () => {
                         <Route path="/signCheck" exact={true} component={signupCheck} />
                         <Route path="/customerlist" exact={true} component={listCustomer} />
                         <Route path="/searchID" exact={true} component={searchID} />
+                        <Route path="/findID" exact={true} component={resultFindID} />
                     </Route>
                    
                     {/* page_5 */}
@@ -83,6 +95,7 @@ const AppRouter = () => {
                         <Route path="/FAQ" exact={true} component={FAQ} />
                         <Route path="/NOTICE" exact={true} component={NOTICE} />
                         <Route path="/groupform" exact={true} component={groupform} />
+                       
                     </Route>
                     
 
@@ -92,6 +105,8 @@ const AppRouter = () => {
                         <Route path="/MyPage_res" exact={true} component={MyPage_res} />
                         <Route path="/MyPage_resCancle" exact={true} component={MyPage_resCancle} />
                         <Route path="/MyPage_coupon" exact={true} component={MyPage_coupon} />
+                        <Route path="/MyPage_wishMovie" exact={true} component={MyPage_wishMovie} />
+                        <Route path="/Consult_part" exact={true} component={Consult_part} />
 
                     </Route>
 

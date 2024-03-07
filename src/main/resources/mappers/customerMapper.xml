@@ -22,6 +22,12 @@
 		SELECT COUNT(*) FROM IM_Customer WHERE IC_email=#{email} and IC_password=#{password} and IC_show ='y'
 	</select>
 	
+	<!-- 아이디 찾기  -->
+	<select id="findID" parameterType="java.util.Map" resultType="String">
+		SELECT IC_email 
+    	FROM IM_Customer 
+    	WHERE IC_name = #{name} AND IC_hp = #{hp} 
+	</select>
 	
 	
 </mapper>

@@ -109,6 +109,38 @@ public class CustomerController {
 		return response;
 	} 
 	
+	// 아이디 찾기
+    @PostMapping("/findID")
+    public Map<String, Object> findID(@RequestBody CustomerDTO dto) throws ServletException, IOException {
+        logger.info("<<< url -> findID start");
+        System.out.println("dto" + dto.toString());
+
+        String resultCode = "";
+        String resultMsg = "";
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        try {
+            String foundEmail = service.findID(dto.getName(), dto.getHp());
+            if (foundEmail != null) {
+                resultCode = "200";
+                resultMsg = "ID found";
+                map.put("foundEmail", foundEmail);
+            } else {
+                resultCode = "404";
+                resultMsg = "ID not found";
+            }
+        } catch (Exception e) {
+            resultCode = "400";
+            resultMsg = e.getMessage();
+            e.printStackTrace();
+        }
+        map.put("resultCode", resultCode);
+        map.put("resultMsg", resultMsg);
+
+        return map;
+    }
+	
 	
 		
 
