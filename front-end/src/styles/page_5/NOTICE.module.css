@@ -1,17 +1,17 @@
 
-.wrappage {
+.NOTICE_wrappage {
     width: 950px;
     margin: 0 auto; /* 가운데 정렬을 위한 방법 */
     text-align: center; /* 내부 요소의 가운데 정렬을 위한 방법 */  
 }
 
-.title{
+.NOTICE_title{
   font-weight: bold;
   margin-left: 10px;
 }
 
 
-.search_box2{
+.SearchBox_search_box2{
   margin-top: 20px;
   position: relative;
   width: 100%; /* 적절한 너비 설정 */
@@ -22,18 +22,18 @@
   display: flex;
 }
 
-.select_box{
+.SearchBox_select_box{
     margin-right: 100px;
     margin-left: 40px;
 }
 
-.search2{
+.SearchBox_search2{
     margin: 0 auto;
     padding-left: 200px;
     
 }
 
-.search_input {
+.SearchBox_search_input {
   width: 350px;
   height: 35px; 
   padding: 10px;
@@ -42,7 +42,7 @@
   font-size: 13px;
 }
 
-.search_btn {
+.SearchBox_search_btn {
   background-color: rgba(0, 0, 0, 0.767);
   color: white;
   font-size: 14px;
@@ -52,41 +52,47 @@
   cursor: pointer;
 }
 
-.search-label {
+.SearchBox_search-label {
   align-self: flex-start; /* 요소를 위로 정렬 */
   margin-right: 10px; /* 오른쪽 여백 설정 */
 }
 
-.test2{
+.NOTICE_test2{
     display: flex;
   }
-  .test2 > p:nth-of-type(1){
+  .NOTICE_test2 > p:nth-of-type(1){
     margin-left: 40px;
     font-weight: bold;
   }
-  .test2 > p:nth-of-type(2){
+  .NOTICE_test2 > p:nth-of-type(2){
     margin-left: 400px;
     font-weight: bold;
   }
 
-  .test2 > p:nth-of-type(3){
+  .NOTICE_test2 > p:nth-of-type(3){
     margin-left: 300px;
     font-weight: bold;
   }
 
-.content{
+.NOTICE_content{
     margin-top: 30px;
 }
 
-  .page2{
-    text-align: center;
-  }
-
-  .pagination {
-    display: flex;
-    padding-left: 350px;
-    list-style: none;
-    color: black;
-    margin: 50px 0 ;
+.NOTICE_pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  justify-content: center; /* 가운데 정렬을 위해 사용 */
+  list-style: none;
+  color: black;
 }
+
+.NOTICE_pagination1 .NOTICE_page {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 70px;
+  margin-bottom: 500px;
+}
+
+
   

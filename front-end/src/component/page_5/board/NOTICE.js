@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState } from 'react';
-import style from '../../../styles/page_5/NOTICE.css';
+import style from '../../../styles/page_5/NOTICE.module.css';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Pagination from 'react-bootstrap/Pagination';
 
@@ -29,9 +29,9 @@ function SearchBox() {
 
 
   return (
-    <div className={`search_box2 ${style.search_box2}`}>
+    <div className={`SearchBox_search_box2 ${style.SearchBox_search_box2}`}>
 
-<div className={`select_box ${style.select_box}`}>
+<div className={`SearchBox_select_box ${style.SearchBox_select_box}`}>
   <select onChange={handleSelect}>
     <option value={1}>서울</option>
     <option value={2}>경기/인천</option>
@@ -49,26 +49,26 @@ function SearchBox() {
         <div id="region_2" className={`region_box ${style.region_box}`}>서울</div> */}
         
 
-      <div className={`search2 ${style.search2}`}>
+      <div className={`SearchBox_search2 ${style.SearchBox_search2}`}>
             <input
             type="text"
             placeholder="검색어를 입력하세요"
             value={searchTerm}
             onChange={handleSearchChange}
-            className={`search_input ${style.search_input}`}/>
+            className={`SearchBox_search_input ${style.SearchBox_search_input}`}/>
             <button
             onClick={handleSearchSubmit}
-            className={`search_btn ${style.search_btn}`}>검색</button>     
+            className={`SearchBox_search_btn ${style.SearchBox_search_btn}`}>검색</button>     
       </div>  
     </div>
   );
 }
 
-function FAQ() {
+function NOTICE() {
   return (
-    <div id='wrappage' className={`wrappage ${style.wrappage}`}>
+    <div id='NOTICE_wrappage' className={`NOTICE_wrappage ${style.NOTICE_wrappage}`}>
       <Navbar expand="lg">
-        <Navbar.Brand href="#home" className={`title ${style.title}`}>고객센터</Navbar.Brand> {/* 고객센터 제목 */}
+        <Navbar.Brand href="#home" className={`NOTICE_title ${style.NOTICE_title}`}>고객센터</Navbar.Brand> {/* 고객센터 제목 */}
       </Navbar>
 
       <Nav fill variant="tabs" defaultActiveKey="/home">
@@ -79,17 +79,17 @@ function FAQ() {
           <Nav.Link href="/NOTICE">공지사항</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/groupform">1:1문의</Nav.Link>
+          <Nav.Link href="/home">1:1문의</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/home">단체관람/대관문의</Nav.Link>
+          <Nav.Link href="/groupform">단체관람/대관문의</Nav.Link>
         </Nav.Item>
       </Nav>
 
     <SearchBox /> {/* 검색창 컴포넌트 추가 */}
 
-<div className={`content ${style.content}`}>
-  <div className={`test2 ${style.test2}`}>
+<div className={`NOTICE_content ${style.NOTICE_content}`}>
+  <div className={`NOTICE_test2 ${style.NOTICE_test2}`}>
     <p>구분</p>
     <p>제목</p>
     <p>등록일</p>
@@ -159,7 +159,7 @@ function FAQ() {
   </ListGroup>
   <hr></hr>
 </div>
-    <Pagination className={`page2 ${style.page2}`}>
+    <Pagination className={`NOTICE_page ${style.NOTICE_page}`}>
       <Pagination.Item active>{1}</Pagination.Item>
       <Pagination.Item >{2}</Pagination.Item>
       <Pagination.Item >{3}</Pagination.Item>
@@ -172,6 +172,6 @@ function FAQ() {
     </div>      
   );
 }
-export default FAQ
+export default NOTICE
 
 
