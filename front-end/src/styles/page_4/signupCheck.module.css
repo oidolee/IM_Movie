@@ -1,7 +1,7 @@
 .wrappage {
     width: 940px;
-    text-align: left;
-    margin: auto;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .signBtn {
@@ -22,3 +22,11 @@
     width: 100px;
 }
 
+.wrappage h5,h6, label, Checkbox {
+    text-align: left;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+}
