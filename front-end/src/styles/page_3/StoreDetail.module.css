@@ -181,4 +181,9 @@ button {
   }
   
 
-  
+  .StoreDetail_bottom{
+    text-align: left;
+    color: #7F7F7F;
+    line-height:300%;
+    margin-right: 50px;
+  }
