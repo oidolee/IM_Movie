@@ -1,0 +1,187 @@
+
+.Form_wrappage {
+    width: 950px;
+    margin: 0 auto; /* 가운데 정렬을 위한 방법 */
+    text-align: center; /* 내부 요소의 가운데 정렬을 위한 방법 */  
+}
+
+.Form_title{
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.Form_box{
+    position: relative;
+    width: 100%; /* 적절한 너비 설정 */
+    height: 150px; /* 적절한 높이 설정 */
+    background-color: #d3d3d321; /* 적절한 배경색 설정 */
+    padding: 20px; /* 적절한 안쪽 여백 설정 */
+    overflow-x: auto; /* 가로 스크롤을 허용 */
+  }
+
+  .Form_grp01{
+    border-color:#d3d3d321; 
+  }
+
+  .Form_make{
+    font-weight: bold;
+    font-size: 18px;
+    color:gray;
+    text-align: left;
+  }
+
+  .Form_content{
+
+  }
+
+  .Form_group{
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .Form_group1{
+    text-align: left;
+    font-weight: bold;
+  }
+  
+
+  .mvchsbtn{
+    border:1px solid black;
+    border-radius: 3px;
+    width: 13%;
+    height:35px;
+    font-size: 13px;
+    font-weight:bold;
+    margin-left: 100px;
+  }
+
+  .category1{
+    margin-left:120px;
+  }
+
+  .category2{
+    margin-left:20px;
+  }
+
+  .num1{
+    margin-left:85px;
+    width:13%;
+    height:36px;
+  }
+
+  .date1{
+    margin-left:99px;
+    width: 20%;
+    height:35px;
+  }
+
+  .time1{
+    margin-left:80px;
+    width: 6%;
+    height:35px;
+  }
+
+  .time2{
+    margin-left:10px;
+    width: 6%;
+    height:35px;
+  }
+
+  .con {
+    display: flex;
+    flex-direction: column;
+    margin:-35px;
+  }
+
+  .con1{
+    margin-left:180px;
+    width:79%;
+    height:35px;
+    padding-left: 20px;
+    font-size:13px;
+    font-weight: bold;
+    background-color:rgba(211, 211, 211, 0.178);
+    border:1px solid rgba(220, 220, 220, 0.445);
+  }
+
+  .con2{
+    margin-left:180px;
+    margin-top:10px;
+    width:79%;
+    height:35px;
+    padding-left: 20px;
+    font-size:13px;
+    font-weight: bold;
+    background-color:rgba(211, 211, 211, 0.178);
+    border:1px solid rgba(220, 220, 220, 0.445);
+  }
+
+  .con3{
+    margin:50px 144px;
+    width:85%;
+    height:200px;
+    padding-top:10px;
+    padding-left: 20px;
+    font-size:13px;
+    font-weight: bold;
+    background-color:rgba(211, 211, 211, 0.178);
+    border:1px solid rgba(220, 220, 220, 0.445);
+  }
+
+  .category3{
+    margin-left:46px;
+  }
+
+  .category4{
+    margin-left:20px;
+  }
+
+  .Form_make2{
+    font-weight: bold;
+    font-size: 18px;
+    color:gray;
+    text-align: left;
+    margin-top:5%;
+  }
+
+  .group_name{
+    margin-left:85px;
+    width:15%;
+    height:36px;
+  }
+  
+  .name1{
+    margin-left:100px;
+    width:15%;
+    height:36px;
+  }
+
+  .tel1{
+    margin-left:85px;
+    width:7%;
+    height:35px;
+  }
+
+  .tel2{
+    margin-left:85px;
+    width:8%;
+    height:35px;
+  }
+
+  .tel3{
+    margin-left:85px;
+    width:8%;
+    height:35px;
+  }
+
+  
+
+  
+
+  
+
+
+  
+  
+  
+  

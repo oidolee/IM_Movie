@@ -29,8 +29,9 @@ import searchID from '../page_4/searchID';
 //page_5
 import movieMain from '../page_5/main/movieMain';
 import FAQ from '../page_5/board/FAQ';
-import NOTICE from '../page_5/board/NOTICE.js';
+import NOTICE from '../page_5/board/NOTICE';
 import groupform from '../page_5/board/groupform';
+
 
 //page_6
 import MyPage from '../page_6/MyPage';
@@ -87,6 +88,7 @@ const AppRouter = () => {
                         <Route path="/FAQ" exact={true} component={FAQ} />
                         <Route path="/NOTICE" exact={true} component={NOTICE} />
                         <Route path="/groupform" exact={true} component={groupform} />
+                       
                     </Route>
                     
 
