@@ -19,6 +19,8 @@ const GroupReservationForm = () => {
     });
   };
 
+  //78
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // 여기서 폼 데이터를 처리하거나 서버로 전송할 수 있습니다.
