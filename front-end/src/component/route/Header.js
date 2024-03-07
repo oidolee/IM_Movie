@@ -48,6 +48,7 @@ function Header() {
                         <li><a href='/FAQ'>고객센터</a></li>
                         <li><a href='page_3'>단체관람/대관문의</a></li>
                         <li><a href='/login'>로그인</a></li>
+                        <li><a href='/myPage'>마이페이지</a></li>
                     </ul>
                     <ul className='header-member-box'>
                         <li>
