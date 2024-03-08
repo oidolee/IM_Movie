@@ -16,7 +16,7 @@
 .Res_Payment {
     display: flex;
     padding: 0;
-    text-align: center; 
+    text-align: center;
     max-width: 1300px;
     margin: 0 auto;
     height: 100%;
@@ -65,7 +65,7 @@
     background-color: #FF243E;
     display: flex;
     align-items: center;
-    height: 100%; 
+    height: 100%;
 }
 
 .Res_Payment .step:hover {
@@ -79,11 +79,11 @@
 
 .Res_Payment #step1 a,
 .Res_Payment #step2 a {
-  color: white;
+    color: white;
 }
 
 .Res_Payment #step2 {
-  background-color: #333;
+    background-color: #333;
 }
 
 .Res_Payment .step:hover a {
@@ -115,7 +115,7 @@
 .Res_Payment .menu2_right {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 .Res_Payment .menu2,
@@ -139,8 +139,8 @@
     height: 68px;
 }
 
-.Res_Payment .Res_left > li:nth-of-type(2) {
-    height: -webkit-calc(100% - 65px); 
+.Res_Payment .Res_left>li:nth-of-type(2) {
+    height: -webkit-calc(100% - 65px);
 }
 
 .Res_Payment .Res_left,
@@ -184,4 +184,64 @@
 
 .Res_Payment .event_img {
     margin-top: 20px;
+}
+
+.Res_Payment .menu3_main {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.Res_Payment .payment_seat,
+.Res_Payment .point_seat {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #bbb;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.Res_Payment .point_seat_main {
+    font-size: 12px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.Res_Payment .usePoint {
+    text-align: left;
+    border: 1px solid #bbb;
+    padding: 10px;
+}
+
+.Res_Payment .usePoint li {
+    padding: 15px;
+    font-size: 13px;
+    border-top: 1px solid #bbb;
+}
+
+.Res_Payment .usePoint li input[type="text"] {
+    font-size: 10px;
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    margin-left: 10px;
+    border: 1px solid #bbb;
+}
+
+.Res_Payment .usePointBtn {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #bbb;
+    margin-top: 10px;
+    font-size: 13px;
+    margin-left: 50px;
+}
+
+.Res_Payment .usePointBtn:hover {
+    background-color: #FF243E;
+    color: white;
+    border: 1px solid #FF243E;
 }

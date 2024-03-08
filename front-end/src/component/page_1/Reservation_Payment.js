@@ -6,11 +6,21 @@ import Res_movie from "../../assets/page_1/movie.jpg";
 import Res_img15 from "../../assets/page_1/15.jpg";
 
 class Reservation_Payment extends Component {
+  state = {
+    isPointClicked: false, // 초기값 설정
+    //dbValue: "" // 데이터베이스에서 불러온 값 저장
+  };
 
   handlePaymentClick = () => {
     this.props.history.push("/pages/Payment");
   };
-  
+
+  handlePointClick = () => {
+    this.setState((prevState) => ({
+      isPointClicked: !prevState.isPointClicked,
+    })); // 상태를 토글하여 내용을 보이거나 감춤
+  };
+
   render() {
     const sysdate = moment().format("YYYY-MM-DD");
 
@@ -132,8 +142,39 @@ class Reservation_Payment extends Component {
                 <ul className="menu3_left">
                   <li className="menu3_main">최종 결제수단</li>
                   <li>
-                    <button id="payment_seat" onClick={this.handlePaymentClick}>결제하기</button>
+                    <button
+                      className="payment_seat"
+                      onClick={this.handlePaymentClick}
+                    >
+                      결제수단
+                    </button>
+                    <button
+                      className="point_seat"
+                      onClick={this.handlePointClick}
+                    >
+                      포인트
+                    </button>
                   </li>
+                  <div className="point_seat_main">
+                    <ul className="point_seat_sub">
+                      {this.state.isPointClicked && (
+                        <div className="usePoint">
+                          <li>회원ID : </li>
+                          <li>잔여 포인트 : </li>
+                          <li>
+                            사용 포인트 : {" "}
+                            <input
+                              type="text"
+                              placeholder="사용할 포인트 입력하세요."
+                            />
+                          </li>
+                          <li>
+                            <button className="usePointBtn">사용</button>
+                          </li>
+                        </div>
+                      )}
+                    </ul>
+                  </div>
                 </ul>
               </div>
             </li>
