@@ -45,6 +45,8 @@ import MyPage_resCancle from '../page_6/reservation/MyPage_resCancle';
 import MyPage_coupon from '../page_6/coupon/MyPage_coupon';
 import MyPage_wishMovie from '../page_6/movielog/MyPage_wishMovie';
 import Consult from '../page_6/consult/Consult';
+import MyPage_myinfo from '../page_6/myinfo/MyPage_myinfo';
+import MyPage_myinfo_update from '../page_6/myinfo/MyPage_myinfo_update';
 
 
 
@@ -107,6 +109,8 @@ const AppRouter = () => {
                         <Route path="/MyPage_coupon" exact={true} component={MyPage_coupon} />
                         <Route path="/MyPage_wishMovie" exact={true} component={MyPage_wishMovie} />
                         <Route path="/Consult" exact={true} component={Consult} />
+                        <Route path="/MyPage_myinfo" exact={true} component={MyPage_myinfo} />
+                        <Route path="/MyPage_myinfo_update" exact={true} component={MyPage_myinfo_update} />
 
                     </Route>
 
