@@ -18,7 +18,7 @@ function Consult_part() {
             <div >
                 <table className={`Consult_table ${style.Consult_table}`}>
                     <tr>
-                        <td style={{paddingRight: '20px'}}>분류 *</td>
+                        <td style={{ paddingRight: '20px' }}>분류 *</td>
                         <td>
                             <select className={`select1 ${style.select1}`} required>
                                 <option value={'#'}>분류선택</option>
@@ -44,14 +44,14 @@ function Consult_part() {
                         <td>종류 *</td>
                         <td>
                             <select required>
-                                    <option value={'movie2'}>영화관문의</option>
-                                    <option value={'else2'}>기타문의</option>
+                                <option value={'movie2'}>영화관문의</option>
+                                <option value={'else2'}>기타문의</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>제목 *</td>
-                        <td><input type="text" placeholder="제목을 입력해주세요" required/></td>
+                        <td><input type="text" placeholder="제목을 입력해주세요" required /></td>
                     </tr>
                     <tr>
                         <td>내용 *</td>
@@ -68,22 +68,22 @@ function Consult_part() {
                     <table className={`myinfo_table ${style.myinfo_table}`}>
                         <tr>
                             <td>성명</td>
-                            <td><input className="myname" type="text" style={{padding: '0px 18px'}}></input></td>
+                            <td><input className="myname" type="text" style={{ padding: '0px 18px' }}></input></td>
                         </tr>
                         <tr>
                             <td>연락처</td>
                             <td>
-                                <input className="tel1" type="text" style={{marginRight: '10px', padding:'0px 18px'}}></input>
-                                <input className="tel2" type="text" style={{marginRight: '10px', padding:'0px 18px'}}></input>
-                                <input className="tel3" type="text" style={{marginRight: '10px', padding:'0px 18px'}}></input>
+                                <input className="tel1" type="text" style={{ marginRight: '10px', padding: '0px 18px' }}></input>
+                                <input className="tel2" type="text" style={{ marginRight: '10px', padding: '0px 18px' }}></input>
+                                <input className="tel3" type="text" style={{ marginRight: '10px', padding: '0px 18px' }}></input>
                             </td>
                         </tr>
                         <tr>
                             <td>이메일</td>
                             <td>
-                                <input className="email1" type="text" style={{marginRight: '10px', padding:'0px 18px'}}></input>
-                                @ 
-                                <input className="email2" type="text" style={{padding:'0px 18px', marginLeft:'10px'}}></input>
+                                <input className="email1" type="text" style={{ marginRight: '10px', padding: '0px 18px' }}></input>
+                                @
+                                <input className="email2" type="text" style={{ padding: '0px 18px', marginLeft: '10px' }}></input>
                             </td>
                         </tr>
                     </table>
