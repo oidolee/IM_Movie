@@ -32,9 +32,13 @@ import searchID from '../page_4/searchID';
 import resultFindID from '../page_4/resultFindID';
 
 //page_5
-import movieMain from '../page_5/main/movieMain';
+import movieMain from '../page_5/movie/movieMain';
+import movieNow from '../page_5/movie/movieNow';
+import movieNext from '../page_5/movie/movieNext';
+import moviePlace from '../page_5/theater/moviePlace';
 import FAQ from '../page_5/board/FAQ';
 import NOTICE from '../page_5/board/NOTICE';
+import NOTICE2 from '../page_5/board/NOTICE2';
 import groupform from '../page_5/board/groupform';
 
 
@@ -92,8 +96,12 @@ const AppRouter = () => {
                     {/* page_5 */}
                     <Route>
                         <Route path="/movieMain" exact={true} component={movieMain} />
+                        <Route path="/movieNow" exact={true} component={movieNow} />
+                        <Route path="/movieNext" exact={true} component={movieNext} />
+                        <Route path="/moviePlace" exact={true} component={moviePlace} />
                         <Route path="/FAQ" exact={true} component={FAQ} />
                         <Route path="/NOTICE" exact={true} component={NOTICE} />
+                        <Route path="/NOTICE2" exact={true} component={NOTICE2} />
                         <Route path="/groupform" exact={true} component={groupform} />
                        
                     </Route>
