@@ -121,19 +121,46 @@ function Form() {
 
             <div className={`Form_group ${style.Form_group}`}>
               <label for="gg_tel">연락처</label>
-              <input type="text" id="tel1" className={`tel1 ${style.tel1}`}  name="tel" />
-              <input type="text" id="tel2" className={`tel2 ${style.tel2}`}  name="tel" />
-              <input type="text" id="tel3" className={`tel3 ${style.tel3}`}  name="tel" />
+              <input type="tel" id="tel1" className={`tel1 ${style.tel1}`}  name="tel" />
+              <input type="tel" id="tel2" className={`tel2 ${style.tel2}`}  name="tel" />
+              <input type="tel" id="tel3" className={`tel3 ${style.tel3}`}  name="tel" />
               
               <hr></hr>
             </div>
 
             <div className={`Form_group ${style.Form_group}`}>
               <label for="gg_email">이메일</label>
-              <input type="text" id="num1" className={`num1 ${style.num1}`}  name="num" />
-              
+              <input type="email" id="email1" className={`email1 ${style.email1}`}  name="email" />
+               &nbsp;@
+              <input type="email" id="email2" className={`email2 ${style.email2}`}  name="email" />
               <hr></hr>
             </div>
+
+            <div className={`Form_make3 ${style.Form_make3}`}>
+                <p>개인정보 수집에 대한 동의</p>
+            </div>
+
+            <div id="section3" className={`agree_box ${style.agree_box}`}>
+				<p className={`agree_con ${style.agree_con}`}>
+                    개인정보의 수집목적 및 항목<br></br>
+                    ① 수집 목적 : 원활한 고객 상담, 단체관람/대관문의 관련 서비스의 제공<br></br>
+                    ② 수집 항목<br></br>
+                    *필수입력사항<br></br>
+                    - 이용자 식별을 위한 항목 : 성명, 연락처, 이메일, 아이디(로그인 시 수집)<br></br> 
+                    
+                    개인정보의 보유 및 이용기간<br></br>
+                    최적의 서비스 제공을 위하여 입력하신 개인정보를 다음과 같이 보유합니다.<br></br>
+                    보유기간 : 문의접수 후 처리 완료시점으로 부터 1년<br></br>
+
+                    ※ 단체 문의 서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다.<br></br>
+				</p> 
+				</div>
+
+                <input type="radio" id="category5" className={`category5 ${style.category5}`}  name="category" value="category5" />
+                <label for="category1">동의</label>
+                
+                <input type="radio" id="category6" className={`category6 ${style.category6}`} name="category" value="category6" />
+                <label for="category2">동의하지않음</label>
 
             
           </form>
