@@ -245,3 +245,19 @@
     color: white;
     border: 1px solid #FF243E;
 }
+
+.Payment {
+    transform: translate(58%, -160%);
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    position: relative;
+}
+
+.Payment button.Payment_close {
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    margin-left: 590px;
+}

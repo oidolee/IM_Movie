@@ -10,21 +10,29 @@ import Modal from "react-modal";
 class Reservation_Payment extends Component {
   state = {
     isPointClicked: false,
-    showModal: false,
+    showModal: false, // 모달 열림 상태를 관리할 state 추가
   };
 
   handlePaymentClick = () => {
+    // 결제 버튼 클릭 시 showModal 상태를 true로 변경하여 모달 열기
     this.setState({ showModal: true });
   };
 
   handleCloseModal = () => {
+    // 모달 닫기 버튼 또는 모달 외부 클릭 시 showModal 상태를 false로 변경하여 모달 닫기
     this.setState({ showModal: false });
   };
 
   handlePointClick = () => {
     this.setState((prevState) => ({
       isPointClicked: !prevState.isPointClicked,
-    }));
+    })); // 상태를 토글하여 내용을 보이거나 감춤
+  };
+
+  handleUsePointClick = () => {
+    this.setState((prevState) => ({
+      isPointClicked: !prevState.isPointClicked,
+    })); // 상태를 토글하여 내용을 보이거나 감춤
   };
 
   render() {
@@ -154,22 +162,6 @@ class Reservation_Payment extends Component {
                     >
                       결제수단
                     </button>
-                    <Modal
-                      isOpen={this.state.showModal}
-                      onRequestClose={this.handleCloseModal}
-                      className="Modal"
-                      overlayClassName="Overlay"
-                    >
-                      <div className={`Payment ${style.Payment}`}>
-                        <button
-                          className="Payment_close"
-                          onClick={this.handleCloseModal}
-                        >
-                          <strong>X</strong>
-                        </button>
-                        <Checkout />
-                      </div>
-                    </Modal>
                     <button
                       className="point_seat"
                       onClick={this.handlePointClick}
@@ -193,7 +185,7 @@ class Reservation_Payment extends Component {
                           <li>
                             <button
                               className="usePointBtn"
-                              onClick={this.handlePointClick}
+                              onClick={this.handleUsePointClick}
                             >
                               사용
                             </button>
@@ -219,6 +211,19 @@ class Reservation_Payment extends Component {
             </li>
           </ul>
         </div>
+        {/* 모달 */}
+        <Modal
+          isOpen={this.state.showModal}
+          onRequestClose={this.handleCloseModal} // 모달 외부를 클릭하거나 닫기 버튼을 눌렀을 때 handleCloseModal 함수 호출
+          className="Modal"
+          overlayClassName="Overlay"
+        >
+          <div className={`Payment_movie ${style.Payment_movie}`}>
+            {/* 모달 내용으로 Checkout 컴포넌트를 렌더링 */}
+            <Checkout />
+          </div>
+          <button onClick={this.handleCloseModal}>닫기</button>
+        </Modal>
       </div>
     );
   }

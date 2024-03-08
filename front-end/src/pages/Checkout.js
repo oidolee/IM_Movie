@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { loadPaymentWidget } from "@tosspayments/payment-widget-sdk";
 import { nanoid } from "nanoid";
 
-import "../styles/common/App.css";
+import "../styles/page_1/Checkout.css";
 
 const clientKey = "test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq";
 const customerKey = "YbX2HuSlsC9uVJW6NMRMj";
@@ -60,18 +60,19 @@ export default function App() {
 
   return (
     <div>
-      <h1>주문서</h1>
       <div id="payment-widget"></div>
-      <div>
+      <div className="paymentMethod_Main">
+        <div>
         <input
           type="checkbox"
           onChange={(event) => {
             setPrice(event.target.checked ? price - 5000 : price + 5000);
           }}
         />
-        <label>5,000원 할인 쿠폰 적용</label>
+        <label className="paymentDiscount">5,000원 할인 쿠폰 적용</label>
       </div>
-      <button onClick={handlePayment}>결제하기</button>
+      <button className="paymentMethod" onClick={handlePayment}>결제하기</button>
+      </div>
     </div>
   );
 }
