@@ -20,5 +20,8 @@ public interface CustomerMapper {
 	
 	// 아이디 찾기
     public String findID(String name, String hp);
+    
+    // 비밀번호 찾기
+    public String findPWD(String email, String hp);
 
 }

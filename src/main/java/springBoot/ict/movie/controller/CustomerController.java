@@ -127,6 +127,42 @@ public class CustomerController {
                 resultMsg = "ID found";
                 map.put("foundEmail", foundEmail);
             } else {
+            	
+            	
+                resultCode = "404";
+                resultMsg = "ID not found";
+            }
+        } catch (Exception e) {
+            resultCode = "400";
+            resultMsg = e.getMessage();
+            e.printStackTrace();
+        }
+        map.put("resultCode", resultCode);
+        map.put("resultMsg", resultMsg);
+
+        return map;
+    }
+    
+ // 비밀번호 찾기
+    @PostMapping("/findPWD")
+    public Map<String, Object> findPWD(@RequestBody CustomerDTO dto) throws ServletException, IOException {
+        logger.info("<<< url -> findPWD start");
+        System.out.println("dto" + dto.toString());
+
+        String resultCode = "";
+        String resultMsg = "";
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        try {
+            String foundPWD = service.findPWD(dto.getEmail(), dto.getHp());
+            if (foundPWD != null) {
+                resultCode = "200";
+                resultMsg = "ID found";
+                map.put("foundEmail", foundPWD);
+            } else {
+            	
+            	
                 resultCode = "404";
                 resultMsg = "ID not found";
             }

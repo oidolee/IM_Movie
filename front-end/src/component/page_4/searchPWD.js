@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { TextField, Button } from '@mui/material';
 import ApiService from '../../ApiService';
 
-class SearchID extends Component {
+class searchPWD extends Component {
 
     
     constructor(props) {
@@ -44,22 +44,22 @@ class SearchID extends Component {
         })
     }
 
-    findID = (e) => {
+    findPWD = (e) => {
         e.preventDefault();
 
         let inputData = {
-            name: this.state.name,
+            email: this.state.email,
             hp: this.state.hp
         }
-        ApiService.findID(inputData)
+        ApiService.findPWD(inputData)
         .then(res => {
             this.setState({
 
             })
-            console.log('아이디찾기 성공 : ' , res.data); // 컨트롤러에서 전달함 (resultCode, resultMsg)
-            const foundEmail = res.data.foundEmail;
+            console.log('비밀번호 찾기 성공 : ' , res.data); // 컨트롤러에서 전달함 (resultCode, resultMsg)
+            const foundPWD = res.data.foundPWD;
             //this.props.history.push('/findID') // RouterComponet.js - ListSampleComponet 호출 
-            this.props.history.push('/findID', { foundEmail });
+            this.props.history.push('/findPWD', { foundPWD });
         })
         .catch(err =>{
             console.log('findID() 에러 !! ', err);
@@ -72,9 +72,9 @@ class SearchID extends Component {
         return (
             <div id='wrappage' className={`wrappage ${style.wrappage}`}>
                 <br/><br/>
-                <h6>아이디 찾기</h6>
+                <h6>비밀번호 찾기</h6>
                 <br></br>
-                <h5> 등록된 회원 정보로 아이디를 찾을 수 있습니다.</h5>
+                <h5> 등록된 회원 정보로 비밀번호를 찾을 수 있습니다.</h5>
                 <hr />
 
                 <Accordion activeKey={this.state.activeKey} >
@@ -92,14 +92,14 @@ class SearchID extends Component {
                         </Accordion.Header>
                         <Accordion.Body>
                             <div id='hpfind' className={`hpfind ${style.hpfind}`}>
-                                <div className={`text ${style.text}`}>이름
+                                <div className={`text ${style.text}`}>이메일
                                 {/* 이름 입력필드 */}
                                 <TextField
                                     required
                                     type="text"
-                                    name="name"
-                                    value={this.state.name}
-                                    placeholder='이름을 입력해주세요.'
+                                    name="email"
+                                    value={this.state.email}
+                                    placeholder='이메일을 입력해주세요.'
                                     onChange={this.onChange}
                                 />
                                 </div>
@@ -125,7 +125,7 @@ class SearchID extends Component {
 
                 <div id='signBtn' className={`signBtn ${style.signBtn}`}>
                     <Button id='goHome' className={`blackBtn ${style.blackBtn}`} onClick={this.goHome}>취소</Button>
-                    <Button id='gosignup' className={`redBtn ${style.redBtn}`} onClick={this.findID}>다음</Button>
+                    <Button id='gosignup' className={`redBtn ${style.redBtn}`} onClick={this.findPWD}>다음</Button>
                 </div>
                 <br/><br/>
             </div>
@@ -133,7 +133,7 @@ class SearchID extends Component {
     }
 }
 
-export default SearchID;
+export default searchPWD;
 
 
 

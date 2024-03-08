@@ -295,10 +295,12 @@
     SELECT IC_email 
     FROM IM_Customer 
     WHERE IC_name = '홍길동' AND IC_hp = '01011112222';
-    -- 아이디찾기 (생년월일 , 이름)
-   SELECT *
-FROM IM_Customer
-WHERE IC_birthday = '2024-02-29';
+    -- 비밀번호 찾기 (이메일 , 이름)
+    SELECT IC_password 
+    	FROM IM_Customer 
+    	WHERE IC_email = 'wwrr400@gmail.com' AND IC_hp = '01026575800';
+
+
 
 
 -- 호진 시작 끝
