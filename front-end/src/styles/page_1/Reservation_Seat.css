@@ -167,6 +167,7 @@
 .Res_seat .Res_cnt button {
   border: none;
   outline: none;
+  background: none;
 }
 
 .Res_seat .Res_cnt span {
@@ -293,7 +294,7 @@
   color: #fff;
   background-color: #6E6E6E;
   font-size: 16px;
-  padding: 20px;
+  
   letter-spacing: 15px;
   text-align: center;
   display: block;
@@ -304,6 +305,15 @@
   align-items: center; 
 }
 
-.Res_seat .paymentBtn {
+.Res_seat .seat_payment span {
+  padding-left: 20px;
+}
+
+.Res_seat .seat_payment button {
   background-color: #FF243E;
+  height: 50px;
+  width: 150px;
+  border: none;
+  color: white;
+  font-size: 14px;
 }
