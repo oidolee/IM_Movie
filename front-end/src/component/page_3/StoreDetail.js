@@ -160,8 +160,7 @@ const StoreDetail = () => {
                 <th>사용가능 영화관</th>
                 <td>
                   <button
-                    id="availableCinema"
-                    className="btn_col4 ty3 rnd"
+                    className="btn_col4"
                     title="레이어팝업 열기"
                   >
                     온라인 관람권

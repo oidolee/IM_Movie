@@ -81,15 +81,24 @@
 .btn_mins{
     width: 60px;
     border: none;
+    cursor: pointer;
+    background-color: #fff;
 }
 
 .btn_plus {
     width: 60px;
     border: none;
+    cursor: pointer;
+    background-color: #fff;
 }
 
 
-
+.btn_col1 ty7 {
+    border: none;
+    cursor: pointer;
+    background-color: #fff;  
+    
+}
 /* .store_detail .pd_detail .bx_num .btn_plus, .store_detail  .pd_detail .bx_num .btn_mins {
     padding: 0 40px;
 }
@@ -116,6 +125,7 @@
     border: none;
     border-bottom: 1px solid #eeeeee;
     margin-bottom: 50px;
+    
 }
 
 .tab_tit {
@@ -123,11 +133,12 @@
     font-size: 15px;
     color: #7F7F7F;
     text-decoration: none; /* 파란색 밑줄 제거 */
+    background-color: white;
 }
 
 
 
-.StoreDetail_store_d button {
+.StoreDetail_store_d  {
     border: 1px solid #DDD;
     cursor: pointer;
     background-color: #fff;
@@ -187,3 +198,4 @@
     line-height:300%;
     margin-right: 50px;
   }
+
