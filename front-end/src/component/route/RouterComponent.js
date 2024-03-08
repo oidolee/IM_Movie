@@ -13,6 +13,7 @@ import MainBody from '../main/MainBody';
 import Reservation_Movie from '../page_1/Reservation_Movie';
 import Reservation_Seat from '../page_1/Reservation_Seat';
 import Reservation_Payment from '../page_1/Reservation_Payment';
+import Payment from '../../pages/Checkout';
 
 //page_2
 import Page2 from '../page_2/Page2';
@@ -62,6 +63,7 @@ const AppRouter = () => {
                         <Route path="/page_1/Reservation_Movie" exact={true} component={Reservation_Movie} />
                         <Route path="/page_1/Reservation_Seat" exact={true} component={Reservation_Seat} />
                         <Route path="/page_1/Reservation_Payment" exact={true} component={Reservation_Payment} />
+                        <Route path="/pages/Payment" exact={true} component={Payment} />
                     </Route>
 
                     {/* page_2 */}
@@ -125,5 +127,7 @@ const AppRouter = () => {
 
 const style = {
 }
+
+
 
 export default AppRouter

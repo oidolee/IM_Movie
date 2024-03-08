@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import moment from "moment";
 import style from "../../styles/page_1/Reservation_Payment.css";
-import Res_event from "../../assets/page_1/event.png"
+import Res_event from "../../assets/page_1/event.png";
 import Res_movie from "../../assets/page_1/movie.jpg";
 import Res_img15 from "../../assets/page_1/15.jpg";
 
 class Reservation_Payment extends Component {
+
+  handlePaymentClick = () => {
+    this.props.history.push("/pages/Payment");
+  };
+  
   render() {
     const sysdate = moment().format("YYYY-MM-DD");
 
@@ -108,7 +113,11 @@ class Reservation_Payment extends Component {
                     <li>인원 성인1</li>
                     <hr />
                     <li>좌석 D3</li>
-                    <li><a href="/page3"><img src={Res_event} className="event_img" /></a></li>
+                    <li>
+                      <a href="/page3">
+                        <img src={Res_event} className="event_img" />
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </ul>
@@ -121,9 +130,10 @@ class Reservation_Payment extends Component {
             <li>
               <div className="menu3">
                 <ul className="menu3_left">
-                <li className="menu3_main">
-                  최종 결제수단
-                </li>
+                  <li className="menu3_main">최종 결제수단</li>
+                  <li>
+                    <button id="payment_seat" onClick={this.handlePaymentClick}>결제하기</button>
+                  </li>
                 </ul>
               </div>
             </li>
