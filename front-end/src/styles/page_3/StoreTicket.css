@@ -164,3 +164,11 @@
 .StoreTicket_area {
      border-right: 1px solid #CCC;
 }
+
+.selectedButton {
+    background-color: gray;
+
+    /* 원하는 스타일 추가 */
+  }
+
+  

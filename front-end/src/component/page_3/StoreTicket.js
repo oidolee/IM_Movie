@@ -6,9 +6,10 @@ class StoreGift extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedValue: null,
+      selectedValue: 1,
     };
   }
+
 
   closeStoreGift = () => {
     const { onClose } = this.props;
@@ -42,7 +43,7 @@ class StoreGift extends Component {
             <div className={`StoreTicket_area ${style.StoreTicket_area}`}>
               <ul>
                 <li>
-                  <a href="#none" onClick={() => this.handleSelect(1)}>
+                  <a href="#none" onClick={() => this.handleSelect(1)} className={selectedValue === 1 ? style.selectedButton : ''}>
                     서울
                   </a>
                 </li>

@@ -9,6 +9,8 @@ import ticket2 from '../../assets/page_3/ticket2.jpg'
 import foods1 from '../../assets/page_3/foods1.jpg'
 import foods2 from '../../assets/page_3/foods2.jpg'
 import foods3 from '../../assets/page_3/foods3.jpg'
+import bottom1 from '../../assets/page_3/bottom1.jpg'
+import bottom2 from '../../assets/page_3/bottom2.jpg'
 import style from '../../styles/page_3/StoreList.css';
 
 class Page3 extends Component{
@@ -192,7 +194,19 @@ class Page3 extends Component{
                             </a>
                         </div>
                     </div>
+                    {/* 중앙 리스트 끝 */}
+                    
+
+                    <div>
+                        <div className={`store_bottom1 ${style.store_bottom1}`} >
+                                    <img src={bottom1}></img>
+                        </div>
+                        <div className={`store_bottom2 ${style.store_bottom2}`}>
+                                    <img src={bottom2}></img>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
         );
