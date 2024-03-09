@@ -2,7 +2,7 @@ import React, { useRef,useState } from 'react';
 import style from '../../styles/page_3/StoreDetail.module.css';
 import package1 from '../../assets/page_3/package1.jpg';
 import StoreGift from './StoreGift'; // StoreGift 컴포넌트를 import
-
+import StoreTicket from './StoreTicket';
 
 
 // 스와이퍼
@@ -14,6 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const StoreDetail = () => {
   const [isStoreGiftOpen, setIsStoreGiftOpen] = useState(false);
+  const [isStoreTicketOpen, setIsStoreTicketOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(22000);
 
@@ -32,6 +33,25 @@ const StoreDetail = () => {
     document.body.style.overflow = 'auto';
     //document.getElementById('overlay').classList.remove('active');
   };
+
+
+  // 온라인 관람권 버튼 클릭시 모달 열기
+  const openStoreTicket = () => {
+    setIsStoreTicketOpen(true);
+    document.body.style.overflow = 'hidden';
+    //document.getElementById('overlay').classList.add('active');
+  };
+
+  // 온라인 관람권 모달 닫기
+  const closeStoreTicket= () => {
+    setIsStoreTicketOpen(false);
+    document.body.style.overflow = 'auto';
+    //document.getElementById('overlay').classList.remove('active');
+  };
+
+
+
+
 
   // 수량 증가
   const increaseQuantity = () => {
@@ -162,6 +182,7 @@ const StoreDetail = () => {
                   <button
                     className="btn_col4"
                     title="레이어팝업 열기"
+                    onClick={openStoreTicket}
                   >
                     온라인 관람권
                   </button>
@@ -195,6 +216,8 @@ const StoreDetail = () => {
 
           {/* 선물하기 모달/팝업 조건부 렌더링 */}
           {isStoreGiftOpen && <StoreGift onClose={closeStoreGift} />}
+          {/* 선물하기 모달/팝업 조건부 렌더링 */}
+          {isStoreTicketOpen && <StoreTicket onClose={closeStoreTicket} />}
         </div>
       </div>
 
