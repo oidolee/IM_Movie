@@ -159,15 +159,16 @@ class Reservation_Payment extends Component {
                       onRequestClose={this.handleCloseModal}
                       className="Modal"
                       overlayClassName="Overlay"
+                      handleCloseModal={this.handleCloseModal}
                     >
                       <div className={`Payment ${style.Payment}`}>
+                        <Checkout />
                         <button
                           className="Payment_close"
                           onClick={this.handleCloseModal}
                         >
-                          <strong>X</strong>
+                          취소
                         </button>
-                        <Checkout />
                       </div>
                     </Modal>
                     <button
@@ -213,7 +214,14 @@ class Reservation_Payment extends Component {
             <li>
               <div className="menu4">
                 <ul className="menu4_left">
-                  <li></li>
+                  <li className="paymentBtn">
+                    <span>상품금액</span>
+                  </li>
+                  <li className="paymentBtn">할인금액</li>
+                  <li className="paymentBtn">결제금액</li>
+                  <li>
+                    <button className="paymentBtn_total">결제하기</button>
+                  </li>
                 </ul>
               </div>
             </li>

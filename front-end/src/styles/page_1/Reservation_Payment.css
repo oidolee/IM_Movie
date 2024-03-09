@@ -198,7 +198,7 @@
     width: 150px;
     height: 50px;
     background-color: white;
-    border: 1px solid #bbb;
+    border: 1px solid #666;
     margin-top: 20px;
     font-size: 13px;
 }
@@ -211,14 +211,14 @@
 
 .Res_Payment .usePoint {
     text-align: left;
-    border: 1px solid #bbb;
+    border: 1px solid #666;
     padding: 10px;
 }
 
 .Res_Payment .usePoint li {
     padding: 15px;
     font-size: 13px;
-    border-top: 1px solid #bbb;
+    border-top: 1px solid #666;
 }
 
 .Res_Payment .usePoint li input[type="text"] {
@@ -227,14 +227,14 @@
     width: 150px;
     height: 25px;
     margin-left: 10px;
-    border: 1px solid #bbb;
+    border: 1px solid #666;
 }
 
 .Res_Payment .usePointBtn {
     width: 150px;
     height: 50px;
     background-color: white;
-    border: 1px solid #bbb;
+    border: 1px solid #666;
     margin-top: 10px;
     font-size: 13px;
     margin-left: 50px;
@@ -247,17 +247,56 @@
 }
 
 .Payment {
-    transform: translate(58%, -160%);
-    width: 50%;
+    transform: translate(120%, -160%);
+    width: 30%;
     height: 50%;
     align-items: center;
     position: relative;
+    background-color: white;
+    border: 1px solid #666;
 }
 
-.Payment button.Payment_close {
-    color: black;
+.Payment .Payment_close {
+    width: 150px;
+    height: 50px;
     background-color: white;
+    border: 1px solid #666;
+    margin-top: 10px;
+    font-size: 13px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+}
+
+.Payment .Payment_close:hover {
+    background-color: #FF243E;
+    color: white;
+    border: 1px solid #FF243E;
+
+}
+
+.Res_Payment .menu4_left {
+    margin-top: 100%;
+    width: 100%;
+}
+
+.Res_Payment .paymentBtn,
+.Res_Payment .paymentBtn_total {
+    background-color: #333;
+    color: white;
+    font-size: 13px;
+    width: 400px;
+    height: 80px;
+    text-align: left;
+    float: bottom;
     border: none;
-    font-size: 30px;
-    margin-left: 590px;
+    border-bottom: 1px solid #666;
+    padding: 30px;
+}
+
+.Res_Payment .paymentBtn_total {
+    background-color: #FF243E;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
 }
