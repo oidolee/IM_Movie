@@ -211,6 +211,6 @@ class Page3 extends Component{
 
         );
     }
-}
+} 
 
 export default Page3;
