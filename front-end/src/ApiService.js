@@ -47,18 +47,28 @@ class ApiService {
      listCustomer(inputData) {
          console.log('listCustomer 호출');
          return axios.get(url + "/index");
-     }
+    }
 
+    // 로그인 
     login(inputData) {
         console.log("login start:")
         console.log(inputData)
         return axios.post("http://localhost:8081/index/login", inputData);
     }
+
+    // 아이디 찾기
     findID(inputData) {
         console.log("findID 호출")
         console.log(inputData)
         return axios.post("http://localhost:8081/index/findID", inputData);
     }
+
+    // 비밀번호 찾기
+    findPWD(inputData) {
+        console.log("findPWD 호출")
+        console.log(inputData)
+        return axios.post("http://localhost:8081/index/findPWD", inputData);
+    } 
 
 }
 export default new ApiService();

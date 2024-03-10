@@ -25,4 +25,7 @@ public interface CustomerService {
 	public String findID(String name, String hp)
 			throws ServletException, IOException; 
 	
+	// 비밀번호 찾기
+	public String findPWD(String email, String hp)
+			throws ServletException, IOException; 
 }

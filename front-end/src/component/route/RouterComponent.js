@@ -31,6 +31,8 @@ import loginComponent from '../page_4/loginComponent';
 import signupCheck from '../page_4/signupCheck';
 import searchID from '../page_4/searchID';
 import resultFindID from '../page_4/resultFindID';
+import searchPWD from '../page_4/searchPWD';
+import resultFindPWD from '../page_4/resultFindPWD';
 
 //page_5
 import movieMain from '../page_5/main/movieMain';
@@ -89,6 +91,8 @@ const AppRouter = () => {
                         <Route path="/customerlist" exact={true} component={listCustomer} />
                         <Route path="/searchID" exact={true} component={searchID} />
                         <Route path="/findID" exact={true} component={resultFindID} />
+                        <Route path="/searchPWD" exact={true} component={searchPWD} />
+                        <Route path="/findPWD" exact={true} component={resultFindPWD} />
                     </Route>
                    
                     {/* page_5 */}
