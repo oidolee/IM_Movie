@@ -137,28 +137,24 @@
 
 .Res_seat .Res_seat2_header,
 .Res_seat .Res_seat2_main {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-.Res_seat .Res_seat2_header {
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
 
 .Res_seat .Res_tit {
   font-size: 18px;
-    padding: 20px 150px;
-    border: 1px solid #666;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: black;
-    color: white;
-    font-weight: 600;
-    height: 80px;
+  padding: 20px 150px;
+  border: 1px solid #666;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-weight: 600;
 }
 
 .Res_seat .Res_seat2_header ul {
@@ -180,7 +176,8 @@
 
 .Res_seat .Res_seat2 p {
   font-size: 12px;
-  text-align: right;
+    margin: 0;
+  padding: 0;
 }
 
 .Res_seat .movie_img {
@@ -250,11 +247,18 @@
 
 .Res_seat .Res_seat2_main {
   background-color: black;
-  margin-top: 20px;
+
 }
 
 .Res_seat .MovieSeats {
   margin-top: 150px;
+  color: white;
+}
+
+.seat_alphabet {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 20px;
 }
 
 .Res_seat .Res_seat2_bottom {

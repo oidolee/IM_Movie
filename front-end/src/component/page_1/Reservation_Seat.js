@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import moment from "moment";
 import style from "../../styles/page_1/Reservation_Seat.css";
 import Res_movie from "../../assets/page_1/movie.jpg";
 import Res_img15 from "../../assets/page_1/15.jpg";
@@ -27,7 +26,7 @@ const QuantityCounter = () => {
   );
 };
 
-// 좌석 
+// 좌석
 const SingleSquare1 = () => <div className="single-square1" />;
 const SingleSquare2 = () => <div className="single-square2" />;
 const SingleSquare3 = () => <div className="single-square3" />;
@@ -36,10 +35,19 @@ const SingleSquare4 = () => <div className="single-square4" />;
 const SeatMap = ({ rows, columns }) => {
   const seats = [];
 
+  // 알파벳 행 추가
+  const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   for (let i = 0; i < rows; i++) {
+    const rowContent = [];
     for (let j = 0; j < columns; j++) {
-      seats.push(<Square key={`${i}-${j}`} row={i} column={j} />);
+      rowContent.push(<Square key={`${i}-${j}`} row={i} column={j} />);
     }
+    seats.push(
+      <div className="seat_row">
+        <sapn className="seat_alphabet">{alphabets[i]}</sapn>
+        {rowContent}
+      </div>
+    );
     seats.push(<br key={`br-${i}`} />);
   }
 
@@ -69,7 +77,6 @@ const Square = ({ row, column }) => {
       onClick={handleChange}
       style={{ backgroundColor }}
     >
-      {column + 1}
       {checked && <div className="checked-square" />}
     </div>
   );
@@ -77,7 +84,6 @@ const Square = ({ row, column }) => {
 
 const Reservation_Seat = () => {
   const history = useHistory();
-  const sysdate = moment().format("YYYY-MM-DD");
 
   const handlePayment = () => {
     history.push("/page_1/Reservation_Payment");
@@ -220,13 +226,13 @@ const Reservation_Seat = () => {
               </div>
             </div>
             <div className="seat_payment">
-                <span>총 합계 : 0원 </span>
-                <div>
-                  <button name="paymentBtn" onClick={handlePayment}>
-                    결제하기
-                  </button>
-                </div>
+              <span>총 합계 : 0원 </span>
+              <div>
+                <button name="paymentBtn" onClick={handlePayment}>
+                  결제하기
+                </button>
               </div>
+            </div>
           </ul>
         </div>
       </div>
