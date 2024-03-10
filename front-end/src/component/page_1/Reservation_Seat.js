@@ -13,7 +13,7 @@ const QuantityCounter = () => {
   };
 
   const handleDecrement = () => {
-    if (quantity > 1) {
+    if (quantity >= 1) {
       setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
@@ -27,6 +27,7 @@ const QuantityCounter = () => {
   );
 };
 
+// 좌석 
 const SingleSquare1 = () => <div className="single-square1" />;
 const SingleSquare2 = () => <div className="single-square2" />;
 const SingleSquare3 = () => <div className="single-square3" />;
@@ -68,6 +69,7 @@ const Square = ({ row, column }) => {
       onClick={handleChange}
       style={{ backgroundColor }}
     >
+      {column + 1}
       {checked && <div className="checked-square" />}
     </div>
   );
