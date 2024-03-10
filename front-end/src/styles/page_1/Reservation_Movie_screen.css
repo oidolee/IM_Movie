@@ -1,31 +1,31 @@
-.Res_Movie div {
+.Res_screen div {
     /* div 줄바꿈 없이 고정 */
     white-space: nowrap;
 }
 
-.Res_Movie a {
+.Res_screen a {
     text-decoration: none;
     color: #666;
 }
 
-.Res_Movie ul {
+.Res_screen ul {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-.Res_Movie li {
+.Res_screen li {
     list-style: none;
 }
 
-.Res_Movie {
+.Res_screen {
     background-color: #444;
     padding: 50px;
     height: 100%;
     width: 100%;
 }
 
-.Res_Movie .Res_menu_content {
+.Res_screen .Res_screen_content {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -37,128 +37,70 @@
     background-color: white;
 }
 
-.Res_Movie .Res_menu1,
-.Res_Movie .Res_menu2,
-.Res_Movie .Res_menu3,
-.Res_Movie .Res_menu4 {
+.Res_screen .Res_menu2,
+.Res_screen .Res_menu4 {
     height: auto;
     width: 100%;
 }
 
-.Res_Movie .Res_menu1 {
-    width: 100px;
+.Res_screen .Res_menu2 {
+    width: 500px;
 }
 
-.Res_Movie>div:not(.Res_menu1) {
+.Res_screen>div:not(.Res_menu2) {
     /* Res_menu1을 제외하고 넓이 자동 맞춤 */
     flex-grow: 1;
 }
 
-.Res_Movie .Res_menu_content>div>ul {
+.Res_screen .Res_screen_content>div>ul {
     /* 부모 요소에 맞춰서 높이 설정 */
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.Res_Movie .Res_menu_content>div>ul>li {
+.Res_screen .Res_screen_content>div>ul>li {
     /* 남은 공간을 모두 채우도록 설정 */
     flex-grow: 1;
 }
 
-.Res_Movie .Res_menu1 li {
-    border: 1px solid #666;
-    border-bottom: none;
-}
-
-.Res_Movie .step {
-    padding: 100px 20px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-}
-
-.Res_Movie .step_content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    z-index: 1;
-    left: 100%;
-    top: 0;
-    padding-left: 20px;
-}
-
-.Res_Movie .step_content dt {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-    border: none;
-    text-align: left;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.Res_Movie .step:hover .step_content {
-    background-color: #FF243E;
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.Res_Movie .step:hover {
-    background-color: #FF243E;
-    cursor: pointer;
-}
-
-.Res_Movie #step1 {
-    background-color: #FF243E;
-}
-
-.Res_Movie #step1 a,
-.Res_Movie .step:hover a {
-    color: white;
-}
-
-.Res_Movie .menu2,
-.Res_Movie .menu3,
-.Res_Movie .menu4 {
+.Res_screen .menu2 {
     display: flex;
     flex-direction: row;
     height: 100%;
     background-color: white;
 }
 
-.Res_Movie .menu2 ul,
-.Res_Movie .menu3 ul,
-.Res_Movie .menu4 ul {
+.Res_screen .menu2 ul,
+.Res_screen .menu4 ul {
     list-style: none;
     width: 100%;
     font-size: 15px;
     text-align: left;
 }
 
-.Res_Movie .menu4 ul {
+.Res_screen .menu4 {
+    width: 100%;
+    background-color: white;
+}
+
+.Res_screen .menu4 ul {
     width: 300px;
 }
 
-.Res_Movie .menu2 ul li,
-.Res_Movie .menu3 ul li,
-.Res_Movie .menu4_main,
-.Res_Movie .menu4_sub {
+.Res_screen .menu2 ul li,
+.Res_screen .menu4_main,
+.Res_screen .menu4_sub {
     margin-top: 20px;
     padding-left: 20px;
+
 }
 
-.Res_Movie .menu2_left,
-.Res_Movie .menu3_left {
+.Res_screen .menu2_left {
     background-color: #F5F5F5;
 }
 
-.Res_Movie .Res_tit {
+.Res_screen .Res_tit {
     font-size: 18px;
     padding: 20px 150px;
     border: 1px solid #666;
@@ -172,25 +114,24 @@
     height: auto;
 }
 
-.Res_Movie .menu2_left {
+.Res_screen .menu2_left {
     font-weight: 500;
     color: black;
     cursor: pointer;
     font-weight: 500;
 }
 
-.Res_Movie .menu3_left a,
-.Res_Movie .menu4_left a {
+.Res_screen .menu4_left a {
     font-weight: 600;
     color: black;
 }
 
-.Res_Movie img {
+.Res_screen img {
     width: 20px;
     margin-right: 10px;
 }
 
-.Res_Movie .menu4_sub li {
+.Res_screen .menu4_sub li {
     height: 50px;
     width: 150px;
     border-radius: 4px;
@@ -200,7 +141,7 @@
     text-align: center;
 }
 
-.Res_Movie .popup {
+.Res_screen .popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -214,7 +155,7 @@
     z-index: 9999;
 }
 
-.Res_Movie .popup_content {
+.Res_screen .popup_content {
     background-color: white;
     padding: 20px;
     text-align: center;
@@ -223,11 +164,11 @@
     z-index: 10000;
 }
 
-.Res_Movie .popup_content strong {
+.Res_screen .popup_content strong {
     font-size: 18px;
 }
 
-.Res_Movie .popup_content button {
+.Res_screen .popup_content button {
     margin: 0 5px;
     padding: 10px 20px;
     border: none;
@@ -238,35 +179,35 @@
     color: white;
 }
 
-.Res_Movie .popup_content button[name="n"] {
+.Res_screen .popup_content button[name="n"] {
     margin-top: 20px;
     background-color: #414141;
     border: 1px solid #414141;
 }
 
-.Res_Movie .popup_content button[name="y"] {
+.Res_screen .popup_content button[name="y"] {
     background-color: #FF243E;
     border: 1px solid #FF243E;
 }
 
-.Res_Movie .Res_screen {
+.Res_screen .Res_screen {
     width: 450px;
     height: 250px;
     margin-left: 15px;
 }
 
-.Res_Movie .menu2_left .subRegions.active {
+.Res_screen .menu2_left .subRegions.active {
     background-color: white;
     height: 60px;
 }
 
-.Res_Movie .menu2_left .subRegions {
+.Res_screen .menu2_left .subRegions {
     height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.Res_Movie .menu2_right {
+.Res_screen .menu2_right {
     width: 100%;
 }
