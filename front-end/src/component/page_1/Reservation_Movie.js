@@ -286,8 +286,6 @@ class Reservation_Movie extends Component {
               </li>
             </ul>
           </div>
-
-          {/* 팝업 창 */}
           {this.state.popupOpen && (
             <div className="popup">
               <div className="popup_content">
@@ -295,7 +293,7 @@ class Reservation_Movie extends Component {
                 <p>
                   잔여좌석 <strong>82</strong>/100
                 </p>
-                
+
                 <img className="Res_screen" src={Res_screen} />
                 <p>
                   <img src={Res_img15} />본 영화는 만 15세 이상 관람가
