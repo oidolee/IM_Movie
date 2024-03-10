@@ -151,7 +151,9 @@ class Reservation_Movie extends Component {
           </div>
           <div className="Res_menu2">
             <ul>
-              <li className="Res_tit">영화관</li>
+              <div className="Res_tit">
+                <li>영화관</li>
+              </div>
               <li>
                 <div className="menu2">
                   <ul className="menu2_left">
@@ -161,27 +163,35 @@ class Reservation_Movie extends Component {
                           selectedRegion === region ? "active" : ""
                         }`}
                         key={region}
-                        onClick={() => this.handleRegionClick(region)}
-                      ><a href="#"></a>
-                        {region}
+                        onClick={(event) => {
+                          event.preventDefault(); // 기본 동작 막기
+                          this.handleRegionClick(region);
+                        }}
+                      >
+                        <a href="#">{region}</a>
                       </li>
                     ))}
                   </ul>
-                  <ul className="menu2_right">
-                    {selectedRegion &&
-                      subRegions[selectedRegion].map((subRegion, index) => (
-                        <li className="subRegions" key={index}>
-                          <a href="#">{subRegion}</a>
-                        </li>
-                      ))}
-                  </ul>
+
+                  <div className="menu2_right">
+                    <ul>
+                      {selectedRegion &&
+                        subRegions[selectedRegion].map((subRegion, index) => (
+                          <li className="subRegions" key={index}>
+                            <a href="#">{subRegion}</a>
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
           <div className="Res_menu3">
             <ul>
-              <li className="Res_tit">영화 선택</li>
+              <div className="Res_tit">
+                <li>영화선택</li>
+              </div>
               <li>
                 <div className="menu3">
                   <ul className="menu3_left">
@@ -240,7 +250,9 @@ class Reservation_Movie extends Component {
           </div>
           <div className="Res_menu4">
             <ul>
-              <li className="Res_tit">{sysdate}</li>
+              <div className="Res_tit">
+                <li>{sysdate}</li>
+              </div>
               <li>
                 <div className="menu4">
                   <ul className="menu4_left">
@@ -283,11 +295,12 @@ class Reservation_Movie extends Component {
                 <p>
                   잔여좌석 <strong>82</strong>/100
                 </p>
+                
+                <img className="Res_screen" src={Res_screen} />
                 <p>
                   <img src={Res_img15} />본 영화는 만 15세 이상 관람가
                   영화입니다.
                 </p>
-                <img className="Res_screen" src={Res_screen} />
                 <button name="n" onClick={this.handleCancellation}>
                   취소
                 </button>

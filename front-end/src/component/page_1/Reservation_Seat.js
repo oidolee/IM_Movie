@@ -78,7 +78,6 @@ const Reservation_Seat = () => {
   const sysdate = moment().format("YYYY-MM-DD");
 
   const handlePayment = () => {
-    // 결제 페이지로 이동
     history.push("/page_1/Reservation_Payment");
   };
 
