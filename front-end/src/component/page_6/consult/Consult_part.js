@@ -12,10 +12,10 @@ function Consult_part() {
     return (
         <div className={`Consult ${style.Consult}`}>
             <div className={`Consult_name${style.Consult_name}`}>
-                <p>문의내용(<span className="haveto">* 필수 입력</span>)</p>
+                <p><strong>문의내용(<span className="haveto">* 필수 입력</span>)</strong></p>
                 <hr></hr>
             </div>
-            <div >
+            <div className={`Consult_table1${style.Consult_table1}`}>
                 <table className={`Consult_table ${style.Consult_table}`}>
                     <tr>
                         <td style={{ paddingRight: '20px' }}>분류 *</td>
@@ -43,7 +43,7 @@ function Consult_part() {
                     <tr>
                         <td>종류 *</td>
                         <td>
-                            <select required>
+                            <select className={`consultType ${style.consultType}`} required>
                                 <option value={'movie2'}>영화관문의</option>
                                 <option value={'else2'}>기타문의</option>
                             </select>
@@ -51,11 +51,13 @@ function Consult_part() {
                     </tr>
                     <tr>
                         <td>제목 *</td>
-                        <td><input type="text" placeholder="제목을 입력해주세요" required /></td>
+                        <td><input className={`consultTitle ${style.consultTitle}`} type="text" placeholder="제목을 입력해주세요" required style={{background: 'rgba(211, 211, 211, 0.178)'}} /></td>
                     </tr>
                     <tr>
                         <td>내용 *</td>
-                        <td><textarea className={`consult_content ${style.consult_content}`}></textarea></td>
+                        <td>
+                            <textarea className={`consult_content ${style.consult_content}`}></textarea>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -68,22 +70,24 @@ function Consult_part() {
                     <table className={`myinfo_table ${style.myinfo_table}`}>
                         <tr>
                             <td>성명</td>
-                            <td><input className="myname" type="text" style={{ padding: '0px 18px' }}></input></td>
+                            <td><input className={`myname ${style.myname}`} type="text" style={{ padding: '0px 18px' , width: '150px',backgroundColor:'rgba(211, 211, 211, 0.199)'}}></input></td>
                         </tr>
                         <tr>
                             <td>연락처</td>
                             <td>
-                                <input className="tel1" type="text" style={{ marginRight: '10px', padding: '0px 18px' }}></input>
-                                <input className="tel2" type="text" style={{ marginRight: '10px', padding: '0px 18px' }}></input>
-                                <input className="tel3" type="text" style={{ marginRight: '10px', padding: '0px 18px' }}></input>
+                                <input className={`tel1 ${style.tel1}`} type="text" style={{ marginRight: '10px', padding: '0px 18px', width: '80px',backgroundColor:'rgba(211, 211, 211, 0.199)'}}></input>
+                                -
+                                <input className={`tel2 ${style.tel2}`} type="text" style={{ marginRight: '10px', marginLeft: '10px', padding: '0px 18px', width: '150px',backgroundColor:'rgba(211, 211, 211, 0.199)'}}></input>
+                                -
+                                <input className={`tel3 ${style.tel3}`} type="text" style={{ marginRight: '10px', marginLeft: '10px', padding: '0px 18px', width: '150px',backgroundColor:'rgba(211, 211, 211, 0.199)'}}></input>
                             </td>
                         </tr>
                         <tr>
                             <td>이메일</td>
                             <td>
-                                <input className="email1" type="text" style={{ marginRight: '10px', padding: '0px 18px' }}></input>
+                                <input className={`email1 ${style.email1}`} type="text" style={{ marginRight: '10px', padding: '0px 18px',backgroundColor:'rgba(211, 211, 211, 0.199)'}}></input>
                                 @
-                                <input className="email2" type="text" style={{ padding: '0px 18px', marginLeft: '10px' }}></input>
+                                <input className={`email2 ${style.email2}`} type="text" style={{ padding: '0px 18px', marginLeft: '10px',backgroundColor:'rgba(211, 211, 211, 0.199)' }}></input>
                             </td>
                         </tr>
                     </table>
