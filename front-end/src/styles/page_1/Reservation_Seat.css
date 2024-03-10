@@ -40,6 +40,7 @@
 .Res_seat .Res_seat2 {
   height: auto;
   width: 100%;
+  background-color: white;
 }
 
 .Res_seat .Res_seat1 {
@@ -141,7 +142,6 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: white;
 }
 
 .Res_seat .Res_tit {
@@ -151,10 +151,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   background-color: black;
   color: white;
   font-weight: 600;
+  height: auto;
 }
 
 .Res_seat .Res_seat2_header ul {
@@ -176,7 +177,7 @@
 
 .Res_seat .Res_seat2 p {
   font-size: 12px;
-    margin: 0;
+  margin: 0;
   padding: 0;
 }
 

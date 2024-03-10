@@ -129,6 +129,7 @@
     display: flex;
     flex-direction: row;
     height: 100%;
+    background-color: white;
 }
 
 .Res_Movie .menu2 ul,
@@ -164,11 +165,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: auto;
     background-color: black;
     color: white;
     font-weight: 600;
-    height: 80px;
+    height: auto;
 }
 
 .Res_Movie .menu2_left {
