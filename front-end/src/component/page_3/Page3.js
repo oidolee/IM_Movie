@@ -2,6 +2,15 @@
 import React, {Component} from 'react';
 import storeBanner from '../../assets/page_3/storeBanner.jpg'
 import package1 from '../../assets/page_3/package1.jpg'
+import package2 from '../../assets/page_3/package2.jpg'
+import package3 from '../../assets/page_3/package3.jpg'
+import ticket1 from '../../assets/page_3/ticket1.jpg'
+import ticket2 from '../../assets/page_3/ticket2.jpg'
+import foods1 from '../../assets/page_3/foods1.jpg'
+import foods2 from '../../assets/page_3/foods2.jpg'
+import foods3 from '../../assets/page_3/foods3.jpg'
+import bottom1 from '../../assets/page_3/bottom1.jpg'
+import bottom2 from '../../assets/page_3/bottom2.jpg'
 import style from '../../styles/page_3/StoreList.css';
 
 class Page3 extends Component{
@@ -44,7 +53,7 @@ class Page3 extends Component{
                         <div className={`page3_flex ${style.page3_flex}`}>
                             <a href="/StoreDetail?num=2" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
-                                    <img src={package1}></img>
+                                    <img src={package2}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
@@ -64,7 +73,7 @@ class Page3 extends Component{
                         <div className={`page3_flex ${style.page3_flex}`}>
                             <a href="/StoreDetail?num=3" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
-                                    <img src={package1}></img>
+                                    <img src={package3}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
@@ -85,7 +94,7 @@ class Page3 extends Component{
                         <div className={`page3_flex ${style.page3_flex}`}>
                             <a href="/StoreDetail?num=4" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
-                                    <img src={package1}></img>
+                                    <img src={ticket1}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
@@ -105,7 +114,7 @@ class Page3 extends Component{
                         <div className={`page3_flex ${style.page3_flex}`}>
                             <a href="/StoreDetail?num=5" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
-                                    <img src={package1}></img>
+                                    <img src={ticket2}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
@@ -127,7 +136,7 @@ class Page3 extends Component{
                         <div className={`page3_flex ${style.page3_flex}`}>
                             <a href="/StoreDetail?num=6" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
-                                    <img src={package1}></img>
+                                    <img src={foods1}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
@@ -147,7 +156,7 @@ class Page3 extends Component{
                         <div className={`page3_flex ${style.page3_flex}`}>
                             <a href="/StoreDetail?num=7" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
-                                    <img src={package1}></img>
+                                    <img src={foods2}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
@@ -167,7 +176,7 @@ class Page3 extends Component{
                         <div className={`page3_flex ${style.page3_flex}`}>
                             <a href="/StoreDetail?num=8" className={`store_item ${style.store_item}`}>
                                 <div className={`store_img ${style.store_img}`}>
-                                    <img src={package1}></img>
+                                    <img src={foods3}></img>
                                 </div>
                                 <div className={`item_content ${style.item_content}`}>
                                     <div className={`item_title ${style.item_title}`}>
@@ -185,11 +194,23 @@ class Page3 extends Component{
                             </a>
                         </div>
                     </div>
+                    {/* 중앙 리스트 끝 */}
+                    
+
+                    <div>
+                        <div className={`store_bottom1 ${style.store_bottom1}`} >
+                                    <img src={bottom1}></img>
+                        </div>
+                        <div className={`store_bottom2 ${style.store_bottom2}`}>
+                                    <img src={bottom2}></img>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
         );
     }
-}
+} 
 
 export default Page3;
