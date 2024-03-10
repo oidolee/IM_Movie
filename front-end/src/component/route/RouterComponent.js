@@ -47,6 +47,8 @@ import MyPage_wishMovie from '../page_6/movielog/MyPage_wishMovie';
 import Consult from '../page_6/consult/Consult';
 import MyPage_myinfo from '../page_6/myinfo/MyPage_myinfo';
 import MyPage_myinfo_update from '../page_6/myinfo/MyPage_myinfo_update';
+import MyPage_consult_list from '../page_6/myinfo/MyPage_consult_list';
+
 
 
 
@@ -111,6 +113,7 @@ const AppRouter = () => {
                         <Route path="/Consult" exact={true} component={Consult} />
                         <Route path="/MyPage_myinfo" exact={true} component={MyPage_myinfo} />
                         <Route path="/MyPage_myinfo_update" exact={true} component={MyPage_myinfo_update} />
+                        <Route path="/MyPage_consult_list" exact={true} component={MyPage_consult_list} />
 
                     </Route>
 
