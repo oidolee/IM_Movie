@@ -29,5 +29,12 @@
     	WHERE IC_name = #{name} AND IC_hp = #{hp} 
 	</select>
 	
+	<!-- 비밀번호 찾기  -->
+	<select id="findPWD" parameterType="java.util.Map" resultType="String">
+		SELECT IC_password 
+    	FROM IM_Customer 
+    	WHERE IC_email = #{email} AND IC_hp = #{hp} 
+	</select>
+	
 	
 </mapper>

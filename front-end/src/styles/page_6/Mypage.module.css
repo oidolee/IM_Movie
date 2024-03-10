@@ -95,7 +95,8 @@
 .MyPage_menu2 {
     border: 1px solid ;
     width: 100%;
-    height: 300px;
+    height: auto;
+    
 }
 
 .MyPage_banner{
@@ -103,6 +104,12 @@
     width: 100%;
     height: 300px;
 }
+
+.MyPage_myinfo_update_part{
+    margin-bottom: 10px;
+}
+
+
 
 
 

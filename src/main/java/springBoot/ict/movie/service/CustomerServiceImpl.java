@@ -44,7 +44,8 @@ public class CustomerServiceImpl implements CustomerService {
 
 	// 로그인
 	@Override
-	public int loginCustomer(CustomerDTO dto) throws ServletException, IOException {
+	public int loginCustomer(CustomerDTO dto) 
+			throws ServletException, IOException {
 		System.out.println("CustomerServiceImpl - loginCustomer");
 		System.out.println(" login dto " + dto.toString());
 		
@@ -56,11 +57,22 @@ public class CustomerServiceImpl implements CustomerService {
 	
 	// 아이디 찾기 
     @Override
-    public String findID(String name, String hp) throws ServletException, IOException {
+    public String findID(String name, String hp) 
+    		throws ServletException, IOException {
         System.out.println("CustomerServiceImpl - findID");
         
         String foundEmail = dao.findID(name, hp);
         
         return foundEmail;
     }
+
+    // 비밀번호 찾기
+	@Override
+	public String findPWD(String email, String hp) 
+			throws ServletException, IOException {
+		
+		String foundPWD = dao.findPWD(email, hp);
+		
+		return foundPWD;
+	}
 }
