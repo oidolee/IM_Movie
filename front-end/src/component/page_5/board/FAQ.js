@@ -49,6 +49,22 @@ function FIND() {
 
 
 function FAQ() {
+  const currentPage = 1; // 예시로 현재 페이지를 1로 설정
+  const totalPages = 2; // 예시로 총 페이지 수를 7로 설정
+
+  // 페이지 변경 시 처리할 함수
+  const onPageChange = (pageNumber) => {
+    // 페이지 변경 처리 로직 구현
+    console.log('페이지 변경:', pageNumber);
+  };
+
+  // 페이지 번호 배열 생성
+  const pageNumbers = [];
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers.push(i);
+  }
+
+
   return (
     <div id='FAQ_wrappage' className={`FAQ_wrappage ${style.FAQ_wrappage}`}>
       <Navbar expand="lg">
@@ -63,7 +79,7 @@ function FAQ() {
           <Nav.Link href="/NOTICE">공지사항</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/home">1:1문의</Nav.Link>
+          <Nav.Link href="/Consult">1:1문의</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/groupform">단체관람/대관문의</Nav.Link>
@@ -96,56 +112,39 @@ function FAQ() {
       <Accordion.Item eventKey="0">
        <Accordion.Header className='header' >영화관 이용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;군인 할인은 어떻게 받나요?</Accordion.Header>
         <Accordion.Body>
-          [군인할인] 군인 고객님들에게 할인 혜택을 제공하고 있습니다.
-          <br/><br/>
-
-          ■ 대상:
-          <br/>
-          대한민국 군장변(ROTC, 사관생도, 부사관후보생, 상근예비역, 간부포함) / 대한민국 예비군 1~2년차 / 국방부 공,군무원, 한국 국방연구원, 병무청 전직원 / 방위사업청, 방위산업기술지원센터, 국방과학연구소 전직원 / 20년 이상 복무 후 전역한 예비역, 군인공제회 전직원 / 사회복무요원, 병역명문가 병역 이행자 및 가족 / 주한미군, 한국전 참전국 주한군인, 국방부 공무직
-          <br/><br/>
-          ■ 2D 영화:
-          주중 9,000원 / 주말 10,000원 관람 (동반 3인)
-          <br/>
-          ■ 3D 영화:
-          주중 10,000원 / 주말 11,000원 관람 (동반 3인)
-          <br/><br/>
-          ■ 매점 콤보 세트:
-          2,000원 할인(더블콤보 4,000원 할인)
-          <br/>
+          [군인할인] 군인 고객님들에게 할인 혜택을 제공하고 있습니다.<br/>
+          
+          ■ 대상:대한민국 군장변(ROTC, 사관생도, 부사관후보생, 상근예비역, 간부포함) / 대한민국 예비군 1~2년차 / 국방부 <br/>
+           공,군무원, 한국 국방연구원, 병무청 전직원 / 방위사업청, 방위산업기술지원센터, 국방과학연구소 전직원 / 20년 이상 <br/>
+           복무 후 전역한 예비역, 군인공제회 전직원 / 사회복무요원, 병역명문가 병역 이행자 및 가족 / 주한미군, 한국전 참전국 <br/>
+          주한군인, 국방부 공무직
+          <p/>
+          ■ 2D 영화: 주중 9,000원 / 주말 10,000원 관람 (동반 3인) <br/>
+          ■ 3D 영화: 주중 10,000원 / 주말 11,000원 관람 (동반 3인)  <br/>
+          ■ 매점 콤보 세트: 2,000원 할인(더블콤보 4,000원 할인) <br/>
           * 일부 영화관에 따라 매점혜택 적용 불가
-          <br/><br/>
-          ※ 현장 할인 적용방법:
-          <br/>
-          - 병사: 휴가증, 외박/외출증 제시 시 적용
-          <br/>
-          - 부사관 후보생: 외박/외출증 제시 시 적용
-          <br/>
-          - 현역간부: 공무원증 제시 시 적용
-          <br/>
-          - 사관생도/ROTC: 사관생도증, 학군사관후보생증 제시 시 적용
-          <br/>
-          - 예비군(1~2년차): 24년 예비군 교육훈련 필증 및 신분증 제시 시 적용
-          <br/>
-          - 방위사업청/방위산업기술지원센터/국방과학연구소/국방기술품질원/국방연구원병무청/군인공제회: 소속기관 신분증 제시 시 적용
-          <br/>
-          - 병역명문가: 병역명문가증 및 가족관계 증명서 제시 시 적용
-          <br/>
-          - 20년 이상 복무 전역한 예비역: 군인연금증, 군인연금카드 제시 시 적용
-          <br/>
+          <p/>
+          ※ 현장 할인 적용방법: <br/>
+          - 병사: 휴가증, 외박/외출증 제시 시 적용 <br/>
+          - 부사관 후보생: 외박/외출증 제시 시 적용 <br/>
+          - 현역간부: 공무원증 제시 시 적용 <br/>
+          - 사관생도/ROTC: 사관생도증, 학군사관후보생증 제시 시 적용 <br/>
+          - 예비군(1~2년차): 24년 예비군 교육훈련 필증 및 신분증 <br/>
+          제시 시 적용 
+          - 방위사업청/방위산업기술지원센터/국방과학연구소/국방기술품질원/국방연구원병무청/군인공제회: 소속기관 신분증 제시 시 적용 <br/>
+          - 병역명문가: 병역명문가증 및 가족관계 증명서 제시 시 적용 <br/>
+          - 20년 이상 복무 전역한 예비역: 군인연금증, 군인연금카드 제시 시 적용 <br/>
           - 국방부 공무직: 공무원증 제시 시 적용
-          <br/><br/>
-          ※ 온라인 예매 방법:
-          <br/>
+          <p/>
+          ※ 온라인 예매 방법: <br/>
           - 결제단계 시 [제휴포인트/할인] - [군인할인] 선택 시 적용 가능
-          <br/><br/>
-          ※ 타인의 신분증 제시 시 입장에 제한이 있을 수 있으므로, 반드시 입장하시는 당사자 본인의 신분증을 지참해주시기 바랍니다. (온라인 예매 시에도 동일 정책 적용)
-          <br/>
-        ※ 유의사항
-        <br/>
-        - 4D, 샤롯데관 등 스페셜관은 할인대상에 포함되지 않습니다.
-        <br/>
-        - 기타할인과 중복 할인 불가합니다.
-        <br/>
+          <br/> <br/> <br/>
+          ※ 타인의 신분증 제시 시 입장에 제한이 있을 수 있으므로, 반드시 입장하시는 당사자 본인의 신분증을 지참해주시기 <br/>
+           바랍니다. (온라인 예매 시에도 동일 정책 적용)
+           <p/>
+        ※ 유의사항 <br/>
+        - 4D, 샤롯데관 등 스페셜관은 할인대상에 포함되지 않습니다. <br/>
+        - 기타할인과 중복 할인 불가합니다. <br/>
         - 본 이벤트의 혜택은 일부 영화관에서 사용 불가합니다.(전주송천) 
       </Accordion.Body>
       </Accordion.Item>
@@ -291,10 +290,19 @@ function FAQ() {
         </Accordion.Item>
       </Accordion>
 
-      <Pagination className={`FAQ_pagination ${style.page}`}>
-        <Pagination.Item active>{1}</Pagination.Item>
-        <Pagination.Item>{2}</Pagination.Item> 
-      </Pagination>
+      <div  className={`FAQ_page ${style.FAQ_page}`}>
+      {pageNumbers.map((pageNumber) => (
+        <button
+          key={pageNumber}
+          className={`${style.pageNumber1} ${
+            pageNumber === currentPage ? style.active : ''
+          }`}
+          onClick={() => onPageChange(pageNumber)}
+        >
+          {pageNumber}
+        </button>
+      ))}
+    </div>
     </div>
   </div>
 

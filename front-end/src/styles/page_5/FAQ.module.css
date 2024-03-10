@@ -32,6 +32,7 @@
 .ico_01{
   display: inline-block; /* 가로로 배열 */
   margin-right: 10px; /* 이미지 사이의 간격 조절 */
+  border:1px solid rgba(211, 211, 211, 0.144);
 }
 
 .ico_01 img{
@@ -142,16 +143,17 @@
     margin-bottom: 10px; /* 줄 바꿈 아래 여백 */
   }
 
-  .FAQ_page__3pOhc{
-    text-align: center;
+  .FAQ_page {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .FAQ_page .pageNumber1 {
+    border:none;
+    margin-right: 15px;
+    cursor: pointer;
+    background-color: #fff;
   }
 
-  .FAQ_pagination {
-    display: flex;
-    padding-left: 450px;
-    list-style: none;
-    color: black;
-    margin: 50px 0 ;
-    text-align: center;
-}
   
