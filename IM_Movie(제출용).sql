@@ -368,115 +368,99 @@
 -- 창해 시작 (page_6)
 
 
---관람평 테이블
+    --관람평 테이블
 
-DROP TABLE IM_REVIEW CASCADE CONSTRAINTS;
-CREATE TABLE IM_REVIEW(  
-    REVIEW_NUM      NUMBER          PRIMARY KEY,       -- 후기코드(PK)
-    MOVIE_ID        VARCHAR2(50)    NOT NULL,          -- 영화코드(FK)
-    CUS_ID          VARCHAR2(50)    NOT NULL,          -- 회원ID(FK)
-    REVIEW_STAR     NUMBER          NOT NULL,          -- 후기별점
-    REVIEW_CONTENTS CLOB            NOT NULL,          -- 후기내용
-    REVIEW_DATE     DATE            NOT NULL           -- 작성일
-);
+    DROP TABLE IM_REVIEW CASCADE CONSTRAINTS;
+    CREATE TABLE IM_REVIEW(  
+        REVIEW_NUM      NUMBER          PRIMARY KEY,       -- 후기코드(PK)
+        MOVIE_ID        VARCHAR2(50)    NOT NULL,          -- 영화코드(FK)
+        CUS_ID          VARCHAR2(50)    NOT NULL,          -- 회원ID(FK)
+        REVIEW_STAR     NUMBER          NOT NULL,          -- 후기별점
+        REVIEW_CONTENTS CLOB            NOT NULL,          -- 후기내용
+        REVIEW_DATE     DATE            NOT NULL           -- 작성일
+    );
 
---------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
 
 
---영화좋아요 테이블
-DROP TABLE IM_LIKE CASCADE CONSTRAINTS;
-CREATE TABLE IM_LIKE(  
-    LIKE_ID      NUMBER          PRIMARY KEY,        -- 좋아요코드(PK)
-    MOVIE_ID     VARCHAR2(50)    NOT NULL,           -- 영화코드(FK)
-    CUS_ID       VARCHAR2(50)    NOT NULL,           -- 회원ID(FK)
-    LIKE_DATE    DATE            NOT NULL            -- 좋아요날짜
-);
+    --영화좋아요 테이블
+    DROP TABLE IM_LIKE CASCADE CONSTRAINTS;
+    CREATE TABLE IM_LIKE(  
+        LIKE_ID      NUMBER          PRIMARY KEY,        -- 좋아요코드(PK)
+        MOVIE_ID     VARCHAR2(50)    NOT NULL,           -- 영화코드(FK)
+        CUS_ID       VARCHAR2(50)    NOT NULL,           -- 회원ID(FK)
+        LIKE_DATE    DATE            NOT NULL            -- 좋아요날짜
+    );
 
---------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
 
---상영시간표 테이블
-DROP TABLE MOVIE_TIME CASCADE CONSTRAINTS;
-CREATE TABLE MOVIE_TIME(  
-    SCHEDULE_ID     NUMBER          PRIMARY KEY,        -- 일정코드(PK)
-    SCREEN_ID       NUMBER          NOT NULL,           -- 상영관코드(FK)
-    THEATER_ID      VARCHAR2(50)    NOT NULL,           -- 영화관코드(FK)
-    MOVIE_ID        VARCHAR2(50)    NOT NULL,           -- 영화코드(FK)
-    TIME_DATE       DATE            NOT NULL,           -- 날짜
-    START_TIME      TIMESTAMP       NOT NULL,           -- 시작시간
-    END_TIME        TIMESTAMP       NOT NULL,           -- 종료시간
-    TIME_CODE       VARCHAR2(10)    NOT NULL            -- 위치코드
-);
+    --상영시간표 테이블
+    DROP TABLE MOVIE_TIME CASCADE CONSTRAINTS;
+    CREATE TABLE MOVIE_TIME(  
+        SCHEDULE_ID     NUMBER          PRIMARY KEY,        -- 일정코드(PK)
+        SCREEN_ID       NUMBER          NOT NULL,           -- 상영관코드(FK)
+        THEATER_ID      VARCHAR2(50)    NOT NULL,           -- 영화관코드(FK)
+        MOVIE_ID        VARCHAR2(50)    NOT NULL,           -- 영화코드(FK)
+        TIME_DATE       DATE            NOT NULL,           -- 날짜
+        START_TIME      TIMESTAMP       NOT NULL,           -- 시작시간
+        END_TIME        TIMESTAMP       NOT NULL,           -- 종료시간
+        TIME_CODE       VARCHAR2(10)    NOT NULL            -- 위치코드
+    );
 
---------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
 
---지역 테이블
-DROP TABLE IM_PLACE  CASCADE CONSTRAINTS;
-CREATE TABLE IM_PLACE(  
-    PLACE_CODE      VARCHAR2(50)      PRIMARY KEY,      --지역코드(PK)
-    PLACE_NAME      VARCHAR2(50)      NOT NULL            --지역이름
-);
+    --지역 테이블
+    DROP TABLE IM_PLACE  CASCADE CONSTRAINTS;
+    CREATE TABLE IM_PLACE(  
+        PLACE_CODE      VARCHAR2(50)      PRIMARY KEY,      --지역코드(PK)
+        PLACE_NAME      VARCHAR2(50)      NOT NULL            --지역이름
+    );
 
---------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
 
---공지사항 테이블
-DROP TABLE NOTICE_BOARD  CASCADE CONSTRAINTS;
-CREATE TABLE NOTICE_BOARD(  
-    NOTICE_NUM      NUMBER      PRIMARY KEY,       --공지번호(PK)
-    NOTICE_ONE      VARCHAR2(50)    NOT NULL,          --구분
-    NOTICE_TITLE    VARCHAR2(50)    NOT NULL,          --제목
-    NOTICE_CON      CLOB            NOT NULL,          --내용
-    NOTICE_DATE     DATE            NOT NULL           --작성일
-);
+    --공지사항 테이블
+    DROP TABLE NOTICE_BOARD  CASCADE CONSTRAINTS;
+    CREATE TABLE NOTICE_BOARD(  
+        NOTICE_NUM      NUMBER      PRIMARY KEY,       --공지번호(PK)
+        NOTICE_ONE      VARCHAR2(50)    NOT NULL,          --구분
+        NOTICE_TITLE    VARCHAR2(50)    NOT NULL,          --제목
+        NOTICE_CON      CLOB            NOT NULL,          --내용
+        NOTICE_DATE     DATE            NOT NULL           --작성일
+    );
 
---------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
 
---대관신청 테이블
-DROP TABLE GROUP_BOARD CASCADE CONSTRAINTS;
-CREATE TABLE GROUP_BOARD(
-    GROUP_NUM           VARCHAR2(50)    PRIMARY KEY,     -- 대관신청코드(PK)
-    CUS_ID              VARCHAR2(50)    NOT NULL,        -- 회원ID(FK)
-    GROUP_LOC           VARCHAR2(100)   NOT NULL,        -- 영화관위치
-    GROUP_TYPE          VARCHAR2(50)    NOT NULL,        -- 분류
-    GROUP_EXPECTED_NUMBER   NUMBER         NOT NULL,     -- 예상인원
-    GROUP_DATE          DATE            NOT NULL,        -- 희망일
-    GROUP_TIME          TIMESTAMP       NOT NULL,        -- 희망시간
-    GROUP_MOVIE_TITLE   VARCHAR2(100)   NOT NULL,        -- 영화제목
-    GROUP_TITLE         VARCHAR2(50)    NOT NULL,        -- 제목 
-    GROUP_CON           CLOB            NOT NULL,        -- 내용 
-    GROUP_NAME          VARCHAR2(50)    NOT NULL,        -- 단체명 
-    NAME                VARCHAR2(30)    NOT NULL,        -- 신청고객명 
-    GROUP_PHONE         VARCHAR2(50)    NOT NULL,        -- 연락처 
-    GROUP_EMAIL         VARCHAR2(50)    NOT NULL        -- 이메일 
-);
- -------------------------------------------------------------------------------
+    --대관신청 테이블
+    DROP TABLE GROUP_BOARD CASCADE CONSTRAINTS;
+    CREATE TABLE GROUP_BOARD(
+        GROUP_NUM           VARCHAR2(50)    PRIMARY KEY,     -- 대관신청코드(PK)
+        CUS_ID              VARCHAR2(50)    NOT NULL,        -- 회원ID(FK)
+        GROUP_LOC           VARCHAR2(100)   NOT NULL,        -- 영화관위치
+        GROUP_TYPE          VARCHAR2(50)    NOT NULL,        -- 분류
+        GROUP_EXPECTED_NUMBER   NUMBER         NOT NULL,     -- 예상인원
+        GROUP_DATE          DATE            NOT NULL,        -- 희망일
+        GROUP_TIME          TIMESTAMP       NOT NULL,        -- 희망시간
+        GROUP_MOVIE_TITLE   VARCHAR2(100)   NOT NULL,        -- 영화제목
+        GROUP_TITLE         VARCHAR2(50)    NOT NULL,        -- 제목 
+        GROUP_CON           CLOB            NOT NULL,        -- 내용 
+        GROUP_NAME          VARCHAR2(50)    NOT NULL,        -- 단체명 
+        NAME                VARCHAR2(30)    NOT NULL,        -- 신청고객명 
+        GROUP_PHONE         VARCHAR2(50)    NOT NULL,        -- 연락처 
+        GROUP_EMAIL         VARCHAR2(50)    NOT NULL        -- 이메일 
+    );
+    -------------------------------------------------------------------------------
 
---답변테이블
-DROP TABLE RE_ANSWER CASCADE CONSTRAINTS;
-CREATE TABLE RE_ANSWER(  
-    CUS_ID      VARCHAR2(50)    NOT NULL,        -- 회원ID
-    RE_TITLE    VARCHAR2(50)    NOT NULL,        -- 제목
-    RE_CON      CLOB            NOT NULL,        -- 내용
-    RE_DATE     TIMESTAMP       NOT NULL,        -- 작성일
-    CONSTRAINT PK_RE_ANSWER PRIMARY KEY (CUS_ID) -- 회원ID를 기본키로 설정
-);
+    --답변테이블
+    DROP TABLE RE_ANSWER CASCADE CONSTRAINTS;
+    CREATE TABLE RE_ANSWER(  
+        CUS_ID      VARCHAR2(50)    NOT NULL,        -- 회원ID
+        RE_TITLE    VARCHAR2(50)    NOT NULL,        -- 제목
+        RE_CON      CLOB            NOT NULL,        -- 내용
+        RE_DATE     TIMESTAMP       NOT NULL,        -- 작성일
+        CONSTRAINT PK_RE_ANSWER PRIMARY KEY (CUS_ID) -- 회원ID를 기본키로 설정
+    );
 
---------------------------------------------------------------------------------
-
--- 샘플용
-DROP TABLE mvc_sample_tbl CASCADE CONSTRAINTS;
-CREATE TABLE mvc_sample_tbl(
-   id      number(5)    PRIMARY KEY,
-   name    varchar2(50) NOT NULL,
-   brand   varchar2(50) NOT NULL,
-   madein  varchar2(50) NOT NULL,
-   price   number(9)    NOT NULL
-);
-insert into mvc_sample_tbl 
-    values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_1', 'brand_1', 'madein_1', 1 );
-insert into mvc_sample_tbl 
-    values( nvl( (select max(id) from mvc_sample_tbl)+1 ,1), 'name_2', 'brand_2', 'madein_2', 2 );
-commit;    
-SELECT * FROM mvc_sample_tbl;
+    --------------------------------------------------------------------------------
 
 
 
