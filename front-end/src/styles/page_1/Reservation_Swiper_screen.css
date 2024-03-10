@@ -1,5 +1,5 @@
 .Reservation_Swiper2 .swiper {
-  width: 900px;
+  width: 100%;
   height: 100px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .Reservation_Swiper2 .swiper_content li {
-  width: 40%;
+  width: 100%;
   height: 100%;
   text-align: center;
   font-weight: 600;
